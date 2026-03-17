@@ -142,16 +142,21 @@ section{padding:100px 20px}
 .city-tag{background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.2);color:var(--accent2);padding:8px 20px;border-radius:50px;font-size:14px;font-weight:500}
 
 /* COMPARE */
-.compare .container{max-width:900px}
-.compare-table{width:100%;border-collapse:collapse;margin-top:40px}
-.compare-table th,.compare-table td{padding:16px 20px;text-align:left;border-bottom:1px solid var(--border);font-size:15px}
-.compare-table th{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:500}
-.compare-table tr.pauco{background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(236,72,153,.05));border-radius:8px}
-.compare-table tr.pauco td{color:var(--text);font-weight:600}
-.compare-table tr.pauco td:first-child{color:var(--accent2)}
-.compare-table .check{color:var(--green)}
-.compare-table .cross{color:var(--red)}
-.compare-price{color:var(--muted);font-weight:400}
+.compare .container{max-width:1100px}
+.compare-wrapper{overflow-x:auto;margin-top:40px;border-radius:12px;border:1px solid var(--border)}
+.compare-table{width:100%;border-collapse:collapse;min-width:700px}
+.compare-table th,.compare-table td{padding:14px 16px;text-align:center;border-bottom:1px solid var(--border);font-size:14px;white-space:nowrap}
+.compare-table th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:500;background:var(--bg3);position:sticky;top:0}
+.compare-table th.col-pauco{background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(99,102,241,.1));color:var(--accent2)}
+.compare-table td:first-child{text-align:left;color:var(--text);font-weight:500}
+.compare-table td.col-pauco{background:rgba(99,102,241,.06)}
+.compare-table tr.row-price td{font-weight:700;font-size:15px}
+.compare-table tr.row-price td.col-pauco{color:var(--accent2)}
+.compare-table tr.row-price td.competitor-price{color:var(--muted)}
+.compare-table .check{color:var(--green);font-size:16px}
+.compare-table .cross{color:var(--red);font-size:16px;opacity:.5}
+.col-pauco-badge{display:inline-flex;align-items:center;gap:4px;background:var(--accent);color:#fff;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:1px;margin-top:4px}
+.compare-note{text-align:center;margin-top:20px;color:var(--muted);font-size:13px;font-style:italic}
 
 /* CTA FINAL */
 .final-cta{text-align:center;padding:120px 20px}
@@ -420,37 +425,103 @@ footer a{color:var(--accent2);text-decoration:none}
     <div class="section-label">Comparatif</div>
     <h2 class="section-title">Pourquoi Pauco est imbattable</h2>
 
-    <table class="compare-table">
-      <thead>
-        <tr>
-          <th>Solution</th>
-          <th>Prix</th>
-          <th>Inclus</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="pauco">
-          <td>Pauco Founder</td>
-          <td>99€/mois à vie</td>
-          <td><span class="check">&#10004; Tout inclus</span></td>
-        </tr>
-        <tr>
-          <td>Lightspeed</td>
-          <td class="compare-price">200-400€/mois</td>
-          <td><span class="cross">&#10008; Pas de rapports IA</span></td>
-        </tr>
-        <tr>
-          <td>Zelty</td>
-          <td class="compare-price">150-300€/mois</td>
-          <td><span class="cross">&#10008; Pas d'e-réputation</span></td>
-        </tr>
-        <tr>
-          <td>L'Addition</td>
-          <td class="compare-price">100-250€/mois</td>
-          <td><span class="cross">&#10008; Pas de prévisions météo</span></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="compare-wrapper">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Fonctionnalité</th>
+            <th class="col-pauco">Pauco<br><span class="col-pauco-badge">&#128274; FOUNDER</span></th>
+            <th>Lightspeed</th>
+            <th>Zelty</th>
+            <th>L'Addition</th>
+            <th>Tabesto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-price">
+            <td>Prix</td>
+            <td class="col-pauco">99€/mois à vie</td>
+            <td class="competitor-price">200-400€/mois</td>
+            <td class="competitor-price">150-300€/mois</td>
+            <td class="competitor-price">100-250€/mois</td>
+            <td class="competitor-price">150€+/mois</td>
+          </tr>
+          <tr>
+            <td>E-réputation (avis Google)</td>
+            <td class="col-pauco"><span class="check">&#10004;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+          </tr>
+          <tr>
+            <td>Rapport quotidien automatique</td>
+            <td class="col-pauco"><span class="check">&#10004;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+          </tr>
+          <tr>
+            <td>Planning équipe</td>
+            <td class="col-pauco"><span class="check">&#10004;</span></td>
+            <td><span class="check">&#10004;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+          </tr>
+          <tr>
+            <td>Fiches de poste</td>
+            <td class="col-pauco"><span class="check">&#10004;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+          </tr>
+          <tr>
+            <td>Fiches techniques / Food cost</td>
+            <td class="col-pauco"><span class="check">&#10004;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="check">&#10004;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+          </tr>
+          <tr>
+            <td>Mercuriale / Inventaire</td>
+            <td class="col-pauco"><span class="check">&#10004;</span></td>
+            <td><span class="check">&#10004;</span></td>
+            <td><span class="check">&#10004;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+          </tr>
+          <tr>
+            <td>Prévisions IA météo</td>
+            <td class="col-pauco"><span class="check">&#10004;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+          </tr>
+          <tr>
+            <td>Intégration caisses</td>
+            <td class="col-pauco"><span class="check">&#10004;</span></td>
+            <td><span class="check">&#10004;</span></td>
+            <td><span class="check">&#10004;</span></td>
+            <td><span class="check">&#10004;</span></td>
+            <td><span class="check">&#10004;</span></td>
+          </tr>
+          <tr>
+            <td>Prix fondateur garanti à vie</td>
+            <td class="col-pauco"><span class="check">&#10004;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+            <td><span class="cross">&#10008;</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-note">* Fonctionnalités Pauco déployées progressivement — toutes incluses dans votre abonnement à 99€/mois</p>
   </div>
 </section>
 
