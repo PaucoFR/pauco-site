@@ -67,17 +67,16 @@ section{padding:100px 20px}
 .now-card p{color:var(--muted);font-size:14px;line-height:1.7}
 
 /* JUIN 2026 SECTION */
-.juin-banner{background:var(--amber);text-align:center;padding:28px 20px}
-.juin-banner-badge{font-size:14px;font-weight:700;color:#1a1a2e;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
-.juin-banner-sub{font-size:14px;color:rgba(26,26,46,.7);font-weight:500}
-.juin-section{text-align:center;padding-bottom:80px}
-.juin-section .section-sub{margin:0 auto 48px;max-width:560px;text-align:center}
-.juin-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px;margin:0 auto;align-items:start}
+.juin-banner{background:#f59e0b;text-align:center;padding:14px 20px}
+.juin-banner-text{font-size:14px;font-weight:600;color:#1a1a2e;letter-spacing:.5px}
+.juin-section{background:#111827;padding:60px 20px;text-align:center}
+.juin-section .container{max-width:1100px;margin:0 auto}
+.juin-label{font-size:14px;color:#a5b4fc;text-transform:uppercase;letter-spacing:2px;font-weight:600;margin-bottom:40px}
+.juin-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
 .juin-col{text-align:center}
-.juin-col-label{font-size:13px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px}
-.juin-col-sub{font-size:13px;color:var(--muted);margin-bottom:20px}
+.juin-col-label{font-size:12px;color:#a5b4fc;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:16px}
 @media(max-width:768px){
-  .juin-grid{grid-template-columns:1fr;gap:40px}
+  .juin-grid{grid-template-columns:1fr;gap:48px}
 }
 
 /* MOCKUP PHONE (rapport) */
@@ -134,15 +133,6 @@ section{padding:100px 20px}
 .dash-seuil-info{display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:10px}
 .dash-seuil-info .date{color:var(--muted)}
 .dash-seuil-info .above{color:var(--green);font-weight:600}
-
-/* JUIN FEATURES */
-.juin-features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;max-width:960px;margin-left:auto;margin-right:auto}
-.juin-feat{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:left}
-.juin-feat h4{font-size:14px;font-weight:600;margin-bottom:4px}
-.juin-feat p{font-size:13px;color:var(--muted);line-height:1.5}
-@media(max-width:768px){
-  .juin-features{grid-template-columns:1fr}
-}
 
 /* COMING SOON */
 .coming-soon{text-align:center}
@@ -340,21 +330,14 @@ footer a{color:var(--accent);text-decoration:none}
 
 <!-- JUIN 2026 — RAPPORT + GESTION -->
 <div class="juin-banner">
-  <div class="juin-banner-badge">Juin 2026</div>
-  <div class="juin-banner-sub">Rapport quotidien + Gestion intégrée — inclus dans votre abonnement fondateur</div>
+  <span class="juin-banner-text">&#128274; Juin 2026 — Inclus dans votre abonnement fondateur</span>
 </div>
 <section class="juin-section" id="juin2026">
   <div class="container">
-    <div class="section-label">Aperçu</div>
-    <h2 class="section-title">Deux outils puissants, un seul abonnement</h2>
-    <p class="section-sub">Chaque matin votre rapport sur WhatsApp. Chaque mois votre gestion complète sur dashboard.</p>
-
+    <div class="juin-label">Ce qui arrive dans 3 mois</div>
     <div class="juin-grid">
-
-      <!-- Colonne gauche — Rapport quotidien -->
       <div class="juin-col">
         <div class="juin-col-label">Rapport quotidien</div>
-        <div class="juin-col-sub">Chaque matin à 7h sur WhatsApp</div>
         <div class="mockup-phone">
           <div class="mockup-header">
             <div class="mockup-logo">P</div>
@@ -401,11 +384,8 @@ footer a{color:var(--accent);text-decoration:none}
           </div>
         </div>
       </div>
-
-      <!-- Colonne droite — Gestion intégrée -->
       <div class="juin-col">
         <div class="juin-col-label">Gestion intégrée</div>
-        <div class="juin-col-sub">Dashboard mensuel complet</div>
         <div class="mockup-dash">
           <div class="dash-header">
             <div class="dash-header-left">
@@ -485,22 +465,6 @@ footer a{color:var(--accent);text-decoration:none}
             </div>
           </div>
         </div>
-      </div>
-
-    </div>
-
-    <div class="juin-features">
-      <div class="juin-feat">
-        <h4>Zéro saisie manuelle</h4>
-        <p>Les données sont importées automatiquement depuis votre caisse et vos fournisseurs.</p>
-      </div>
-      <div class="juin-feat">
-        <h4>WhatsApp ou Email</h4>
-        <p>Vous choisissez comment recevoir votre rapport chaque matin.</p>
-      </div>
-      <div class="juin-feat">
-        <h4>Inclus dans votre abonnement</h4>
-        <p>Rapport + gestion intégrée pour 99€/mois. Sans surcoût.</p>
       </div>
     </div>
   </div>
@@ -883,7 +847,7 @@ const observer=new IntersectionObserver((entries)=>{
   });
 },{threshold:0.1});
 
-document.querySelectorAll('.timeline-item, .preview-card, .founder-card, .now-card, .h-timeline-item, .mockup-phone, .mockup-dash, .juin-feat, .juin-col').forEach(el=>{
+document.querySelectorAll('.timeline-item, .preview-card, .founder-card, .now-card, .h-timeline-item, .mockup-phone, .mockup-dash, .juin-col').forEach(el=>{
   el.style.opacity='0';
   el.style.transform='translateY(30px)';
   el.style.transition='all .6s ease';
