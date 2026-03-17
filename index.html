@@ -142,6 +142,10 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:var(--bg-card);b
 .tl-text{font-size:14px;color:var(--text-muted);line-height:1.5}
 .tl-badge{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:50px;margin-top:6px}
 .tl-badge.green{background:#ECFDF5;color:var(--green)}
+.tl-prices{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.tl-price{font-size:12px;font-weight:500;padding:2px 8px;border-radius:4px}
+.tl-price.fondateur{background:#EEF2FF;color:var(--primary)}
+.tl-price.nouveau{background:#F3F4F6;color:var(--text-muted)}
 .roadmap-note{text-align:center;font-size:14px;color:var(--text-muted);margin-top:48px}
 
 /* COMPARATIF */
@@ -240,7 +244,7 @@ footer p{color:rgba(255,255,255,.6);font-size:13px;margin-bottom:6px}
       <a href="javascript:void(0)" class="btn btn-primary" onclick="openModal()" style="padding:14px 28px">Devenir client fondateur</a>
       <a href="#juin2026" class="btn btn-outline" style="padding:14px 28px">Voir la démo &rarr;</a>
     </div>
-    <p class="hero-note">+40 restaurants en France &middot; Premier mois offert &middot; Sans engagement</p>
+    <p class="hero-note">+40 restaurants en France &middot; Sans engagement</p>
   </div>
 </section>
 
@@ -410,32 +414,52 @@ footer p{color:rgba(255,255,255,.6);font-size:13px;margin-bottom:6px}
     <div class="timeline">
       <div class="tl-item fade-in">
         <div class="tl-dot green"></div>
-        <div class="tl-date">Maintenant — 99€/mois</div>
+        <div class="tl-date">Maintenant</div>
         <div class="tl-text">E-réputation — Réponses automatiques aux avis</div>
         <div class="tl-badge green">Disponible</div>
+        <div class="tl-prices">
+          <span class="tl-price fondateur">Fondateurs : 99€/mois à vie</span>
+          <span class="tl-price nouveau">Nouveaux clients : 99€/mois</span>
+        </div>
       </div>
       <div class="tl-item fade-in">
         <div class="tl-dot violet"></div>
-        <div class="tl-date">Juin 2026 — inclus</div>
+        <div class="tl-date">Juin 2026</div>
         <div class="tl-text">Rapport quotidien + Gestion intégrée (CA, dépenses, ratios)</div>
+        <div class="tl-prices">
+          <span class="tl-price fondateur">Fondateurs : 99€/mois à vie</span>
+          <span class="tl-price nouveau">Nouveaux clients : 149€/mois</span>
+        </div>
       </div>
       <div class="tl-item fade-in">
         <div class="tl-dot violet-light"></div>
-        <div class="tl-date">Décembre 2026 — inclus</div>
+        <div class="tl-date">Décembre 2026</div>
         <div class="tl-text">Planning équipe + Fiches de poste + Fiches techniques</div>
+        <div class="tl-prices">
+          <span class="tl-price fondateur">Fondateurs : 99€/mois à vie</span>
+          <span class="tl-price nouveau">Nouveaux clients : 199€/mois</span>
+        </div>
       </div>
       <div class="tl-item fade-in">
         <div class="tl-dot gray"></div>
-        <div class="tl-date">Mai 2027 — inclus</div>
+        <div class="tl-date">Mai 2027</div>
         <div class="tl-text">Mercuriale + Inventaire + Prévisions IA météo</div>
+        <div class="tl-prices">
+          <span class="tl-price fondateur">Fondateurs : 99€/mois à vie</span>
+          <span class="tl-price nouveau">Nouveaux clients : 249€/mois</span>
+        </div>
       </div>
       <div class="tl-item fade-in">
         <div class="tl-dot gray"></div>
-        <div class="tl-date">Décembre 2027 — inclus</div>
+        <div class="tl-date">Décembre 2027</div>
         <div class="tl-text">Intégration caisses (Lightspeed, Zelty, L'Addition)</div>
+        <div class="tl-prices">
+          <span class="tl-price fondateur">Fondateurs : 99€/mois à vie</span>
+          <span class="tl-price nouveau">Nouveaux clients : 299€/mois</span>
+        </div>
       </div>
     </div>
-    <p class="roadmap-note">Nos futurs clients paieront 299€/mois. Vous, toujours 99€.</p>
+    <p class="roadmap-note">Vous entrez à 99€/mois aujourd'hui. Dans 18 mois, les nouveaux clients paieront 299€. Vous, toujours 99€.</p>
   </div>
 </section>
 
@@ -559,7 +583,7 @@ footer p{color:rgba(255,255,255,.6);font-size:13px;margin-bottom:6px}
     <ul class="founder-points">
       <li>&#128274; 99€/mois — jamais augmenté pour vous</li>
       <li>&#128241; Logiciel complet d'ici fin 2027</li>
-      <li>&#9889; Premier mois offert — sans engagement</li>
+      <li>&#9889; Sans engagement — résiliez quand vous voulez</li>
     </ul>
     <a href="javascript:void(0)" class="btn btn-white" onclick="openModal()">Devenir client fondateur &rarr;</a>
     <p class="founder-note">Déjà +40 restaurants en France &middot; Paul : +33 7 83 47 06 57</p>
