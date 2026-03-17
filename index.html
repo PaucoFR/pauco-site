@@ -6,270 +6,201 @@
 <script>history.scrollRestoration = 'manual';</script>
 <title>Pauco — Le logiciel tout-en-un des restaurateurs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #0f0f1a;
-  --bg2: #1a1a2e;
-  --bg3: #1a1a2e;
-  --border: rgba(255,255,255,0.07);
-  --text: #ffffff;
-  --muted: #a0a0b8;
-  --accent: #6366f1;
-  --accent2: #6366f1;
-  --accent-hover: #4f46e5;
-  --green: #22c55e;
-  --red: #ef4444;
-  --amber: #f59e0b;
+:root{
+  --primary:#6366f1;
+  --primary-dark:#4f46e5;
+  --bg:#FAFAF8;
+  --bg-card:#FFFFFF;
+  --bg-subtle:#F4F4F0;
+  --text:#0f0f0f;
+  --text-muted:#6b7280;
+  --border:#E5E5E0;
+  --green:#16a34a;
+  --amber:#d97706;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:'Instrument Serif',serif;font-weight:500}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:all .3s}
-nav.scrolled{background:rgba(10,10,10,.9);backdrop-filter:blur(20px);border-bottom-color:var(--border)}
-.nav-logo{font-family:'Instrument Serif',serif;font-size:22px;letter-spacing:-.5px;color:var(--text)}
-.nav-links{display:flex;align-items:center;gap:32px}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;transition:color .2s}
-.nav-links a:hover{color:var(--text)}
-.nav-cta{background:var(--accent);color:#fff;padding:10px 22px;border-radius:6px;font-size:14px;font-weight:500;text-decoration:none;transition:all .2s;cursor:pointer;border:none}
-.nav-cta:hover{opacity:.9;transform:translateY(-1px)}
-.menu-toggle{display:none;background:none;border:none;color:var(--text);font-size:24px;cursor:pointer}
-
-/* SECTIONS */
-section{padding:100px 20px}
-.container{max-width:1100px;margin:0 auto}
-.section-label{font-size:12px;text-transform:uppercase;letter-spacing:3px;color:var(--accent);margin-bottom:16px;font-weight:500}
-.section-title{font-family:'Instrument Serif',serif;font-size:clamp(32px,5vw,48px);line-height:1.15;margin-bottom:24px}
-.section-sub{color:var(--muted);font-size:18px;max-width:600px;line-height:1.7}
+nav{position:sticky;top:0;left:0;right:0;z-index:100;background:var(--bg-card);border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 40px}
+.nav-logo{font-family:'Instrument Serif',serif;font-size:20px;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:2px}
+.nav-logo::after{content:'';width:6px;height:6px;background:var(--primary);border-radius:50%;margin-left:1px;margin-bottom:8px}
+.nav-right{display:flex;align-items:center;gap:16px}
+.nav-link{color:var(--text-muted);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+.nav-link:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;border-radius:8px;cursor:pointer;transition:all .15s;text-decoration:none;border:none}
+.btn-primary{background:var(--primary);color:#fff;padding:10px 20px}
+.btn-primary:hover{background:var(--primary-dark);transform:scale(1.02)}
+.btn-outline{background:transparent;color:var(--primary);border:1px solid var(--primary);padding:10px 20px}
+.btn-outline:hover{background:var(--primary);color:#fff}
+.btn-white{background:#fff;color:var(--primary);padding:16px 32px;font-weight:500}
+.btn-white:hover{transform:scale(1.02);box-shadow:0 4px 20px rgba(0,0,0,.15)}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:120px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(99,102,241,.12) 0%,transparent 70%);pointer-events:none}
-.hero-content{position:relative;z-index:1;max-width:800px}
-.founder-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#92400e,var(--amber));color:#fff;padding:10px 20px;border-radius:50px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:32px;animation:pulse-badge 2s ease-in-out infinite;box-shadow:0 0 30px rgba(245,158,11,.3)}
-@keyframes pulse-badge{0%,100%{box-shadow:0 0 20px rgba(245,158,11,.3)}50%{box-shadow:0 0 40px rgba(245,158,11,.5)}}
-.hero h1{font-family:'Instrument Serif',serif;font-size:clamp(36px,6vw,64px);line-height:1.1;margin-bottom:24px;color:var(--text)}
-.hero .sub{color:var(--muted);font-size:clamp(16px,2.5vw,20px);max-width:620px;margin:0 auto 40px;line-height:1.7}
-.hero .sub strong{color:var(--text);font-weight:600}
-.cta-primary{display:inline-block;background:var(--accent);color:#fff;padding:16px 40px;border-radius:8px;font-size:16px;font-weight:600;text-decoration:none;transition:all .3s;cursor:pointer;border:none;letter-spacing:.5px}
-.cta-primary:hover{transform:translateY(-2px);background:var(--accent-hover);box-shadow:0 10px 40px rgba(99,102,241,.4)}
+.hero{padding:120px 24px 80px;text-align:center}
+.hero-inner{max-width:720px;margin:0 auto}
+.hero-badge{display:inline-block;background:#EEF2FF;color:var(--primary);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;padding:8px 18px;border-radius:50px;margin-bottom:32px}
+.hero h1{font-family:'Instrument Serif',serif;font-style:italic;font-size:56px;line-height:1.15;margin-bottom:24px;color:var(--text)}
+.hero-sub{font-size:18px;color:var(--text-muted);max-width:520px;margin:0 auto 36px;line-height:1.7}
+.hero-buttons{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.hero-note{font-size:13px;color:var(--text-muted)}
 
-/* AVAILABLE NOW */
-.available-now{background:var(--bg2);text-align:center;position:relative}
-.available-now::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(74,222,128,.03),transparent);pointer-events:none}
-.green-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#15803d,var(--green));color:#fff;padding:10px 24px;border-radius:50px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:32px;box-shadow:0 0 30px rgba(34,197,94,.2)}
-.now-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:40px}
-.now-card{background:var(--bg);border:1px solid rgba(34,197,94,.25);border-radius:12px;padding:32px 24px;text-align:left;transition:all .3s}
-.now-card:hover{border-color:var(--green);transform:translateY(-4px);box-shadow:0 8px 32px rgba(34,197,94,.1)}
-.now-card-icon{font-size:32px;margin-bottom:16px}
-.now-card h3{font-family:'Instrument Serif',serif;font-size:20px;margin-bottom:8px}
-.now-card p{color:var(--muted);font-size:14px;line-height:1.7}
+/* DISPONIBLE */
+.disponible{background:var(--bg-subtle);padding:80px 0}
+.section-badge{display:inline-block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;padding:8px 18px;border-radius:50px;margin-bottom:16px}
+.badge-green{background:#ECFDF5;color:var(--green)}
+.section-title{font-size:36px;text-align:center;margin-bottom:48px;color:var(--text)}
+.cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:880px;margin:0 auto}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:28px;transition:all .2s}
+.card:hover{box-shadow:0 8px 30px rgba(0,0,0,.06);transform:translateY(-2px)}
+.card-icon{font-size:32px;margin-bottom:12px}
+.card h3{font-family:'Inter',sans-serif;font-size:16px;font-weight:600;margin-bottom:8px;color:var(--text)}
+.card p{font-size:14px;color:var(--text-muted);line-height:1.6}
 
-/* JUIN 2026 SECTION */
-.juin-banner{background:#f59e0b;text-align:center;padding:14px 20px}
-.juin-banner-text{font-size:14px;font-weight:600;color:#1a1a2e;letter-spacing:.5px}
-.juin-section{background:#111827;padding:60px 20px;text-align:center}
-.juin-section .container{max-width:1100px;margin:0 auto}
-.juin-label{font-size:14px;color:#a5b4fc;text-transform:uppercase;letter-spacing:2px;font-weight:600;margin-bottom:40px}
-.juin-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+/* JUIN 2026 */
+.juin-divider{text-align:center;padding:0 24px;position:relative;margin:0}
+.juin-divider::before{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:var(--border)}
+.juin-divider span{position:relative;background:var(--bg);padding:0 20px;font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--amber);font-weight:600}
+.juin{padding:80px 0}
+.juin .section-sub{text-align:center;font-size:15px;color:var(--text-muted);margin-bottom:48px}
+.juin-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:1000px;margin:0 auto;align-items:start}
 .juin-col{text-align:center}
-.juin-col-label{font-size:12px;color:#a5b4fc;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:16px}
-@media(max-width:768px){
-  .juin-grid{grid-template-columns:1fr;gap:48px}
-}
+.juin-col-label{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--primary);font-weight:600;margin-bottom:4px}
+.juin-col-sub{font-size:13px;color:var(--text-muted);margin-bottom:16px}
 
-/* MOCKUP PHONE (rapport) */
-.mockup-phone{max-width:100%;margin:0 auto;background:#0b1520;border-radius:20px;overflow:hidden;box-shadow:0 20px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08)}
-.mockup-header{background:var(--accent);padding:14px 16px;display:flex;align-items:center;gap:10px}
-.mockup-logo{width:28px;height:28px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-size:14px;font-weight:700;color:var(--accent)}
-.mockup-header-text{text-align:left}
-.mockup-header-text .name{font-size:14px;font-weight:600;color:#fff}
+/* MOCKUP PHONE */
+.mockup-phone{max-width:340px;margin:0 auto;background:#0f0f1a;border-radius:16px;overflow:hidden;text-align:left}
+.mockup-header{background:var(--primary);padding:12px 16px;display:flex;align-items:center;gap:10px}
+.mockup-logo{width:28px;height:28px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-size:14px;font-weight:700;color:var(--primary)}
+.mockup-header-text .name{font-size:13px;font-weight:600;color:#fff}
 .mockup-header-text .desc{font-size:10px;color:rgba(255,255,255,.7)}
-.mockup-body{padding:12px;text-align:left}
-.msg-bubble{background:#1a2332;border-radius:0 12px 12px 12px;padding:14px;position:relative}
+.mockup-body{padding:14px;background:#0d0d1a}
+.msg-bubble{background:#1a1a2e;border-radius:2px 12px 12px 12px;padding:14px}
 .msg-section{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.06)}
-.msg-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.msg-section-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:6px;font-weight:600}
+.msg-section:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.msg-section-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--primary);margin-bottom:6px;font-weight:600}
 .msg-row{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.85);margin-bottom:3px}
 .msg-row:last-child{margin-bottom:0}
-.msg-row .label{color:var(--muted);font-size:11px}
+.msg-row .label{color:rgba(255,255,255,.5);font-size:11px}
 .msg-row .value{font-weight:600;font-variant-numeric:tabular-nums}
-.msg-row .value.positive{color:var(--green)}
-.msg-row .value.negative{color:var(--red)}
+.msg-row .value.green{color:var(--green)}
 .msg-row .value.highlight{color:#fff;font-size:13px}
-.msg-meteo{background:rgba(99,102,241,.12);border-radius:8px;padding:10px;margin-top:4px}
-.msg-meteo-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#a5b4fc;margin-bottom:6px;font-weight:600}
-.msg-meteo .msg-row .label{color:#a5b4fc}
-.msg-meteo .msg-row .value{color:#a5b4fc;font-weight:600}
-.msg-time{text-align:right;font-size:10px;color:rgba(255,255,255,.35);margin-top:6px}
-.msg-time .read{color:#53bdeb}
+.msg-meteo{background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.2);border-radius:8px;padding:10px;margin-top:4px}
+.msg-meteo-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(99,102,241,.8);margin-bottom:6px;font-weight:600}
+.msg-meteo .msg-row .label{color:rgba(99,102,241,.6)}
+.msg-meteo .msg-row .value{color:rgba(99,102,241,.9);font-weight:600}
+.msg-time{text-align:right;font-size:9px;color:rgba(99,102,241,.4);margin-top:6px}
+.msg-time .read{color:rgba(99,102,241,.5)}
 
-/* MOCKUP DASH (gestion) */
-.mockup-dash{max-width:100%;margin:0 auto;background:#0b1520;border-radius:20px;overflow:hidden;box-shadow:0 20px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08)}
-.dash-header{background:var(--accent);padding:14px 16px;display:flex;align-items:center;justify-content:space-between}
+/* MOCKUP DASH */
+.mockup-dash{max-width:340px;margin:0 auto;background:#0f0f1a;border-radius:16px;overflow:hidden;text-align:left}
+.dash-header{background:var(--primary);padding:10px 14px;display:flex;align-items:center;justify-content:space-between}
 .dash-header-left{display:flex;align-items:center;gap:8px}
-.dash-logo{width:28px;height:28px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-size:14px;font-weight:700;color:var(--accent)}
-.dash-header-left span{font-size:14px;font-weight:600;color:#fff}
-.dash-badge{background:rgba(255,255,255,.2);color:#fff;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600}
-.dash-body{padding:12px}
-.dash-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
-.dash-metric{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:10px;text-align:left}
-.dash-metric-label{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:3px}
-.dash-metric-value{font-size:17px;font-weight:700;color:#fff}
-.dash-metric-change{font-size:10px;margin-top:2px;font-weight:500}
-.dash-metric-change.up{color:var(--green)}
-.dash-metric-change.down{color:var(--red)}
-.dash-section{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:12px;margin-bottom:8px}
-.dash-section-title{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:8px;font-weight:600}
+.dash-logo{width:24px;height:24px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-size:12px;font-weight:700;color:var(--primary)}
+.dash-header-left span{font-size:13px;font-weight:600;color:#fff}
+.dash-badge{background:rgba(255,255,255,.15);color:#fff;padding:3px 10px;border-radius:20px;font-size:9px;font-weight:600}
+.dash-body{padding:12px;background:#0d0d1a}
+.dash-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.dash-metric{background:#1a1a2e;border-radius:8px;padding:10px}
+.dash-metric-label{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.4);margin-bottom:3px}
+.dash-metric-value{font-size:16px;font-weight:700;color:#fff}
+.dash-metric-sub{font-size:9px;margin-top:2px;font-weight:500}
+.dash-metric-sub.green{color:var(--green)}
+.dash-metric-sub.muted{color:rgba(255,255,255,.4)}
+.dash-card{background:#1a1a2e;border-radius:8px;padding:10px;margin-bottom:8px}
+.dash-card-title{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.4);margin-bottom:8px;font-weight:600}
 .dash-bar-row{margin-bottom:6px}
 .dash-bar-row:last-child{margin-bottom:0}
 .dash-bar-label{display:flex;justify-content:space-between;font-size:10px;margin-bottom:3px}
-.dash-bar-label span:first-child{color:var(--muted)}
+.dash-bar-label span:first-child{color:rgba(255,255,255,.5)}
 .dash-bar-label span:last-child{color:#fff;font-weight:600}
 .dash-bar{height:5px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
-.dash-bar-fill{height:100%;border-radius:3px;background:var(--accent)}
+.dash-bar-fill{height:100%;border-radius:3px;background:var(--primary)}
 .dash-bar-fill.green{background:var(--green)}
-.dash-seuil-info{display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:10px}
-.dash-seuil-info .date{color:var(--muted)}
-.dash-seuil-info .above{color:var(--green);font-weight:600}
-
-/* COMING SOON */
-.coming-soon{text-align:center}
-.orange-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#92400e,var(--amber));color:#fff;padding:10px 24px;border-radius:50px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:32px;box-shadow:0 0 30px rgba(245,158,11,.15)}
-.h-timeline{display:flex;align-items:flex-start;justify-content:space-between;margin-top:40px;position:relative;padding:0 20px}
-.h-timeline::before{content:'';position:absolute;top:20px;left:40px;right:40px;height:2px;background:linear-gradient(to right,var(--amber),rgba(245,158,11,.2))}
-.h-timeline-item{flex:1;text-align:center;position:relative;padding-top:48px;min-width:0}
-.h-timeline-dot{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:18px;height:18px;border-radius:50%;background:var(--bg);border:2px solid var(--amber);z-index:1}
-.h-timeline-dot-inner{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:8px}
-.h-timeline-date{font-size:13px;font-weight:600;color:var(--amber);margin-bottom:6px}
-.h-timeline-label{font-size:13px;color:var(--muted);line-height:1.5;padding:0 4px}
-.coming-soon-note{margin-top:48px;max-width:500px;margin-left:auto;margin-right:auto}
-.coming-soon-note p{color:var(--muted);font-size:16px;line-height:1.8}
-.coming-soon-note p strong{color:var(--text)}
-
-@media(max-width:768px){
-  .h-timeline{flex-direction:column;align-items:stretch;gap:24px;padding:0}
-  .h-timeline::before{display:none}
-  .h-timeline-item{padding-top:0;text-align:left;padding-left:40px;position:relative}
-  .h-timeline-dot{top:2px;left:0;transform:none}
-}
-
-/* PROBLEM */
-.problem{background:var(--bg2);text-align:center}
-.problem-text{font-family:'Instrument Serif',serif;font-size:clamp(22px,3.5vw,32px);line-height:1.5;max-width:700px;margin:0 auto;color:var(--muted)}
-.problem-text strong{color:var(--text)}
-
-/* FOUNDER PRICE */
-.founder{position:relative;overflow:hidden}
-.founder::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(245,158,11,.06),transparent);pointer-events:none}
-.founder-card{position:relative;background:linear-gradient(135deg,rgba(245,158,11,.08),rgba(15,15,26,.6));border:2px solid var(--amber);border-radius:16px;padding:60px 40px;text-align:center;max-width:700px;margin:0 auto;box-shadow:0 0 60px rgba(245,158,11,.08)}
-.founder-card .badge-top{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#000;padding:8px 20px;border-radius:50px;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px}
-.founder-card h2{font-family:'Instrument Serif',serif;font-size:clamp(28px,4vw,42px);margin-bottom:8px}
-.founder-price-tag{font-size:clamp(48px,8vw,72px);font-weight:700;color:var(--amber);margin:16px 0}
-.founder-price-tag span{font-size:clamp(18px,2vw,24px);color:var(--muted);font-weight:400}
-.founder-card p{color:var(--muted);font-size:17px;line-height:1.8;max-width:500px;margin:0 auto 32px}
-.founder-card p strong{color:var(--text)}
-.future-price{color:var(--amber);font-size:14px;margin-top:16px;font-weight:500}
+.dash-seuil{display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:10px}
+.dash-seuil .left{color:rgba(255,255,255,.5)}
+.dash-seuil .right{color:var(--green);font-weight:600}
 
 /* ROADMAP */
-.roadmap{background:var(--bg2)}
-.timeline{position:relative;max-width:800px;margin:40px auto 0}
-.timeline::before{content:'';position:absolute;left:24px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--accent),var(--accent2),rgba(99,102,241,.2))}
-.timeline-item{position:relative;padding-left:64px;margin-bottom:48px}
-.timeline-item:last-child{margin-bottom:0}
-.timeline-dot{position:absolute;left:15px;top:4px;width:20px;height:20px;border-radius:50%;border:2px solid var(--accent);background:var(--bg2);display:flex;align-items:center;justify-content:center}
-.timeline-item.done .timeline-dot{background:var(--green);border-color:var(--green)}
-.timeline-dot-inner{width:8px;height:8px;border-radius:50%;background:var(--accent)}
-.timeline-item.done .timeline-dot-inner{background:#fff}
-.timeline-phase{font-size:13px;text-transform:uppercase;letter-spacing:2px;color:var(--accent2);font-weight:600;margin-bottom:4px}
-.timeline-item.done .timeline-phase{color:var(--green)}
-.timeline-title{font-family:'Instrument Serif',serif;font-size:22px;margin-bottom:4px}
-.timeline-date{font-size:14px;color:var(--muted)}
-.timeline-price{display:inline-block;background:rgba(99,102,241,.15);color:var(--accent);padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;margin-top:8px}
-.timeline-item.done .timeline-price{background:rgba(34,197,94,.15);color:var(--green)}
-.roadmap-note{text-align:center;margin-top:48px;font-size:18px;color:var(--accent);font-weight:500}
-.roadmap-note strong{color:var(--text)}
+.roadmap{background:var(--bg-subtle);padding:80px 0}
+.roadmap .section-sub{text-align:center;font-size:15px;color:var(--text-muted);margin-bottom:48px}
+.timeline{max-width:600px;margin:0 auto;position:relative;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--border)}
+.tl-item{position:relative;margin-bottom:36px;padding-left:24px}
+.tl-item:last-child{margin-bottom:0}
+.tl-dot{position:absolute;left:-32px;top:6px;width:16px;height:16px;border-radius:50%;border:2px solid var(--border);background:var(--bg-card)}
+.tl-dot.green{background:var(--green);border-color:var(--green)}
+.tl-dot.violet{background:var(--primary);border-color:var(--primary)}
+.tl-dot.violet-light{background:#a5b4fc;border-color:#a5b4fc}
+.tl-dot.gray{background:var(--border);border-color:var(--border)}
+.tl-date{font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px}
+.tl-text{font-size:14px;color:var(--text-muted);line-height:1.5}
+.tl-badge{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:50px;margin-top:6px}
+.tl-badge.green{background:#ECFDF5;color:var(--green)}
+.roadmap-note{text-align:center;font-size:14px;color:var(--text-muted);margin-top:48px}
 
-/* PREVIEW */
-.preview{text-align:center}
-.preview-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:40px}
-.preview-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:32px 24px;text-align:left;transition:all .3s}
-.preview-card:hover{border-color:var(--accent);transform:translateY(-4px)}
-.preview-icon{font-size:32px;margin-bottom:16px}
-.preview-card h3{font-family:'Instrument Serif',serif;font-size:20px;margin-bottom:8px}
-.preview-card p{color:var(--muted);font-size:15px;line-height:1.6}
-.preview-note{margin-top:32px;color:var(--accent);font-size:16px;font-weight:500}
+/* COMPARATIF */
+.comparatif{padding:80px 0}
+.table-wrap{overflow-x:auto;max-width:1000px;margin:0 auto;-webkit-overflow-scrolling:touch}
+.comp-table{width:100%;border-collapse:collapse;font-size:14px;min-width:700px}
+.comp-table th,.comp-table td{padding:12px 16px;text-align:center;border-bottom:1px solid var(--border)}
+.comp-table th{font-family:'Inter',sans-serif;font-weight:600;font-size:13px;color:var(--text)}
+.comp-table th:first-child,.comp-table td:first-child{text-align:left;font-weight:500}
+.comp-table th.pauco{background:var(--primary);color:#fff;border-radius:8px 8px 0 0}
+.comp-table td.pauco{background:#EEF2FF}
+.comp-table tr.prix td{font-weight:700}
+.comp-table .check{color:var(--green);font-size:16px}
+.comp-table .cross{color:#d1d5db;font-size:16px}
+.comp-note{text-align:center;font-size:12px;color:var(--text-muted);margin-top:16px;max-width:700px;margin-left:auto;margin-right:auto}
 
-/* SOCIAL PROOF */
-.proof{background:var(--bg2);text-align:center}
-.proof-number{font-family:'Instrument Serif',serif;font-size:clamp(48px,8vw,80px);color:var(--accent);margin-bottom:8px}
-.proof-label{color:var(--muted);font-size:18px;margin-bottom:40px}
-.cities{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:600px;margin:0 auto}
-.city-tag{background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.2);color:var(--accent);padding:8px 20px;border-radius:50px;font-size:14px;font-weight:500}
-
-/* COMPARE */
-.compare .container{max-width:1100px}
-.compare-wrapper{overflow-x:auto;margin-top:40px;border-radius:12px;border:1px solid var(--border)}
-.compare-table{width:100%;border-collapse:collapse;min-width:700px}
-.compare-table th,.compare-table td{padding:14px 16px;text-align:center;border-bottom:1px solid var(--border);font-size:14px;white-space:nowrap}
-.compare-table th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:500;background:var(--bg3);position:sticky;top:0}
-.compare-table th.col-pauco{background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(99,102,241,.1));color:var(--accent)}
-.compare-table td:first-child{text-align:left;color:var(--text);font-weight:500}
-.compare-table td.col-pauco{background:rgba(99,102,241,.06)}
-.compare-table tr.row-price td{font-weight:700;font-size:15px}
-.compare-table tr.row-price td.col-pauco{color:var(--accent)}
-.compare-table tr.row-price td.competitor-price{color:var(--muted)}
-.compare-table .check{color:var(--green);font-size:16px}
-.compare-table .cross{color:var(--red);font-size:16px;opacity:.5}
-.col-pauco-badge{display:inline-flex;align-items:center;gap:4px;background:var(--accent);color:#fff;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:1px;margin-top:4px}
-.compare-note{text-align:center;margin-top:20px;color:var(--muted);font-size:13px;font-style:italic}
-
-/* CTA FINAL */
-.final-cta{text-align:center;padding:120px 20px}
-.final-cta h2{font-family:'Instrument Serif',serif;font-size:clamp(28px,4vw,44px);margin-bottom:16px}
-.final-cta p{color:var(--muted);font-size:18px;margin-bottom:40px}
-
-/* FOOTER */
-footer{border-top:1px solid var(--border);padding:40px 20px;text-align:center}
-footer p{color:var(--muted);font-size:14px}
-footer a{color:var(--accent);text-decoration:none}
+/* FOUNDER CTA */
+.founder{background:var(--primary);padding:80px 24px;text-align:center}
+.founder h2{font-family:'Instrument Serif',serif;font-style:italic;font-size:42px;color:#fff;margin-bottom:32px;line-height:1.2}
+.founder-points{list-style:none;margin-bottom:36px}
+.founder-points li{font-size:16px;color:rgba(255,255,255,.85);margin-bottom:8px}
+.founder-note{font-size:13px;color:rgba(255,255,255,.6);margin-top:20px}
 
 /* MODAL */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:200;align-items:center;justify-content:center;padding:20px}
+.modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:200;align-items:center;justify-content:center}
 .modal-overlay.active{display:flex}
-.modal{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:48px 40px;max-width:500px;width:100%;position:relative;max-height:90vh;overflow-y:auto}
-.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--muted);font-size:24px;cursor:pointer;transition:color .2s}
-.modal-close:hover{color:var(--text)}
-.modal h2{font-family:'Instrument Serif',serif;font-size:28px;margin-bottom:8px}
-.modal .modal-sub{color:var(--muted);font-size:14px;margin-bottom:32px}
-.form-group{margin-bottom:20px}
-.form-group label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:1px}
-.form-group input,.form-group textarea{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 16px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;transition:border-color .2s}
-.form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--accent)}
-.form-group textarea{height:80px;resize:vertical}
-.form-submit{width:100%;background:var(--accent);color:#fff;padding:14px;border:none;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;transition:all .3s;font-family:'DM Sans',sans-serif}
-.form-submit:hover{opacity:.9;transform:translateY(-1px)}
-.form-success{display:none;text-align:center;padding:40px 20px}
-.form-success .checkmark{font-size:48px;margin-bottom:16px}
-.form-success p{color:var(--muted);font-size:16px}
+.modal{background:var(--bg-card);border-radius:16px;padding:32px;max-width:480px;width:90%;position:relative}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;color:var(--text-muted);cursor:pointer;line-height:1}
+.modal h3{font-family:'Instrument Serif',serif;font-size:24px;margin-bottom:4px}
+.modal-sub{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.modal form{display:flex;flex-direction:column;gap:12px}
+.modal input{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;outline:none;transition:border .2s;background:var(--bg)}
+.modal input:focus{border-color:var(--primary)}
+.modal .btn-submit{background:var(--primary);color:#fff;padding:14px;border:none;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;transition:background .15s}
+.modal .btn-submit:hover{background:var(--primary-dark)}
+.modal-legal{font-size:12px;color:var(--text-muted);text-align:center;margin-top:8px}
+
+/* FOOTER */
+footer{background:#0f0f0f;padding:40px 24px;text-align:center}
+footer p{color:rgba(255,255,255,.6);font-size:13px;margin-bottom:6px}
+
+/* ANIMATIONS */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
 
 /* RESPONSIVE */
 @media(max-width:768px){
-  nav{padding:16px 20px}
-  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(10,10,10,.95);backdrop-filter:blur(20px);flex-direction:column;padding:20px;gap:16px;border-bottom:1px solid var(--border)}
-  .nav-links.open{display:flex}
-  .menu-toggle{display:block}
-  section{padding:60px 16px}
-  .hero{padding-top:100px;min-height:auto;padding-bottom:60px}
-  .founder-card{padding:40px 24px}
-  .timeline::before{left:16px}
-  .timeline-item{padding-left:48px}
-  .timeline-dot{left:7px}
-  .compare-table{font-size:13px}
-  .compare-table th,.compare-table td{padding:12px 10px}
-  .modal{padding:32px 24px}
+  nav{padding:0 20px}
+  .nav-link.hide-mobile{display:none}
+  .hero{padding:80px 20px 60px}
+  .hero h1{font-size:36px}
+  .hero-sub{font-size:16px}
+  .hero-buttons{flex-direction:column;gap:12px}
+  .hero-buttons .btn{width:100%}
+  .cards-grid{grid-template-columns:1fr}
+  .juin-grid{grid-template-columns:1fr;gap:40px}
+  .comp-table{min-width:600px}
+  .founder h2{font-size:32px}
+  .section-title{font-size:28px}
 }
 </style>
 </head>
@@ -277,52 +208,51 @@ footer a{color:var(--accent);text-decoration:none}
 <script>window.scrollTo(0, 0);</script>
 
 <!-- NAV -->
-<nav id="nav">
-  <span class="nav-logo">Pauco</span>
-  <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
-  <div class="nav-links">
-    <a href="#disponible">Disponible</a>
-    <a href="#prix-fondateur">Prix Fondateur</a>
-    <a href="#roadmap">Roadmap</a>
-    <a href="#preuve">Résultats</a>
-    <button class="nav-cta" onclick="openModal()">Devenir client fondateur</button>
+<nav>
+  <a href="#" class="nav-logo">Pauco</a>
+  <div class="nav-right">
+    <a href="#" class="nav-link hide-mobile">Se connecter</a>
+    <a href="javascript:void(0)" class="btn btn-primary" onclick="openModal()">Devenir fondateur</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-content">
-    <div class="founder-badge">&#128274; Prix Fondateur — Places limitées</div>
-    <h1>Le logiciel tout-en-un des restaurateurs qui gagnent.</h1>
-    <p class="sub">E-réputation, rapports quotidiens, planning, prévisions IA météo. <strong>Tout inclus. 99€/mois à vie.</strong></p>
-    <button class="cta-primary" onclick="openModal()">Devenir client fondateur</button>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">&#128274; Prix fondateur — 99€/mois à vie</div>
+    <h1>Le logiciel tout-en-un<br>des restaurateurs qui gagnent.</h1>
+    <p class="hero-sub">E-réputation, rapports quotidiens, gestion, planning et prévisions IA. Tout inclus. Prix fondateur garanti à vie.</p>
+    <div class="hero-buttons">
+      <a href="javascript:void(0)" class="btn btn-primary" onclick="openModal()" style="padding:14px 28px">Devenir client fondateur</a>
+      <a href="#juin2026" class="btn btn-outline" style="padding:14px 28px">Voir la démo &rarr;</a>
+    </div>
+    <p class="hero-note">+40 restaurants en France &middot; Premier mois offert &middot; Sans engagement</p>
   </div>
 </section>
 
 <!-- DISPONIBLE MAINTENANT -->
-<section class="available-now" id="disponible">
-  <div class="container">
-    <div class="green-badge">&#9989; Disponible maintenant — Dès votre inscription</div>
+<section class="disponible" id="disponible">
+  <div class="container" style="text-align:center">
+    <div class="section-badge badge-green">&#9989; Disponible dès votre inscription</div>
     <h2 class="section-title">Ce que vous obtenez aujourd'hui</h2>
-
-    <div class="now-cards">
-      <div class="now-card">
-        <div class="now-card-icon">&#129302;</div>
+    <div class="cards-grid">
+      <div class="card fade-in">
+        <div class="card-icon">&#129302;</div>
         <h3>Réponses automatiques</h3>
-        <p>Chaque avis Google, TripAdvisor et Booking reçoit une réponse personnalisée dans les 24h. Automatiquement.</p>
+        <p>Chaque avis Google, TripAdvisor et Booking reçoit une réponse personnalisée dans les 24h.</p>
       </div>
-      <div class="now-card">
-        <div class="now-card-icon">&#128202;</div>
+      <div class="card fade-in">
+        <div class="card-icon">&#128202;</div>
         <h3>Dashboard client</h3>
-        <p>Suivez vos avis, vos réponses et votre progression en temps réel depuis votre espace personnel.</p>
+        <p>Suivez vos avis, votre progression de note et vos réponses en temps réel.</p>
       </div>
-      <div class="now-card">
-        <div class="now-card-icon">&#11088;</div>
+      <div class="card fade-in">
+        <div class="card-icon">&#11088;</div>
         <h3>Optimisation fiche Google</h3>
         <p>Optimisation complète de votre fiche Google incluse à l'inscription. Valeur 299€ — offerte.</p>
       </div>
-      <div class="now-card">
-        <div class="now-card-icon">&#128200;</div>
+      <div class="card fade-in">
+        <div class="card-icon">&#128200;</div>
         <h3>Rapport hebdomadaire</h3>
         <p>Chaque semaine un résumé de vos avis, votre évolution de note et les actions recommandées.</p>
       </div>
@@ -330,16 +260,20 @@ footer a{color:var(--accent);text-decoration:none}
   </div>
 </section>
 
-<!-- JUIN 2026 — RAPPORT + GESTION -->
-<div class="juin-banner">
-  <span class="juin-banner-text">&#128274; Juin 2026 — Inclus dans votre abonnement fondateur</span>
-</div>
-<section class="juin-section" id="juin2026">
-  <div class="container">
-    <div class="juin-label">Ce qui arrive dans 3 mois</div>
+<!-- JUIN 2026 DIVIDER -->
+<div class="juin-divider"><span>— Juin 2026 — Dans 3 mois —</span></div>
+
+<!-- JUIN 2026 -->
+<section class="juin" id="juin2026">
+  <div class="container" style="text-align:center">
+    <h2 class="section-title">Ce qui arrive dans votre abonnement</h2>
+    <p class="section-sub">Inclus sans surcoût — votre prix fondateur ne change pas.</p>
     <div class="juin-grid">
-      <div class="juin-col">
+
+      <!-- Rapport quotidien -->
+      <div class="juin-col fade-in">
         <div class="juin-col-label">Rapport quotidien</div>
+        <div class="juin-col-sub">Chaque matin à 7h sur votre téléphone</div>
         <div class="mockup-phone">
           <div class="mockup-header">
             <div class="mockup-logo">P</div>
@@ -352,7 +286,7 @@ footer a{color:var(--accent);text-decoration:none}
             <div class="msg-bubble">
               <div class="msg-section">
                 <div class="msg-section-title">Chiffre d'affaires — Lundi 16 mars</div>
-                <div class="msg-row"><span class="label">CA total</span><span class="value highlight">4 280 €</span></div>
+                <div class="msg-row"><span class="label">CA total</span><span class="value green">4 280 €</span></div>
                 <div class="msg-row"><span class="label">Restaurant</span><span class="value">3 120 €</span></div>
                 <div class="msg-row"><span class="label">Bar</span><span class="value">1 160 €</span></div>
               </div>
@@ -364,16 +298,16 @@ footer a{color:var(--accent);text-decoration:none}
               </div>
               <div class="msg-section">
                 <div class="msg-section-title">Réservations &amp; effectif</div>
-                <div class="msg-row"><span class="label">Résas midi</span><span class="value">52</span></div>
-                <div class="msg-row"><span class="label">Résas soir</span><span class="value">38</span></div>
-                <div class="msg-row"><span class="label">Effectif midi</span><span class="value">6 pers.</span></div>
-                <div class="msg-row"><span class="label">Effectif soir</span><span class="value">5 pers.</span></div>
+                <div class="msg-row"><span class="label">Résas midi</span><span class="value">12 tables</span></div>
+                <div class="msg-row"><span class="label">Résas soir</span><span class="value">18 tables</span></div>
+                <div class="msg-row"><span class="label">Effectif midi</span><span class="value">3 salle / 2 cuisine</span></div>
+                <div class="msg-row"><span class="label">Effectif soir</span><span class="value">4 salle / 3 cuisine</span></div>
               </div>
               <div class="msg-section">
                 <div class="msg-section-title">Vs semaine dernière</div>
-                <div class="msg-row"><span class="label">CA total</span><span class="value positive">+12,4% (+472 €)</span></div>
-                <div class="msg-row"><span class="label">Couverts</span><span class="value positive">+8 couverts</span></div>
-                <div class="msg-row"><span class="label">Ticket moyen</span><span class="value positive">+1,20 €</span></div>
+                <div class="msg-row"><span class="label">CA total</span><span class="value green">+12,4% (+472 €)</span></div>
+                <div class="msg-row"><span class="label">Couverts</span><span class="value green">+8 couverts</span></div>
+                <div class="msg-row"><span class="label">Ticket moyen</span><span class="value green">+1,20 €</span></div>
               </div>
               <div class="msg-meteo">
                 <div class="msg-meteo-title">Prévision demain — Mardi 17 mars</div>
@@ -386,41 +320,44 @@ footer a{color:var(--accent);text-decoration:none}
           </div>
         </div>
       </div>
-      <div class="juin-col">
+
+      <!-- Gestion intégrée -->
+      <div class="juin-col fade-in">
         <div class="juin-col-label">Gestion intégrée</div>
+        <div class="juin-col-sub">Pilotez votre rentabilité en temps réel</div>
         <div class="mockup-dash">
           <div class="dash-header">
             <div class="dash-header-left">
               <div class="dash-logo">P</div>
               <span>Pauco — Gestion</span>
             </div>
-            <div class="dash-badge">Mars 2027</div>
+            <div class="dash-badge">Mars 2026</div>
           </div>
           <div class="dash-body">
             <div class="dash-metrics">
               <div class="dash-metric">
                 <div class="dash-metric-label">CA Mars</div>
                 <div class="dash-metric-value">48 320 €</div>
-                <div class="dash-metric-change up">+6% (+2 730 €)</div>
+                <div class="dash-metric-sub green">+6% (+2 730 €)</div>
               </div>
               <div class="dash-metric">
                 <div class="dash-metric-label">Résultat net</div>
                 <div class="dash-metric-value">8 470 €</div>
-                <div class="dash-metric-change up">Marge 17,5%</div>
+                <div class="dash-metric-sub muted">Marge 17,5%</div>
               </div>
               <div class="dash-metric">
                 <div class="dash-metric-label">Ticket moyen</div>
                 <div class="dash-metric-value">34,50 €</div>
-                <div class="dash-metric-change up">+1,20 € vs fév.</div>
+                <div class="dash-metric-sub green">+1,20 € vs fév.</div>
               </div>
               <div class="dash-metric">
                 <div class="dash-metric-label">Couverts</div>
                 <div class="dash-metric-value">1 401</div>
-                <div class="dash-metric-change">Midi 612 / Soir 789</div>
+                <div class="dash-metric-sub muted">612 midi / 789 soir</div>
               </div>
             </div>
-            <div class="dash-section">
-              <div class="dash-section-title">Répartition des charges</div>
+            <div class="dash-card">
+              <div class="dash-card-title">Répartition des charges</div>
               <div class="dash-bar-row">
                 <div class="dash-bar-label"><span>Fournisseurs — 15 460 €</span><span>32%</span></div>
                 <div class="dash-bar"><div class="dash-bar-fill" style="width:32%"></div></div>
@@ -434,103 +371,19 @@ footer a{color:var(--accent);text-decoration:none}
                 <div class="dash-bar"><div class="dash-bar-fill" style="width:16%"></div></div>
               </div>
             </div>
-            <div class="dash-section">
-              <div class="dash-section-title">Seuil de rentabilité</div>
-              <div class="dash-bar-row">
-                <div class="dash-bar-label"><span>Progression</span><span>126%</span></div>
-                <div class="dash-bar"><div class="dash-bar-fill green" style="width:100%"></div></div>
-              </div>
-              <div class="dash-seuil-info">
-                <span class="date">Seuil : 38 200 € — Atteint le 12 mars</span>
-                <span class="above">+10 120 € au-dessus</span>
-              </div>
-            </div>
-            <div class="dash-chart">
-              <div class="dash-chart-title">CA 12 derniers mois</div>
-              <div class="dash-bars">
-                <div class="dash-col" style="height:52%"></div>
-                <div class="dash-col" style="height:48%"></div>
-                <div class="dash-col" style="height:55%"></div>
-                <div class="dash-col" style="height:60%"></div>
-                <div class="dash-col" style="height:58%"></div>
-                <div class="dash-col" style="height:72%"></div>
-                <div class="dash-col" style="height:85%"></div>
-                <div class="dash-col" style="height:78%"></div>
-                <div class="dash-col" style="height:65%"></div>
-                <div class="dash-col" style="height:70%"></div>
-                <div class="dash-col" style="height:76%"></div>
-                <div class="dash-col current" style="height:92%"></div>
-              </div>
-              <div class="dash-col-labels">
-                <span>Avr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Aoû</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Déc</span><span>Jan</span><span>Fév</span><span>Mar</span>
+            <div class="dash-card">
+              <div class="dash-card-title">Seuil de rentabilité</div>
+              <div class="dash-bar-label"><span>Seuil : 38 200 €</span><span>Atteint le 12 mars</span></div>
+              <div class="dash-bar"><div class="dash-bar-fill green" style="width:79%"></div></div>
+              <div class="dash-seuil">
+                <span class="left"></span>
+                <span class="right">+10 120 € au-dessus du seuil</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- BIENTOT DISPONIBLE -->
-<section class="coming-soon" id="bientot">
-  <div class="container">
-    <div class="orange-badge">&#128274; Inclus dans votre abonnement</div>
-    <h2 class="section-title">Bientôt disponible</h2>
-
-    <div class="h-timeline">
-      <div class="h-timeline-item">
-        <div class="h-timeline-dot"></div>
-        <div class="h-timeline-date">Juin 2026</div>
-        <div class="h-timeline-label">Rapports quotidiens + Module gestion complet</div>
-      </div>
-      <div class="h-timeline-item">
-        <div class="h-timeline-dot"></div>
-        <div class="h-timeline-date">Déc 2026</div>
-        <div class="h-timeline-label">Planning équipe + Fiches techniques</div>
-      </div>
-      <div class="h-timeline-item">
-        <div class="h-timeline-dot"></div>
-        <div class="h-timeline-date">Mai 2027</div>
-        <div class="h-timeline-label">Prévisions IA météo + Mercuriale</div>
-      </div>
-      <div class="h-timeline-item">
-        <div class="h-timeline-dot"></div>
-        <div class="h-timeline-date">Déc 2027</div>
-        <div class="h-timeline-label">Intégrations caisses</div>
-      </div>
-    </div>
-
-    <div class="coming-soon-note">
-      <p>Vous entrez aujourd'hui à <strong>99€/mois</strong>.<br>
-      Votre logiciel complet d'ici fin 2027. Toutes les fonctionnalités incluses.<br>
-      <strong>Votre prix ne changera jamais.</strong></p>
-    </div>
-  </div>
-</section>
-
-<!-- PROBLEME -->
-<section class="problem" id="probleme">
-  <div class="container">
-    <p class="problem-text">
-      Vos avis Google restent sans réponse. Vous pilotez votre restaurant à l'aveugle. Votre staff improvise les plannings.<br><br>
-      <strong>Ça coûte des clients, du temps et de l'argent.</strong>
-    </p>
-  </div>
-</section>
-
-<!-- FOUNDER PRICE -->
-<section class="founder" id="prix-fondateur">
-  <div class="container">
-    <div class="founder-card">
-      <div class="badge-top">&#128274; Prix Fondateur</div>
-      <h2>Bloquez votre prix. Pour toujours.</h2>
-      <div class="founder-price-tag">99€<span>/mois à vie</span></div>
-      <p>Nos futurs clients paieront <strong>299€/mois</strong>.<br>
-      Vous, toujours <strong>99€</strong> — logiciel complet fin 2027.<br>
-      Peu importe les fonctionnalités ajoutées.</p>
-      <button class="cta-primary" onclick="openModal()">Bloquer mon prix maintenant</button>
-      <p class="future-price">&#9888;&#65039; Le prix augmentera à chaque nouvelle phase</p>
     </div>
   </div>
 </section>
@@ -538,110 +391,50 @@ footer a{color:var(--accent);text-decoration:none}
 <!-- ROADMAP -->
 <section class="roadmap" id="roadmap">
   <div class="container">
-    <div class="section-label">Roadmap</div>
-    <h2 class="section-title">5 phases. Un seul prix pour vous.</h2>
-    <p class="section-sub">Chaque trimestre, Pauco devient plus puissant. Votre prix fondateur ne bouge jamais.</p>
-
+    <h2 class="section-title">Votre logiciel complet d'ici fin 2027</h2>
+    <p class="section-sub">Vous entrez aujourd'hui à 99€/mois. Ce prix ne change jamais.</p>
     <div class="timeline">
-      <div class="timeline-item done">
-        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
-        <div class="timeline-phase">Phase 1 &#10004;</div>
-        <div class="timeline-title">E-réputation</div>
-        <div class="timeline-date">Disponible maintenant</div>
-        <div class="timeline-price">Prix public : 99€/mois</div>
+      <div class="tl-item fade-in">
+        <div class="tl-dot green"></div>
+        <div class="tl-date">Maintenant — 99€/mois</div>
+        <div class="tl-text">E-réputation — Réponses automatiques aux avis</div>
+        <div class="tl-badge green">Disponible</div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
-        <div class="timeline-phase">Phase 2</div>
-        <div class="timeline-title">Rapports quotidiens, hebdo &amp; mensuel + Gestion intégrée (CA, dépenses, ratios, seuil de rentabilité)</div>
-        <div class="timeline-date">Juin 2026</div>
-        <div class="timeline-price">Prix public : 149€/mois</div>
+      <div class="tl-item fade-in">
+        <div class="tl-dot violet"></div>
+        <div class="tl-date">Juin 2026 — inclus</div>
+        <div class="tl-text">Rapport quotidien + Gestion intégrée (CA, dépenses, ratios)</div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
-        <div class="timeline-phase">Phase 3</div>
-        <div class="timeline-title">Planning + Fiches de poste + Fiches techniques</div>
-        <div class="timeline-date">Décembre 2026</div>
-        <div class="timeline-price">Prix public : 199€/mois</div>
+      <div class="tl-item fade-in">
+        <div class="tl-dot violet-light"></div>
+        <div class="tl-date">Décembre 2026 — inclus</div>
+        <div class="tl-text">Planning équipe + Fiches de poste + Fiches techniques</div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
-        <div class="timeline-phase">Phase 4</div>
-        <div class="timeline-title">Mercuriale + Inventaire + Prévisions IA météo</div>
-        <div class="timeline-date">Mai 2027</div>
-        <div class="timeline-price">Prix public : 249€/mois</div>
+      <div class="tl-item fade-in">
+        <div class="tl-dot gray"></div>
+        <div class="tl-date">Mai 2027 — inclus</div>
+        <div class="tl-text">Mercuriale + Inventaire + Prévisions IA météo</div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
-        <div class="timeline-phase">Phase 5</div>
-        <div class="timeline-title">Intégrations caisses</div>
-        <div class="timeline-date">Décembre 2027</div>
-        <div class="timeline-price">Prix public : 299€/mois</div>
+      <div class="tl-item fade-in">
+        <div class="tl-dot gray"></div>
+        <div class="tl-date">Décembre 2027 — inclus</div>
+        <div class="tl-text">Intégration caisses (Lightspeed, Zelty, L'Addition)</div>
       </div>
     </div>
-
-    <p class="roadmap-note">Votre logiciel complet d'ici fin 2027 — <strong>vous payez toujours 99€.</strong></p>
-  </div>
-</section>
-
-<!-- PREVIEW 6 MOIS -->
-<section class="preview" id="preview">
-  <div class="container">
-    <div class="section-label">Dans 6 mois</div>
-    <h2 class="section-title">Ce que vous recevrez chaque matin sur votre téléphone</h2>
-
-    <div class="preview-cards">
-      <div class="preview-card">
-        <div class="preview-icon">&#128202;</div>
-        <h3>CA de la veille</h3>
-        <p>Chiffre d'affaires, nombre de couverts, ticket moyen. Chaque matin, automatiquement.</p>
-      </div>
-      <div class="preview-card">
-        <div class="preview-icon">&#127780;&#65039;</div>
-        <h3>Prévision couverts demain</h3>
-        <p>L'IA croise vos données historiques avec la météo pour prédire votre affluence.</p>
-      </div>
-      <div class="preview-card">
-        <div class="preview-icon">&#128203;</div>
-        <h3>Planning équipe optimisé</h3>
-        <p>Vos plannings sont générés selon l'affluence prévue. Plus de sous-effectif ni de surcoût.</p>
-      </div>
-    </div>
-
-    <p class="preview-note">Personne ne propose ça à 99€/mois.</p>
-  </div>
-</section>
-
-<!-- PREUVE SOCIALE -->
-<section class="proof" id="preuve">
-  <div class="container">
-    <div class="proof-number">+40</div>
-    <p class="proof-label">restaurants en France nous font confiance</p>
-    <div class="cities">
-      <span class="city-tag">Paris</span>
-      <span class="city-tag">Bordeaux</span>
-      <span class="city-tag">Biarritz</span>
-      <span class="city-tag">Annecy</span>
-      <span class="city-tag">Île de Ré</span>
-      <span class="city-tag">Cassis</span>
-      <span class="city-tag">La Baule</span>
-      <span class="city-tag">Quimper</span>
-    </div>
+    <p class="roadmap-note">Nos futurs clients paieront 299€/mois. Vous, toujours 99€.</p>
   </div>
 </section>
 
 <!-- COMPARATIF -->
-<section class="compare" id="comparatif">
+<section class="comparatif" id="comparatif">
   <div class="container">
-    <div class="section-label">Comparatif</div>
-    <h2 class="section-title">Pourquoi Pauco est imbattable</h2>
-
-    <div class="compare-wrapper">
-      <table class="compare-table">
+    <h2 class="section-title">Pauco vs la concurrence</h2>
+    <div class="table-wrap fade-in">
+      <table class="comp-table">
         <thead>
           <tr>
             <th>Fonctionnalité</th>
-            <th class="col-pauco">Pauco<br><span class="col-pauco-badge">&#128274; FOUNDER</span></th>
+            <th class="pauco">Pauco &#128274;</th>
             <th>Lightspeed</th>
             <th>Zelty</th>
             <th>L'Addition</th>
@@ -649,212 +442,145 @@ footer a{color:var(--accent);text-decoration:none}
           </tr>
         </thead>
         <tbody>
-          <tr class="row-price">
+          <tr class="prix">
             <td>Prix</td>
-            <td class="col-pauco">99€/mois à vie</td>
-            <td class="competitor-price">200-400€/mois</td>
-            <td class="competitor-price">150-300€/mois</td>
-            <td class="competitor-price">100-250€/mois</td>
-            <td class="competitor-price">150€+/mois</td>
+            <td class="pauco">99€/mois à vie</td>
+            <td>200-400€</td>
+            <td>150-300€</td>
+            <td>100-250€</td>
+            <td>150€+</td>
           </tr>
           <tr>
             <td>E-réputation (avis Google)</td>
-            <td class="col-pauco"><span class="check">&#10004;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
+            <td class="pauco"><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
           </tr>
           <tr>
-            <td>Rapport quotidien automatique</td>
-            <td class="col-pauco"><span class="check">&#10004;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
+            <td>Rapport quotidien auto</td>
+            <td class="pauco"><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
           </tr>
           <tr>
-            <td>Module gestion (CA, ratios, rentabilité)</td>
-            <td class="col-pauco"><span class="check">&#10004;</span></td>
-            <td><span class="check">&#10004;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
+            <td>Module gestion (CA, ratios)</td>
+            <td class="pauco"><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
           </tr>
           <tr>
             <td>Planning équipe</td>
-            <td class="col-pauco"><span class="check">&#10004;</span></td>
-            <td><span class="check">&#10004;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
+            <td class="pauco"><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
           </tr>
           <tr>
-            <td>Fiches de poste</td>
-            <td class="col-pauco"><span class="check">&#10004;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-          </tr>
-          <tr>
-            <td>Fiches techniques / Food cost</td>
-            <td class="col-pauco"><span class="check">&#10004;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="check">&#10004;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-          </tr>
-          <tr>
-            <td>Mercuriale / Inventaire</td>
-            <td class="col-pauco"><span class="check">&#10004;</span></td>
-            <td><span class="check">&#10004;</span></td>
-            <td><span class="check">&#10004;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
+            <td>Fiches techniques</td>
+            <td class="pauco"><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
           </tr>
           <tr>
             <td>Prévisions IA météo</td>
-            <td class="col-pauco"><span class="check">&#10004;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
+            <td class="pauco"><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
           </tr>
           <tr>
             <td>Intégration caisses</td>
-            <td class="col-pauco"><span class="check">&#10004;</span></td>
-            <td><span class="check">&#10004;</span></td>
-            <td><span class="check">&#10004;</span></td>
-            <td><span class="check">&#10004;</span></td>
-            <td><span class="check">&#10004;</span></td>
+            <td class="pauco"><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
           </tr>
           <tr>
-            <td>Prix fondateur garanti à vie</td>
-            <td class="col-pauco"><span class="check">&#10004;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
-            <td><span class="cross">&#10008;</span></td>
+            <td>Prix fondateur à vie</td>
+            <td class="pauco"><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
+            <td><span class="cross">&#10005;</span></td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="compare-note">* Toutes les fonctionnalités déployées progressivement d'ici fin 2027 — incluses dans votre abonnement à 99€/mois</p>
+    <p class="comp-note">* Fonctionnalités Pauco déployées progressivement d'ici fin 2027 — incluses dans votre abonnement</p>
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section class="final-cta">
+<!-- FOUNDER CTA -->
+<section class="founder" id="prix-fondateur">
   <div class="container">
-    <h2>Prêt à bloquer votre prix fondateur ?</h2>
-    <p>Rejoignez les 40+ restaurateurs qui ont déjà sécurisé leur tarif à vie.</p>
-    <button class="cta-primary" onclick="openModal()">Devenir client fondateur — 99€/mois</button>
+    <h2>Entrez maintenant.<br>Prix garanti à vie.</h2>
+    <ul class="founder-points">
+      <li>&#128274; 99€/mois — jamais augmenté pour vous</li>
+      <li>&#128241; Logiciel complet d'ici fin 2027</li>
+      <li>&#9889; Premier mois offert — sans engagement</li>
+    </ul>
+    <a href="javascript:void(0)" class="btn btn-white" onclick="openModal()">Devenir client fondateur &rarr;</a>
+    <p class="founder-note">Déjà +40 restaurants en France &middot; Paul : +33 7 83 47 06 57</p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="container">
-    <p>&copy; 2026 Pauco &amp; Co — <a href="mailto:paul@paucoandco.com">paul@paucoandco.com</a></p>
-  </div>
+  <p>Pauco &middot; paul@paucoandco.com &middot; +33 7 83 47 06 57 &middot; paucoandco.com</p>
+  <p>&copy; 2026 Pauco — Tous droits réservés</p>
 </footer>
 
 <!-- MODAL CONTACT -->
 <div class="modal-overlay" id="modal">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">&times;</button>
-    <div id="modal-form-container">
-      <h2>Devenir client fondateur</h2>
-      <p class="modal-sub">Bloquez votre prix à 99€/mois à vie. On vous recontacte sous 24h.</p>
-      <form id="contact-form" onsubmit="submitForm(event)">
-        <div class="form-group">
-          <label>Nom</label>
-          <input type="text" name="name" required placeholder="Votre nom">
-        </div>
-        <div class="form-group">
-          <label>Restaurant</label>
-          <input type="text" name="restaurant" required placeholder="Nom du restaurant">
-        </div>
-        <div class="form-group">
-          <label>Ville</label>
-          <input type="text" name="city" required placeholder="Ville">
-        </div>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" name="email" required placeholder="email@restaurant.com">
-        </div>
-        <div class="form-group">
-          <label>Téléphone</label>
-          <input type="tel" name="phone" required placeholder="06 00 00 00 00">
-        </div>
-        <div class="form-group">
-          <label>Message</label>
-          <textarea name="message">Je veux bloquer mon prix fondateur à 99€/mois</textarea>
-        </div>
-        <button type="submit" class="form-submit">Envoyer ma demande</button>
-      </form>
-    </div>
-    <div class="form-success" id="form-success">
-      <div class="checkmark">&#10004;&#65039;</div>
-      <h2>Demande envoyée !</h2>
-      <p>On vous recontacte sous 24h pour bloquer votre prix fondateur.</p>
-    </div>
+    <h3>Bloquer mon prix fondateur</h3>
+    <p class="modal-sub">99€/mois à vie — je vous contacte sous 24h</p>
+    <form id="contactForm" onsubmit="submitForm(event)">
+      <input type="text" name="nom" placeholder="Nom et prénom" required>
+      <input type="text" name="restaurant" placeholder="Nom du restaurant" required>
+      <input type="text" name="ville" placeholder="Ville" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="telephone" placeholder="Téléphone" required>
+      <button type="submit" class="btn-submit">Envoyer ma demande</button>
+    </form>
+    <p class="modal-legal">En soumettant ce formulaire vous acceptez d'être contacté par Paul de Pauco.</p>
   </div>
 </div>
 
 <script>
-// Nav scroll
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50);
-});
-
 // Modal
-function openModal(){
-  document.getElementById('modal').classList.add('active');
-  document.body.style.overflow='hidden';
-}
-function closeModal(){
-  document.getElementById('modal').classList.remove('active');
-  document.body.style.overflow='';
-}
-document.getElementById('modal').addEventListener('click',(e)=>{
-  if(e.target===e.currentTarget)closeModal();
-});
+function openModal(){document.getElementById('modal').classList.add('active')}
+function closeModal(){document.getElementById('modal').classList.remove('active')}
+document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal()});
 
-// Form submission
+// Form submit → mailto
 function submitForm(e){
   e.preventDefault();
-  const form=e.target;
-  const data=new FormData(form);
-  const body=Array.from(data.entries()).map(([k,v])=>`${k}: ${v}`).join('\n');
-
-  // mailto fallback
-  const subject=encodeURIComponent('Nouveau client fondateur — '+data.get('restaurant'));
-  const mailBody=encodeURIComponent(body);
-  window.location.href=`mailto:paul@paucoandco.com?subject=${subject}&body=${mailBody}`;
-
-  // Show success
-  document.getElementById('modal-form-container').style.display='none';
-  document.getElementById('form-success').style.display='block';
+  var f=e.target;
+  var body='Nom : '+f.nom.value+'\nRestaurant : '+f.restaurant.value+'\nVille : '+f.ville.value+'\nEmail : '+f.email.value+'\nTéléphone : '+f.telephone.value;
+  window.location.href='mailto:paul@paucoandco.com?subject=Demande fondateur — '+encodeURIComponent(f.restaurant.value)+'&body='+encodeURIComponent(body);
+  closeModal();
 }
 
-// Animate on scroll
-const observer=new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.style.opacity='1';
-      entry.target.style.transform='translateY(0)';
-    }
+// Fade-in on scroll
+var observer=new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
   });
 },{threshold:0.1});
-
-document.querySelectorAll('.timeline-item, .preview-card, .founder-card, .now-card, .h-timeline-item, .mockup-phone, .mockup-dash, .juin-col').forEach(el=>{
-  el.style.opacity='0';
-  el.style.transform='translateY(30px)';
-  el.style.transition='all .6s ease';
-  observer.observe(el);
-});
+document.querySelectorAll('.fade-in').forEach(function(el){observer.observe(el)});
 </script>
 </body>
 </html>
