@@ -98,6 +98,48 @@ section{padding:100px 20px}
 .rapport-feat h4{font-size:14px;font-weight:600;margin-bottom:4px}
 .rapport-feat p{font-size:13px;color:var(--muted);line-height:1.5}
 
+/* GESTION MOCKUP */
+.gestion{text-align:center;background:var(--bg2)}
+.gestion .section-sub{margin:0 auto 48px;max-width:560px}
+.mockup-dash{max-width:480px;margin:0 auto;background:#0b1520;border-radius:20px;overflow:hidden;box-shadow:0 20px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08)}
+.dash-header{background:var(--accent);padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.dash-header-left{display:flex;align-items:center;gap:10px}
+.dash-logo{width:28px;height:28px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-size:14px;font-weight:700;color:var(--accent)}
+.dash-header-left span{font-size:14px;font-weight:600;color:#fff}
+.dash-badge{background:rgba(255,255,255,.2);color:#fff;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600}
+.dash-body{padding:16px}
+.dash-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.dash-metric{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px 12px;text-align:left}
+.dash-metric-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:4px}
+.dash-metric-value{font-size:20px;font-weight:700;color:#fff}
+.dash-metric-change{font-size:11px;margin-top:2px;font-weight:500}
+.dash-metric-change.up{color:var(--green)}
+.dash-metric-change.down{color:var(--red)}
+.dash-section{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px;margin-bottom:10px}
+.dash-section-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:10px;font-weight:600}
+.dash-bar-row{margin-bottom:8px}
+.dash-bar-row:last-child{margin-bottom:0}
+.dash-bar-label{display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px}
+.dash-bar-label span:first-child{color:var(--muted)}
+.dash-bar-label span:last-child{color:#fff;font-weight:600}
+.dash-bar{height:6px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
+.dash-bar-fill{height:100%;border-radius:3px;background:var(--accent)}
+.dash-bar-fill.green{background:var(--green)}
+.dash-seuil-info{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:11px}
+.dash-seuil-info .date{color:var(--muted)}
+.dash-seuil-info .above{color:var(--green);font-weight:600}
+.dash-chart{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px}
+.dash-chart-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:12px;font-weight:600}
+.dash-bars{display:flex;align-items:flex-end;gap:4px;height:80px}
+.dash-col{flex:1;border-radius:3px 3px 0 0;background:var(--accent);min-width:0;transition:all .3s}
+.dash-col.current{background:var(--green)}
+.dash-col-labels{display:flex;gap:4px;margin-top:4px}
+.dash-col-labels span{flex:1;font-size:8px;color:rgba(255,255,255,.3);text-align:center}
+.gestion-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:48px;max-width:760px;margin-left:auto;margin-right:auto}
+.gestion-feat{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:left}
+.gestion-feat h4{font-size:14px;font-weight:600;margin-bottom:4px}
+.gestion-feat p{font-size:13px;color:var(--muted);line-height:1.5}
+
 /* COMING SOON */
 .coming-soon{text-align:center}
 .orange-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#92400e,var(--amber));color:#fff;padding:10px 24px;border-radius:50px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:32px;box-shadow:0 0 30px rgba(245,158,11,.15)}
@@ -362,6 +404,115 @@ footer a{color:var(--accent);text-decoration:none}
       </div>
       <div class="rapport-feat">
         <h4>Disponible en Juin 2026</h4>
+        <p>Inclus dans votre abonnement fondateur à 99€/mois.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APERCU GESTION INTEGREE -->
+<section class="gestion" id="gestion">
+  <div class="container">
+    <div class="section-label">Gestion</div>
+    <h2 class="section-title">Pilotez votre restaurant comme un chef d'entreprise</h2>
+    <p class="section-sub">Disponible en Juin 2026 — inclus dans votre abonnement fondateur.</p>
+
+    <div class="mockup-dash">
+      <div class="dash-header">
+        <div class="dash-header-left">
+          <div class="dash-logo">P</div>
+          <span>Pauco — Gestion</span>
+        </div>
+        <div class="dash-badge">Mars 2027</div>
+      </div>
+      <div class="dash-body">
+
+        <div class="dash-metrics">
+          <div class="dash-metric">
+            <div class="dash-metric-label">CA Mars</div>
+            <div class="dash-metric-value">87 420 €</div>
+            <div class="dash-metric-change up">+14,2% vs fév.</div>
+          </div>
+          <div class="dash-metric">
+            <div class="dash-metric-label">Résultat net</div>
+            <div class="dash-metric-value">12 830 €</div>
+            <div class="dash-metric-change up">+8,6% vs fév.</div>
+          </div>
+          <div class="dash-metric">
+            <div class="dash-metric-label">Ticket moyen</div>
+            <div class="dash-metric-value">38,90 €</div>
+            <div class="dash-metric-change up">+1,20 €</div>
+          </div>
+          <div class="dash-metric">
+            <div class="dash-metric-label">Couverts</div>
+            <div class="dash-metric-value">2 247</div>
+            <div class="dash-metric-change">Midi 1 380 / Soir 867</div>
+          </div>
+        </div>
+
+        <div class="dash-section">
+          <div class="dash-section-title">Répartition des charges</div>
+          <div class="dash-bar-row">
+            <div class="dash-bar-label"><span>Fournisseurs</span><span>32%</span></div>
+            <div class="dash-bar"><div class="dash-bar-fill" style="width:32%"></div></div>
+          </div>
+          <div class="dash-bar-row">
+            <div class="dash-bar-label"><span>Personnel</span><span>34%</span></div>
+            <div class="dash-bar"><div class="dash-bar-fill" style="width:34%"></div></div>
+          </div>
+          <div class="dash-bar-row">
+            <div class="dash-bar-label"><span>Charges fixes</span><span>16,5%</span></div>
+            <div class="dash-bar"><div class="dash-bar-fill" style="width:16.5%"></div></div>
+          </div>
+        </div>
+
+        <div class="dash-section">
+          <div class="dash-section-title">Seuil de rentabilité</div>
+          <div class="dash-bar-row">
+            <div class="dash-bar-label"><span>Progression</span><span>113%</span></div>
+            <div class="dash-bar"><div class="dash-bar-fill green" style="width:100%"></div></div>
+          </div>
+          <div class="dash-seuil-info">
+            <span class="date">Atteint le 12 mars</span>
+            <span class="above">+10 120 € au-dessus</span>
+          </div>
+        </div>
+
+        <div class="dash-chart">
+          <div class="dash-chart-title">CA 12 derniers mois</div>
+          <div class="dash-bars">
+            <div class="dash-col" style="height:52%"></div>
+            <div class="dash-col" style="height:48%"></div>
+            <div class="dash-col" style="height:55%"></div>
+            <div class="dash-col" style="height:60%"></div>
+            <div class="dash-col" style="height:58%"></div>
+            <div class="dash-col" style="height:72%"></div>
+            <div class="dash-col" style="height:85%"></div>
+            <div class="dash-col" style="height:78%"></div>
+            <div class="dash-col" style="height:65%"></div>
+            <div class="dash-col" style="height:70%"></div>
+            <div class="dash-col" style="height:76%"></div>
+            <div class="dash-col current" style="height:92%"></div>
+          </div>
+          <div class="dash-col-labels">
+            <span>Avr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Aoû</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Déc</span><span>Jan</span><span>Fév</span><span>Mar</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="gestion-features">
+      <div class="gestion-feat">
+        <h4>Saisie en 2 minutes</h4>
+        <p>Entrez votre CA du jour, le reste est calculé automatiquement.</p>
+      </div>
+      <div class="gestion-feat">
+        <h4>Ratios en temps réel</h4>
+        <p>Coût matière, personnel, marge — tout s'actualise instantanément.</p>
+      </div>
+      <div class="gestion-feat">
+        <h4>Disponible Juin 2026</h4>
         <p>Inclus dans votre abonnement fondateur à 99€/mois.</p>
       </div>
     </div>
@@ -745,7 +896,7 @@ const observer=new IntersectionObserver((entries)=>{
   });
 },{threshold:0.1});
 
-document.querySelectorAll('.timeline-item, .preview-card, .founder-card, .now-card, .h-timeline-item, .mockup-phone, .rapport-feat').forEach(el=>{
+document.querySelectorAll('.timeline-item, .preview-card, .founder-card, .now-card, .h-timeline-item, .mockup-phone, .rapport-feat, .mockup-dash, .gestion-feat').forEach(el=>{
   el.style.opacity='0';
   el.style.transform='translateY(30px)';
   el.style.transition='all .6s ease';
