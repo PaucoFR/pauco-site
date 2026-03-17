@@ -66,6 +66,38 @@ section{padding:100px 20px}
 .now-card h3{font-family:'Instrument Serif',serif;font-size:20px;margin-bottom:8px}
 .now-card p{color:var(--muted);font-size:14px;line-height:1.7}
 
+/* RAPPORT MOCKUP */
+.rapport{text-align:center}
+.rapport .section-sub{margin:0 auto 48px;max-width:500px}
+.mockup-phone{max-width:380px;margin:0 auto;background:#0b1520;border-radius:24px;overflow:hidden;box-shadow:0 20px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08)}
+.mockup-header{background:var(--accent);padding:16px 20px;display:flex;align-items:center;gap:12px}
+.mockup-logo{width:32px;height:32px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-size:16px;font-weight:700;color:var(--accent)}
+.mockup-header-text{text-align:left}
+.mockup-header-text .name{font-size:15px;font-weight:600;color:#fff}
+.mockup-header-text .desc{font-size:11px;color:rgba(255,255,255,.7)}
+.mockup-body{padding:16px;text-align:left}
+.msg-bubble{background:#1a2332;border-radius:0 12px 12px 12px;padding:16px;margin-bottom:8px;position:relative}
+.msg-section{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.06)}
+.msg-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.msg-section-title{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:8px;font-weight:600}
+.msg-row{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,255,255,.85);margin-bottom:4px}
+.msg-row:last-child{margin-bottom:0}
+.msg-row .label{color:var(--muted);font-size:12px}
+.msg-row .value{font-weight:600;font-variant-numeric:tabular-nums}
+.msg-row .value.positive{color:var(--green)}
+.msg-row .value.negative{color:var(--red)}
+.msg-row .value.highlight{color:#fff;font-size:15px}
+.msg-meteo{background:rgba(99,102,241,.12);border-radius:8px;padding:12px;margin-top:4px}
+.msg-meteo-title{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#a5b4fc;margin-bottom:8px;font-weight:600}
+.msg-meteo .msg-row .label{color:#a5b4fc}
+.msg-meteo .msg-row .value{color:#a5b4fc;font-weight:600}
+.msg-time{text-align:right;font-size:11px;color:rgba(255,255,255,.35);margin-top:6px}
+.msg-time .read{color:#53bdeb}
+.rapport-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:48px;max-width:760px;margin-left:auto;margin-right:auto}
+.rapport-feat{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:left}
+.rapport-feat h4{font-size:14px;font-weight:600;margin-bottom:4px}
+.rapport-feat p{font-size:13px;color:var(--muted);line-height:1.5}
+
 /* COMING SOON */
 .coming-soon{text-align:center}
 .orange-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#92400e,var(--amber));color:#fff;padding:10px 24px;border-radius:50px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:32px;box-shadow:0 0 30px rgba(245,158,11,.15)}
@@ -255,6 +287,82 @@ footer a{color:var(--accent);text-decoration:none}
         <div class="now-card-icon">&#128200;</div>
         <h3>Rapport hebdomadaire</h3>
         <p>Chaque semaine un résumé de vos avis, votre évolution de note et les actions recommandées.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APERCU RAPPORT QUOTIDIEN -->
+<section class="rapport" id="rapport">
+  <div class="container">
+    <div class="section-label">Aperçu</div>
+    <h2 class="section-title">Chaque matin à 7h sur votre téléphone</h2>
+    <p class="section-sub">Votre restaurant résumé en un message. Sans rien faire.</p>
+
+    <div class="mockup-phone">
+      <div class="mockup-header">
+        <div class="mockup-logo">P</div>
+        <div class="mockup-header-text">
+          <div class="name">Pauco</div>
+          <div class="desc">Rapport quotidien automatique</div>
+        </div>
+      </div>
+      <div class="mockup-body">
+        <div class="msg-bubble">
+
+          <div class="msg-section">
+            <div class="msg-section-title">Chiffre d'affaires — Lundi 16 mars</div>
+            <div class="msg-row"><span class="label">CA total</span><span class="value highlight">4 280 €</span></div>
+            <div class="msg-row"><span class="label">Restaurant</span><span class="value">3 120 €</span></div>
+            <div class="msg-row"><span class="label">Bar</span><span class="value">1 160 €</span></div>
+          </div>
+
+          <div class="msg-section">
+            <div class="msg-section-title">Couverts &amp; ticket moyen</div>
+            <div class="msg-row"><span class="label">Couverts midi</span><span class="value">68</span></div>
+            <div class="msg-row"><span class="label">Couverts soir</span><span class="value">42</span></div>
+            <div class="msg-row"><span class="label">Ticket moyen</span><span class="value highlight">38,90 €</span></div>
+          </div>
+
+          <div class="msg-section">
+            <div class="msg-section-title">Réservations &amp; effectif</div>
+            <div class="msg-row"><span class="label">Résas midi</span><span class="value">52</span></div>
+            <div class="msg-row"><span class="label">Résas soir</span><span class="value">38</span></div>
+            <div class="msg-row"><span class="label">Effectif midi</span><span class="value">6 pers.</span></div>
+            <div class="msg-row"><span class="label">Effectif soir</span><span class="value">5 pers.</span></div>
+          </div>
+
+          <div class="msg-section">
+            <div class="msg-section-title">Vs semaine dernière</div>
+            <div class="msg-row"><span class="label">CA total</span><span class="value positive">+12,4% (+472 €)</span></div>
+            <div class="msg-row"><span class="label">Couverts</span><span class="value positive">+8 couverts</span></div>
+            <div class="msg-row"><span class="label">Ticket moyen</span><span class="value positive">+1,20 €</span></div>
+          </div>
+
+          <div class="msg-meteo">
+            <div class="msg-meteo-title">Prévision demain — Mardi 17 mars</div>
+            <div class="msg-row"><span class="label">Météo</span><span class="value">&#9925; 14°C — Nuageux</span></div>
+            <div class="msg-row"><span class="label">Couverts estimés</span><span class="value">105 couverts</span></div>
+            <div class="msg-row"><span class="label">Recommandation</span><span class="value">Effectif normal</span></div>
+          </div>
+
+          <div class="msg-time">07:00 <span class="read">&#10003;&#10003;</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rapport-features">
+      <div class="rapport-feat">
+        <h4>Zéro saisie manuelle</h4>
+        <p>Les données sont importées automatiquement depuis votre caisse.</p>
+      </div>
+      <div class="rapport-feat">
+        <h4>WhatsApp ou Email</h4>
+        <p>Vous choisissez comment recevoir votre rapport chaque matin.</p>
+      </div>
+      <div class="rapport-feat">
+        <h4>Disponible en Juin 2026</h4>
+        <p>Inclus dans votre abonnement fondateur à 99€/mois.</p>
       </div>
     </div>
   </div>
@@ -637,7 +745,7 @@ const observer=new IntersectionObserver((entries)=>{
   });
 },{threshold:0.1});
 
-document.querySelectorAll('.timeline-item, .preview-card, .founder-card, .now-card, .h-timeline-item').forEach(el=>{
+document.querySelectorAll('.timeline-item, .preview-card, .founder-card, .now-card, .h-timeline-item, .mockup-phone, .rapport-feat').forEach(el=>{
   el.style.opacity='0';
   el.style.transform='translateY(30px)';
   el.style.transition='all .6s ease';
