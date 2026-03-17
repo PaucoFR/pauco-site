@@ -66,79 +66,83 @@ section{padding:100px 20px}
 .now-card h3{font-family:'Instrument Serif',serif;font-size:20px;margin-bottom:8px}
 .now-card p{color:var(--muted);font-size:14px;line-height:1.7}
 
-/* RAPPORT MOCKUP */
-.rapport{text-align:center}
-.rapport .section-sub{margin:0 auto 48px;max-width:500px}
-.mockup-phone{max-width:380px;margin:0 auto;background:#0b1520;border-radius:24px;overflow:hidden;box-shadow:0 20px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08)}
-.mockup-header{background:var(--accent);padding:16px 20px;display:flex;align-items:center;gap:12px}
-.mockup-logo{width:32px;height:32px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-size:16px;font-weight:700;color:var(--accent)}
+/* JUIN 2026 SECTION */
+.juin-banner{background:var(--amber);text-align:center;padding:28px 20px}
+.juin-banner-badge{font-size:14px;font-weight:700;color:#1a1a2e;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.juin-banner-sub{font-size:14px;color:rgba(26,26,46,.7);font-weight:500}
+.juin-section{text-align:center;padding-bottom:80px}
+.juin-section .section-sub{margin:0 auto 48px;max-width:560px;text-align:center}
+.juin-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px;margin:0 auto;align-items:start}
+.juin-col{text-align:center}
+.juin-col-label{font-size:13px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px}
+.juin-col-sub{font-size:13px;color:var(--muted);margin-bottom:20px}
+@media(max-width:768px){
+  .juin-grid{grid-template-columns:1fr;gap:40px}
+}
+
+/* MOCKUP PHONE (rapport) */
+.mockup-phone{max-width:100%;margin:0 auto;background:#0b1520;border-radius:20px;overflow:hidden;box-shadow:0 20px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08)}
+.mockup-header{background:var(--accent);padding:14px 16px;display:flex;align-items:center;gap:10px}
+.mockup-logo{width:28px;height:28px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-size:14px;font-weight:700;color:var(--accent)}
 .mockup-header-text{text-align:left}
-.mockup-header-text .name{font-size:15px;font-weight:600;color:#fff}
-.mockup-header-text .desc{font-size:11px;color:rgba(255,255,255,.7)}
-.mockup-body{padding:16px;text-align:left}
-.msg-bubble{background:#1a2332;border-radius:0 12px 12px 12px;padding:16px;margin-bottom:8px;position:relative}
-.msg-section{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.06)}
+.mockup-header-text .name{font-size:14px;font-weight:600;color:#fff}
+.mockup-header-text .desc{font-size:10px;color:rgba(255,255,255,.7)}
+.mockup-body{padding:12px;text-align:left}
+.msg-bubble{background:#1a2332;border-radius:0 12px 12px 12px;padding:14px;position:relative}
+.msg-section{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.06)}
 .msg-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.msg-section-title{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:8px;font-weight:600}
-.msg-row{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,255,255,.85);margin-bottom:4px}
+.msg-section-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:6px;font-weight:600}
+.msg-row{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.85);margin-bottom:3px}
 .msg-row:last-child{margin-bottom:0}
-.msg-row .label{color:var(--muted);font-size:12px}
+.msg-row .label{color:var(--muted);font-size:11px}
 .msg-row .value{font-weight:600;font-variant-numeric:tabular-nums}
 .msg-row .value.positive{color:var(--green)}
 .msg-row .value.negative{color:var(--red)}
-.msg-row .value.highlight{color:#fff;font-size:15px}
-.msg-meteo{background:rgba(99,102,241,.12);border-radius:8px;padding:12px;margin-top:4px}
-.msg-meteo-title{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#a5b4fc;margin-bottom:8px;font-weight:600}
+.msg-row .value.highlight{color:#fff;font-size:13px}
+.msg-meteo{background:rgba(99,102,241,.12);border-radius:8px;padding:10px;margin-top:4px}
+.msg-meteo-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#a5b4fc;margin-bottom:6px;font-weight:600}
 .msg-meteo .msg-row .label{color:#a5b4fc}
 .msg-meteo .msg-row .value{color:#a5b4fc;font-weight:600}
-.msg-time{text-align:right;font-size:11px;color:rgba(255,255,255,.35);margin-top:6px}
+.msg-time{text-align:right;font-size:10px;color:rgba(255,255,255,.35);margin-top:6px}
 .msg-time .read{color:#53bdeb}
-.rapport-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:48px;max-width:760px;margin-left:auto;margin-right:auto}
-.rapport-feat{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:left}
-.rapport-feat h4{font-size:14px;font-weight:600;margin-bottom:4px}
-.rapport-feat p{font-size:13px;color:var(--muted);line-height:1.5}
 
-/* GESTION MOCKUP */
-.gestion{text-align:center;background:var(--bg2)}
-.gestion .section-sub{margin:0 auto 48px;max-width:560px}
-.mockup-dash{max-width:480px;margin:0 auto;background:#0b1520;border-radius:20px;overflow:hidden;box-shadow:0 20px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08)}
-.dash-header{background:var(--accent);padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-.dash-header-left{display:flex;align-items:center;gap:10px}
+/* MOCKUP DASH (gestion) */
+.mockup-dash{max-width:100%;margin:0 auto;background:#0b1520;border-radius:20px;overflow:hidden;box-shadow:0 20px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08)}
+.dash-header{background:var(--accent);padding:14px 16px;display:flex;align-items:center;justify-content:space-between}
+.dash-header-left{display:flex;align-items:center;gap:8px}
 .dash-logo{width:28px;height:28px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-size:14px;font-weight:700;color:var(--accent)}
 .dash-header-left span{font-size:14px;font-weight:600;color:#fff}
 .dash-badge{background:rgba(255,255,255,.2);color:#fff;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600}
-.dash-body{padding:16px}
-.dash-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
-.dash-metric{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px 12px;text-align:left}
-.dash-metric-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:4px}
-.dash-metric-value{font-size:20px;font-weight:700;color:#fff}
-.dash-metric-change{font-size:11px;margin-top:2px;font-weight:500}
+.dash-body{padding:12px}
+.dash-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.dash-metric{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:10px;text-align:left}
+.dash-metric-label{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:3px}
+.dash-metric-value{font-size:17px;font-weight:700;color:#fff}
+.dash-metric-change{font-size:10px;margin-top:2px;font-weight:500}
 .dash-metric-change.up{color:var(--green)}
 .dash-metric-change.down{color:var(--red)}
-.dash-section{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px;margin-bottom:10px}
-.dash-section-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:10px;font-weight:600}
-.dash-bar-row{margin-bottom:8px}
+.dash-section{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:12px;margin-bottom:8px}
+.dash-section-title{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:8px;font-weight:600}
+.dash-bar-row{margin-bottom:6px}
 .dash-bar-row:last-child{margin-bottom:0}
-.dash-bar-label{display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px}
+.dash-bar-label{display:flex;justify-content:space-between;font-size:10px;margin-bottom:3px}
 .dash-bar-label span:first-child{color:var(--muted)}
 .dash-bar-label span:last-child{color:#fff;font-weight:600}
-.dash-bar{height:6px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
+.dash-bar{height:5px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
 .dash-bar-fill{height:100%;border-radius:3px;background:var(--accent)}
 .dash-bar-fill.green{background:var(--green)}
-.dash-seuil-info{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:11px}
+.dash-seuil-info{display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:10px}
 .dash-seuil-info .date{color:var(--muted)}
 .dash-seuil-info .above{color:var(--green);font-weight:600}
-.dash-chart{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:14px}
-.dash-chart-title{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:12px;font-weight:600}
-.dash-bars{display:flex;align-items:flex-end;gap:4px;height:80px}
-.dash-col{flex:1;border-radius:3px 3px 0 0;background:var(--accent);min-width:0;transition:all .3s}
-.dash-col.current{background:var(--green)}
-.dash-col-labels{display:flex;gap:4px;margin-top:4px}
-.dash-col-labels span{flex:1;font-size:8px;color:rgba(255,255,255,.3);text-align:center}
-.gestion-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:48px;max-width:760px;margin-left:auto;margin-right:auto}
-.gestion-feat{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:left}
-.gestion-feat h4{font-size:14px;font-weight:600;margin-bottom:4px}
-.gestion-feat p{font-size:13px;color:var(--muted);line-height:1.5}
+
+/* JUIN FEATURES */
+.juin-features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;max-width:960px;margin-left:auto;margin-right:auto}
+.juin-feat{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:left}
+.juin-feat h4{font-size:14px;font-weight:600;margin-bottom:4px}
+.juin-feat p{font-size:13px;color:var(--muted);line-height:1.5}
+@media(max-width:768px){
+  .juin-features{grid-template-columns:1fr}
+}
 
 /* COMING SOON */
 .coming-soon{text-align:center}
@@ -334,186 +338,169 @@ footer a{color:var(--accent);text-decoration:none}
   </div>
 </section>
 
-<!-- APERCU RAPPORT QUOTIDIEN -->
-<section class="rapport" id="rapport">
+<!-- JUIN 2026 — RAPPORT + GESTION -->
+<div class="juin-banner">
+  <div class="juin-banner-badge">Juin 2026</div>
+  <div class="juin-banner-sub">Rapport quotidien + Gestion intégrée — inclus dans votre abonnement fondateur</div>
+</div>
+<section class="juin-section" id="juin2026">
   <div class="container">
     <div class="section-label">Aperçu</div>
-    <h2 class="section-title">Chaque matin à 7h sur votre téléphone</h2>
-    <p class="section-sub">Votre restaurant résumé en un message. Sans rien faire.</p>
+    <h2 class="section-title">Deux outils puissants, un seul abonnement</h2>
+    <p class="section-sub">Chaque matin votre rapport sur WhatsApp. Chaque mois votre gestion complète sur dashboard.</p>
 
-    <div class="mockup-phone">
-      <div class="mockup-header">
-        <div class="mockup-logo">P</div>
-        <div class="mockup-header-text">
-          <div class="name">Pauco</div>
-          <div class="desc">Rapport quotidien automatique</div>
+    <div class="juin-grid">
+
+      <!-- Colonne gauche — Rapport quotidien -->
+      <div class="juin-col">
+        <div class="juin-col-label">Rapport quotidien</div>
+        <div class="juin-col-sub">Chaque matin à 7h sur WhatsApp</div>
+        <div class="mockup-phone">
+          <div class="mockup-header">
+            <div class="mockup-logo">P</div>
+            <div class="mockup-header-text">
+              <div class="name">Pauco</div>
+              <div class="desc">Rapport quotidien automatique</div>
+            </div>
+          </div>
+          <div class="mockup-body">
+            <div class="msg-bubble">
+              <div class="msg-section">
+                <div class="msg-section-title">Chiffre d'affaires — Lundi 16 mars</div>
+                <div class="msg-row"><span class="label">CA total</span><span class="value highlight">4 280 €</span></div>
+                <div class="msg-row"><span class="label">Restaurant</span><span class="value">3 120 €</span></div>
+                <div class="msg-row"><span class="label">Bar</span><span class="value">1 160 €</span></div>
+              </div>
+              <div class="msg-section">
+                <div class="msg-section-title">Couverts &amp; ticket moyen</div>
+                <div class="msg-row"><span class="label">Couverts midi</span><span class="value">68</span></div>
+                <div class="msg-row"><span class="label">Couverts soir</span><span class="value">42</span></div>
+                <div class="msg-row"><span class="label">Ticket moyen</span><span class="value highlight">38,90 €</span></div>
+              </div>
+              <div class="msg-section">
+                <div class="msg-section-title">Réservations &amp; effectif</div>
+                <div class="msg-row"><span class="label">Résas midi</span><span class="value">52</span></div>
+                <div class="msg-row"><span class="label">Résas soir</span><span class="value">38</span></div>
+                <div class="msg-row"><span class="label">Effectif midi</span><span class="value">6 pers.</span></div>
+                <div class="msg-row"><span class="label">Effectif soir</span><span class="value">5 pers.</span></div>
+              </div>
+              <div class="msg-section">
+                <div class="msg-section-title">Vs semaine dernière</div>
+                <div class="msg-row"><span class="label">CA total</span><span class="value positive">+12,4% (+472 €)</span></div>
+                <div class="msg-row"><span class="label">Couverts</span><span class="value positive">+8 couverts</span></div>
+                <div class="msg-row"><span class="label">Ticket moyen</span><span class="value positive">+1,20 €</span></div>
+              </div>
+              <div class="msg-meteo">
+                <div class="msg-meteo-title">Prévision demain — Mardi 17 mars</div>
+                <div class="msg-row"><span class="label">Météo</span><span class="value">&#9925; 14°C — Nuageux</span></div>
+                <div class="msg-row"><span class="label">Couverts estimés</span><span class="value">105 couverts</span></div>
+                <div class="msg-row"><span class="label">Recommandation</span><span class="value">Effectif normal</span></div>
+              </div>
+              <div class="msg-time">07:00 <span class="read">&#10003;&#10003;</span></div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="mockup-body">
-        <div class="msg-bubble">
 
-          <div class="msg-section">
-            <div class="msg-section-title">Chiffre d'affaires — Lundi 16 mars</div>
-            <div class="msg-row"><span class="label">CA total</span><span class="value highlight">4 280 €</span></div>
-            <div class="msg-row"><span class="label">Restaurant</span><span class="value">3 120 €</span></div>
-            <div class="msg-row"><span class="label">Bar</span><span class="value">1 160 €</span></div>
+      <!-- Colonne droite — Gestion intégrée -->
+      <div class="juin-col">
+        <div class="juin-col-label">Gestion intégrée</div>
+        <div class="juin-col-sub">Dashboard mensuel complet</div>
+        <div class="mockup-dash">
+          <div class="dash-header">
+            <div class="dash-header-left">
+              <div class="dash-logo">P</div>
+              <span>Pauco — Gestion</span>
+            </div>
+            <div class="dash-badge">Mars 2027</div>
           </div>
-
-          <div class="msg-section">
-            <div class="msg-section-title">Couverts &amp; ticket moyen</div>
-            <div class="msg-row"><span class="label">Couverts midi</span><span class="value">68</span></div>
-            <div class="msg-row"><span class="label">Couverts soir</span><span class="value">42</span></div>
-            <div class="msg-row"><span class="label">Ticket moyen</span><span class="value highlight">38,90 €</span></div>
+          <div class="dash-body">
+            <div class="dash-metrics">
+              <div class="dash-metric">
+                <div class="dash-metric-label">CA Mars</div>
+                <div class="dash-metric-value">48 320 €</div>
+                <div class="dash-metric-change up">+6% (+2 730 €)</div>
+              </div>
+              <div class="dash-metric">
+                <div class="dash-metric-label">Résultat net</div>
+                <div class="dash-metric-value">8 470 €</div>
+                <div class="dash-metric-change up">Marge 17,5%</div>
+              </div>
+              <div class="dash-metric">
+                <div class="dash-metric-label">Ticket moyen</div>
+                <div class="dash-metric-value">34,50 €</div>
+                <div class="dash-metric-change up">+1,20 € vs fév.</div>
+              </div>
+              <div class="dash-metric">
+                <div class="dash-metric-label">Couverts</div>
+                <div class="dash-metric-value">1 401</div>
+                <div class="dash-metric-change">Midi 612 / Soir 789</div>
+              </div>
+            </div>
+            <div class="dash-section">
+              <div class="dash-section-title">Répartition des charges</div>
+              <div class="dash-bar-row">
+                <div class="dash-bar-label"><span>Fournisseurs — 15 460 €</span><span>32%</span></div>
+                <div class="dash-bar"><div class="dash-bar-fill" style="width:32%"></div></div>
+              </div>
+              <div class="dash-bar-row">
+                <div class="dash-bar-label"><span>Personnel — 16 430 €</span><span>34%</span></div>
+                <div class="dash-bar"><div class="dash-bar-fill" style="width:34%"></div></div>
+              </div>
+              <div class="dash-bar-row">
+                <div class="dash-bar-label"><span>Charges fixes — 7 960 €</span><span>16%</span></div>
+                <div class="dash-bar"><div class="dash-bar-fill" style="width:16%"></div></div>
+              </div>
+            </div>
+            <div class="dash-section">
+              <div class="dash-section-title">Seuil de rentabilité</div>
+              <div class="dash-bar-row">
+                <div class="dash-bar-label"><span>Progression</span><span>126%</span></div>
+                <div class="dash-bar"><div class="dash-bar-fill green" style="width:100%"></div></div>
+              </div>
+              <div class="dash-seuil-info">
+                <span class="date">Seuil : 38 200 € — Atteint le 12 mars</span>
+                <span class="above">+10 120 € au-dessus</span>
+              </div>
+            </div>
+            <div class="dash-chart">
+              <div class="dash-chart-title">CA 12 derniers mois</div>
+              <div class="dash-bars">
+                <div class="dash-col" style="height:52%"></div>
+                <div class="dash-col" style="height:48%"></div>
+                <div class="dash-col" style="height:55%"></div>
+                <div class="dash-col" style="height:60%"></div>
+                <div class="dash-col" style="height:58%"></div>
+                <div class="dash-col" style="height:72%"></div>
+                <div class="dash-col" style="height:85%"></div>
+                <div class="dash-col" style="height:78%"></div>
+                <div class="dash-col" style="height:65%"></div>
+                <div class="dash-col" style="height:70%"></div>
+                <div class="dash-col" style="height:76%"></div>
+                <div class="dash-col current" style="height:92%"></div>
+              </div>
+              <div class="dash-col-labels">
+                <span>Avr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Aoû</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Déc</span><span>Jan</span><span>Fév</span><span>Mar</span>
+              </div>
+            </div>
           </div>
-
-          <div class="msg-section">
-            <div class="msg-section-title">Réservations &amp; effectif</div>
-            <div class="msg-row"><span class="label">Résas midi</span><span class="value">52</span></div>
-            <div class="msg-row"><span class="label">Résas soir</span><span class="value">38</span></div>
-            <div class="msg-row"><span class="label">Effectif midi</span><span class="value">6 pers.</span></div>
-            <div class="msg-row"><span class="label">Effectif soir</span><span class="value">5 pers.</span></div>
-          </div>
-
-          <div class="msg-section">
-            <div class="msg-section-title">Vs semaine dernière</div>
-            <div class="msg-row"><span class="label">CA total</span><span class="value positive">+12,4% (+472 €)</span></div>
-            <div class="msg-row"><span class="label">Couverts</span><span class="value positive">+8 couverts</span></div>
-            <div class="msg-row"><span class="label">Ticket moyen</span><span class="value positive">+1,20 €</span></div>
-          </div>
-
-          <div class="msg-meteo">
-            <div class="msg-meteo-title">Prévision demain — Mardi 17 mars</div>
-            <div class="msg-row"><span class="label">Météo</span><span class="value">&#9925; 14°C — Nuageux</span></div>
-            <div class="msg-row"><span class="label">Couverts estimés</span><span class="value">105 couverts</span></div>
-            <div class="msg-row"><span class="label">Recommandation</span><span class="value">Effectif normal</span></div>
-          </div>
-
-          <div class="msg-time">07:00 <span class="read">&#10003;&#10003;</span></div>
         </div>
       </div>
+
     </div>
 
-    <div class="rapport-features">
-      <div class="rapport-feat">
+    <div class="juin-features">
+      <div class="juin-feat">
         <h4>Zéro saisie manuelle</h4>
-        <p>Les données sont importées automatiquement depuis votre caisse.</p>
+        <p>Les données sont importées automatiquement depuis votre caisse et vos fournisseurs.</p>
       </div>
-      <div class="rapport-feat">
+      <div class="juin-feat">
         <h4>WhatsApp ou Email</h4>
         <p>Vous choisissez comment recevoir votre rapport chaque matin.</p>
       </div>
-      <div class="rapport-feat">
-        <h4>Disponible en Juin 2026</h4>
-        <p>Inclus dans votre abonnement fondateur à 99€/mois.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- APERCU GESTION INTEGREE -->
-<section class="gestion" id="gestion">
-  <div class="container">
-    <div class="section-label">Gestion</div>
-    <h2 class="section-title">Pilotez votre restaurant comme un chef d'entreprise</h2>
-    <p class="section-sub">Disponible en Juin 2026 — inclus dans votre abonnement fondateur.</p>
-
-    <div class="mockup-dash">
-      <div class="dash-header">
-        <div class="dash-header-left">
-          <div class="dash-logo">P</div>
-          <span>Pauco — Gestion</span>
-        </div>
-        <div class="dash-badge">Mars 2027</div>
-      </div>
-      <div class="dash-body">
-
-        <div class="dash-metrics">
-          <div class="dash-metric">
-            <div class="dash-metric-label">CA Mars</div>
-            <div class="dash-metric-value">87 420 €</div>
-            <div class="dash-metric-change up">+14,2% vs fév.</div>
-          </div>
-          <div class="dash-metric">
-            <div class="dash-metric-label">Résultat net</div>
-            <div class="dash-metric-value">12 830 €</div>
-            <div class="dash-metric-change up">+8,6% vs fév.</div>
-          </div>
-          <div class="dash-metric">
-            <div class="dash-metric-label">Ticket moyen</div>
-            <div class="dash-metric-value">38,90 €</div>
-            <div class="dash-metric-change up">+1,20 €</div>
-          </div>
-          <div class="dash-metric">
-            <div class="dash-metric-label">Couverts</div>
-            <div class="dash-metric-value">2 247</div>
-            <div class="dash-metric-change">Midi 1 380 / Soir 867</div>
-          </div>
-        </div>
-
-        <div class="dash-section">
-          <div class="dash-section-title">Répartition des charges</div>
-          <div class="dash-bar-row">
-            <div class="dash-bar-label"><span>Fournisseurs</span><span>32%</span></div>
-            <div class="dash-bar"><div class="dash-bar-fill" style="width:32%"></div></div>
-          </div>
-          <div class="dash-bar-row">
-            <div class="dash-bar-label"><span>Personnel</span><span>34%</span></div>
-            <div class="dash-bar"><div class="dash-bar-fill" style="width:34%"></div></div>
-          </div>
-          <div class="dash-bar-row">
-            <div class="dash-bar-label"><span>Charges fixes</span><span>16,5%</span></div>
-            <div class="dash-bar"><div class="dash-bar-fill" style="width:16.5%"></div></div>
-          </div>
-        </div>
-
-        <div class="dash-section">
-          <div class="dash-section-title">Seuil de rentabilité</div>
-          <div class="dash-bar-row">
-            <div class="dash-bar-label"><span>Progression</span><span>113%</span></div>
-            <div class="dash-bar"><div class="dash-bar-fill green" style="width:100%"></div></div>
-          </div>
-          <div class="dash-seuil-info">
-            <span class="date">Atteint le 12 mars</span>
-            <span class="above">+10 120 € au-dessus</span>
-          </div>
-        </div>
-
-        <div class="dash-chart">
-          <div class="dash-chart-title">CA 12 derniers mois</div>
-          <div class="dash-bars">
-            <div class="dash-col" style="height:52%"></div>
-            <div class="dash-col" style="height:48%"></div>
-            <div class="dash-col" style="height:55%"></div>
-            <div class="dash-col" style="height:60%"></div>
-            <div class="dash-col" style="height:58%"></div>
-            <div class="dash-col" style="height:72%"></div>
-            <div class="dash-col" style="height:85%"></div>
-            <div class="dash-col" style="height:78%"></div>
-            <div class="dash-col" style="height:65%"></div>
-            <div class="dash-col" style="height:70%"></div>
-            <div class="dash-col" style="height:76%"></div>
-            <div class="dash-col current" style="height:92%"></div>
-          </div>
-          <div class="dash-col-labels">
-            <span>Avr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Aoû</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Déc</span><span>Jan</span><span>Fév</span><span>Mar</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="gestion-features">
-      <div class="gestion-feat">
-        <h4>Saisie en 2 minutes</h4>
-        <p>Entrez votre CA du jour, le reste est calculé automatiquement.</p>
-      </div>
-      <div class="gestion-feat">
-        <h4>Ratios en temps réel</h4>
-        <p>Coût matière, personnel, marge — tout s'actualise instantanément.</p>
-      </div>
-      <div class="gestion-feat">
-        <h4>Disponible Juin 2026</h4>
-        <p>Inclus dans votre abonnement fondateur à 99€/mois.</p>
+      <div class="juin-feat">
+        <h4>Inclus dans votre abonnement</h4>
+        <p>Rapport + gestion intégrée pour 99€/mois. Sans surcoût.</p>
       </div>
     </div>
   </div>
@@ -896,7 +883,7 @@ const observer=new IntersectionObserver((entries)=>{
   });
 },{threshold:0.1});
 
-document.querySelectorAll('.timeline-item, .preview-card, .founder-card, .now-card, .h-timeline-item, .mockup-phone, .rapport-feat, .mockup-dash, .gestion-feat').forEach(el=>{
+document.querySelectorAll('.timeline-item, .preview-card, .founder-card, .now-card, .h-timeline-item, .mockup-phone, .mockup-dash, .juin-feat, .juin-col').forEach(el=>{
   el.style.opacity='0';
   el.style.transform='translateY(30px)';
   el.style.transition='all .6s ease';
