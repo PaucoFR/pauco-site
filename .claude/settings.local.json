@@ -5,7 +5,12 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(ls *.jpeg)",
-      "Bash(git mv:*)"
+      "Bash(git mv:*)",
+      "Bash(ls *.jpeg *.jpg *.png 2>/dev/null)",
+      "WebFetch(domain:paucoandco.com)",
+      "Bash(magick --version 2>/dev/null; ffmpeg -version 2>/dev/null | head -1)",
+      "Bash(python3 -c \"from PIL import Image; print\\('OK'\\)\" 2>/dev/null || python -c \"from PIL import Image; print\\('OK'\\)\" 2>/dev/null)",
+      "Bash(pip install:*)"
     ]
   }
 }
