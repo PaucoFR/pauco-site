@@ -949,7 +949,14 @@ document.addEventListener('DOMContentLoaded',()=>{
     btn.textContent='Analyse en cours...';btn.disabled=true;
     errEl.classList.remove('show');resEl.classList.remove('show');
     fetch('/api/audit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({restaurant,ville})})
-    .then(r=>{if(!r.ok)return r.json().then(d=>{throw new Error(d.error||'Erreur')});return r.json();})
+    .then(r=>{
+      var ct=r.headers.get('content-type')||'';
+      if(!r.ok){
+        if(ct.indexOf('application/json')!==-1)return r.json().then(d=>{throw new Error(d.error||'Erreur '+r.status)});
+        throw new Error('Erreur serveur ('+r.status+')');
+      }
+      return r.json();
+    })
     .then(d=>{
       auditData={restaurant:d.name,ville,note:d.rating,nb_avis:d.nb_avis};
       document.getElementById('audit-name').textContent=d.name;
@@ -969,7 +976,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       btn.textContent='Analyser maintenant';btn.disabled=false;
     })
     .catch(err=>{
-      errEl.textContent=err.message==='Restaurant non trouv\u00e9'?'Restaurant non trouv\u00e9. V\u00e9rifiez le nom et la ville.':'Une erreur est survenue. R\u00e9essayez.';
+      errEl.textContent=err.message.indexOf('non trouv')!==-1?'Restaurant non trouv\u00e9. V\u00e9rifiez le nom et la ville.':err.message;
       errEl.classList.add('show');
       btn.textContent='Analyser maintenant';btn.disabled=false;
     });
