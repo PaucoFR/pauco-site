@@ -973,6 +973,8 @@ document.addEventListener('DOMContentLoaded',()=>{
       else{alertEl.style.display='none';}
       resEl.classList.add('show');
       document.getElementById('audit-confirm').classList.remove('show');
+      document.getElementById('audit-email-form').style.display='';
+      document.getElementById('audit-email').value='';
       btn.textContent='Analyser maintenant';btn.disabled=false;
     })
     .catch(err=>{
@@ -984,22 +986,33 @@ document.addEventListener('DOMContentLoaded',()=>{
   };
   window.sendAuditEmail=function(e){
     e.preventDefault();
-    const email=document.getElementById('audit-email').value.trim();
+    var emailInput=document.getElementById('audit-email');
+    var email=emailInput.value.trim();
     if(!email)return false;
-    const btn=document.getElementById('audit-email-btn');
+    var btn=document.getElementById('audit-email-btn');
+    var confirmEl=document.getElementById('audit-confirm');
     btn.textContent='Envoi...';btn.disabled=true;
-    const payload={restaurant:auditData.restaurant||'',ville:auditData.ville||'',email:email,note:auditData.note||0,nb_avis:auditData.nb_avis||0};
-    fetch('https://hook.eu1.make.com/8j1jw8nk9cy95eca4pnu9x7jpblnuxqg',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
-    .then(r=>{
-      document.getElementById('audit-confirm').classList.add('show');
-      document.getElementById('audit-email-form').style.display='none';
-      btn.textContent='Recevoir mon audit complet';btn.disabled=false;
+    var payload={restaurant:auditData.restaurant||'',ville:auditData.ville||'',email:email,note:auditData.note||0,nb_avis:auditData.nb_avis||0};
+    console.log('[Pauco] audit email payload:',JSON.stringify(payload));
+    fetch('https://hook.eu1.make.com/8j1jw8nk9cy95eca4pnu9x7jpblnuxqg',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(payload)
     })
-    .catch(()=>{
-      document.getElementById('audit-confirm').classList.add('show');
+    .then(function(r){
+      if(!r.ok)throw new Error('HTTP '+r.status);
+      confirmEl.textContent='\u2705 Votre audit arrive dans quelques minutes sur '+email+'.';
+      confirmEl.classList.add('show');
       document.getElementById('audit-email-form').style.display='none';
-      btn.textContent='Recevoir mon audit complet';btn.disabled=false;
+    })
+    .catch(function(){
+      confirmEl.textContent='\u2705 Votre audit arrive dans quelques minutes sur '+email+'.';
+      confirmEl.classList.add('show');
+      document.getElementById('audit-email-form').style.display='none';
+      var img=new Image();
+      img.src='https://hook.eu1.make.com/8j1jw8nk9cy95eca4pnu9x7jpblnuxqg?restaurant='+encodeURIComponent(payload.restaurant)+'&ville='+encodeURIComponent(payload.ville)+'&email='+encodeURIComponent(payload.email)+'&note='+payload.note+'&nb_avis='+payload.nb_avis;
     });
+    btn.textContent='Recevoir mon audit complet';btn.disabled=false;
     return false;
   };
 
