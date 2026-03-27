@@ -70,7 +70,7 @@ export default function ContactContent() {
                       required
                       value={form.nom}
                       onChange={(e) => setForm({ ...form, nom: e.target.value })}
-                      className="w-full bg-[#fafaf8] border-[1.5px] border-[#E4DDD3] rounded-lg px-4 py-3 text-sm text-[#1a1a18] outline-none focus:border-[#2D6A4A] transition-colors placeholder:text-[#A09488]"
+                      className="w-full bg-[#fafaf8] border-[1.5px] border-[#E4DDD3] rounded-lg px-4 py-3 text-base sm:text-sm text-[#1a1a18] outline-none focus:border-[#2D6A4A] transition-colors placeholder:text-[#A09488]"
                     />
                     <input
                       type="text"
@@ -78,7 +78,7 @@ export default function ContactContent() {
                       required
                       value={form.restaurant}
                       onChange={(e) => setForm({ ...form, restaurant: e.target.value })}
-                      className="w-full bg-[#fafaf8] border-[1.5px] border-[#E4DDD3] rounded-lg px-4 py-3 text-sm text-[#1a1a18] outline-none focus:border-[#2D6A4A] transition-colors placeholder:text-[#A09488]"
+                      className="w-full bg-[#fafaf8] border-[1.5px] border-[#E4DDD3] rounded-lg px-4 py-3 text-base sm:text-sm text-[#1a1a18] outline-none focus:border-[#2D6A4A] transition-colors placeholder:text-[#A09488]"
                     />
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -88,14 +88,14 @@ export default function ContactContent() {
                       required
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full bg-[#fafaf8] border-[1.5px] border-[#E4DDD3] rounded-lg px-4 py-3 text-sm text-[#1a1a18] outline-none focus:border-[#2D6A4A] transition-colors placeholder:text-[#A09488]"
+                      className="w-full bg-[#fafaf8] border-[1.5px] border-[#E4DDD3] rounded-lg px-4 py-3 text-base sm:text-sm text-[#1a1a18] outline-none focus:border-[#2D6A4A] transition-colors placeholder:text-[#A09488]"
                     />
                     <input
                       type="tel"
                       placeholder="Téléphone"
                       value={form.telephone}
                       onChange={(e) => setForm({ ...form, telephone: e.target.value })}
-                      className="w-full bg-[#fafaf8] border-[1.5px] border-[#E4DDD3] rounded-lg px-4 py-3 text-sm text-[#1a1a18] outline-none focus:border-[#2D6A4A] transition-colors placeholder:text-[#A09488]"
+                      className="w-full bg-[#fafaf8] border-[1.5px] border-[#E4DDD3] rounded-lg px-4 py-3 text-base sm:text-sm text-[#1a1a18] outline-none focus:border-[#2D6A4A] transition-colors placeholder:text-[#A09488]"
                     />
                   </div>
                   <textarea

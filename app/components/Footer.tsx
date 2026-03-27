@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-white/[0.07] pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <span className="text-xs text-white/20">&copy; 2026 Pauco. Tous droits réservés.</span>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
             <Link href="/mentions-legales" className="text-xs text-white/20 hover:text-white/40 transition-colors no-underline">Mentions légales</Link>
             <Link href="/politique-de-confidentialite" className="text-xs text-white/20 hover:text-white/40 transition-colors no-underline">Confidentialité</Link>
             <Link href="/cgv" className="text-xs text-white/20 hover:text-white/40 transition-colors no-underline">CGV</Link>

@@ -27,6 +27,17 @@ body {
   color: var(--text);
   font-family: "DM Sans", sans-serif;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Prevent horizontal overflow on all sections */
+main, section, footer {
+  overflow-x: hidden;
+}
+
+/* Smooth momentum scrolling for tables on iOS */
+.-webkit-overflow-scrolling-touch {
+  -webkit-overflow-scrolling: touch;
 }
 
 @keyframes blink {

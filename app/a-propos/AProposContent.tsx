@@ -66,7 +66,7 @@ export default function AProposContent() {
 
             <ScrollReveal delay={0.15}>
               <Tag>Le fondateur</Tag>
-              <h1 className="font-serif text-[42px] font-semibold tracking-tight mt-4 mb-1">Paul</h1>
+              <h1 className="font-serif text-[36px] sm:text-[42px] font-semibold tracking-tight mt-4 mb-1">Paul</h1>
               <p className="text-sm text-[#6A6059] mb-5">
                 Fondateur de Pauco · Responsable de Restaurant
               </p>

@@ -18,11 +18,11 @@ export default function CTASection() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[#2D6A4A] text-white text-base font-semibold px-8 py-4 rounded-lg hover:bg-[#3a7d58] hover:-translate-y-0.5 transition-all duration-200 no-underline"
+            className="block sm:inline-block w-full sm:w-auto bg-[#2D6A4A] text-white text-base font-semibold px-8 py-4 rounded-lg hover:bg-[#3a7d58] hover:-translate-y-0.5 transition-all duration-200 no-underline text-center"
           >
             Devenir client fondateur &rarr;
           </Link>
-          <div className="flex justify-center gap-7 flex-wrap mt-7">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-7 mt-7 items-center">
             {[
               "99€/mois · jamais augmenté",
               "Logiciel complet d'ici fin 2027",

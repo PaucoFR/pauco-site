@@ -167,8 +167,14 @@ export default function TarifsContent() {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <div className="overflow-x-auto border border-[#E4DDD3] rounded-xl">
-              <table className="w-full border-collapse text-sm">
+            <div className="md:hidden text-xs text-[#A09488] mb-2 flex items-center gap-1.5">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+              Glissez pour voir le tableau complet
+            </div>
+            <div className="overflow-x-auto border border-[#E4DDD3] rounded-xl -webkit-overflow-scrolling-touch">
+              <table className="w-full border-collapse text-sm min-w-[640px]">
                 <thead>
                   <tr>
                     <th className="px-5 py-3.5 text-left border-b border-[#E4DDD3] text-[11px] font-semibold tracking-[0.09em] uppercase text-[#A09488] bg-[#fafaf8] whitespace-nowrap">
@@ -240,10 +246,10 @@ export default function TarifsContent() {
                 <div className="border-b border-[#E4DDD3]">
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    className="w-full py-5 flex justify-between items-center gap-4 text-left text-[15px] font-semibold text-[#1a1a18] hover:text-[#2D6A4A] transition-colors"
+                    className="w-full py-4 flex justify-between items-center gap-4 text-left text-base font-semibold text-[#1a1a18] hover:text-[#2D6A4A] transition-colors min-h-[44px]"
                   >
                     {faq.q}
-                    <span className={`text-[#A09488] shrink-0 transition-transform duration-200 ${openFaq === i ? "rotate-180 text-[#2D6A4A]" : ""}`}>
+                    <span className={`text-[#A09488] shrink-0 transition-transform duration-200 text-lg ${openFaq === i ? "rotate-180 text-[#2D6A4A]" : ""}`}>
                       ↓
                     </span>
                   </button>

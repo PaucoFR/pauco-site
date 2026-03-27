@@ -301,7 +301,7 @@ export default function Home() {
                         <div className="font-semibold text-xs">{t.name}</div>
                         <div className="text-[11px] text-[#6A6059]">{t.role}</div>
                       </div>
-                      <span className="ml-auto bg-[#D6F0DF] text-[#2D6A4A] text-[9px] font-bold tracking-[0.08em] px-2 py-0.5 rounded">
+                      <span className="ml-auto bg-[#D6F0DF] text-[#2D6A4A] text-[9px] font-bold tracking-[0.08em] px-2 py-0.5 rounded shrink-0 hidden sm:inline">
                         CLIENT FONDATEUR
                       </span>
                     </div>
@@ -316,7 +316,7 @@ export default function Home() {
       {/* Proof strip */}
       <div className="bg-white border-t border-b border-[#E4DDD3] py-12">
         <div className="max-w-[1120px] mx-auto px-6 md:px-12">
-          <div className="flex flex-wrap items-center justify-around gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-5">
             {[
               { n: "12", l: "restaurants en France" },
               { n: "4,7★", l: "note moyenne clients" },
@@ -324,8 +324,8 @@ export default function Home() {
               { n: "24h", l: "pour être opérationnel" },
             ].map((s, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="text-center px-4">
-                  <div className="font-serif text-4xl font-semibold leading-none">
+                <div className="text-center">
+                  <div className="font-serif text-3xl sm:text-4xl font-semibold leading-none">
                     {s.n}
                   </div>
                   <div className="text-sm text-[#6A6059] mt-1">{s.l}</div>
@@ -356,7 +356,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#E4DDD3] border border-[#E4DDD3] rounded-xl overflow-hidden">
             {features.map((f, i) => (
               <ScrollReveal key={i} delay={i * 0.08}>
-                <div className="bg-white p-9 relative overflow-hidden group hover:bg-[#FAFDF8] transition-colors duration-200">
+                <div className="bg-white p-6 sm:p-9 relative overflow-hidden group hover:bg-[#FAFDF8] transition-colors duration-200">
                   <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#2D6A4A] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300" />
                   <div className="w-10 h-10 rounded-[10px] bg-[#D6F0DF] flex items-center justify-center mb-4">
                     {f.icon}
@@ -421,7 +421,7 @@ export default function Home() {
               },
             ].map((step, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
-                <div className={`bg-white border border-[#E4DDD3] p-9 md:p-10 h-full ${
+                <div className={`bg-white border border-[#E4DDD3] p-6 sm:p-9 md:p-10 h-full ${
                   i === 0 ? "rounded-t-xl md:rounded-l-xl md:rounded-tr-none" :
                   i === 2 ? "rounded-b-xl md:rounded-r-xl md:rounded-bl-none" : ""
                 } ${i > 0 ? "-mt-px md:mt-0 md:-ml-px" : ""}`}>
