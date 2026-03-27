@@ -58,7 +58,7 @@ export default function AProposContent() {
                   priority
                 />
                 <div className="absolute bottom-5 right-0 lg:-right-4 bg-white border border-[#E4DDD3] rounded-xl px-4 py-3.5 shadow-lg">
-                  <div className="font-serif text-[26px] font-semibold leading-none">8 ans</div>
+                  <div className="font-serif text-[26px] font-semibold leading-none">10 ans</div>
                   <div className="text-[11px] text-[#6A6059] mt-0.5">en restauration</div>
                 </div>
               </div>
@@ -71,7 +71,7 @@ export default function AProposContent() {
                 Fondateur de Pauco · Responsable de Restaurant
               </p>
               <blockquote className="text-lg leading-relaxed border-l-[3px] border-[#2D6A4A] pl-5 italic text-[#1a1a18] mb-5">
-                &ldquo;J&apos;ai passé 8 ans en salle et en gestion — de Dinard à Saint-Barth,
+                &ldquo;J&apos;ai passé 10 ans en salle et en gestion — de Dinard à Saint-Barth,
                 en passant par Méribel. Ce qui m&apos;a frappé partout : des gérants qui
                 pilotent à l&apos;aveugle, sans données, sans temps.&rdquo;
               </blockquote>
@@ -107,7 +107,7 @@ export default function AProposContent() {
             <div className="mb-12">
               <Tag>Parcours</Tag>
               <h2 className="font-serif text-3xl md:text-4xl font-semibold leading-tight tracking-tight mt-4 mb-3">
-                8 ans sur le terrain.
+                10 ans sur le terrain.
               </h2>
               <p className="text-base text-[#6A6059] max-w-xl">
                 De la Bretagne aux Caraïbes, en passant par les Alpes — chaque
