@@ -18,7 +18,7 @@ export default function PolitiqueConfidentialite() {
             <h2 className="font-semibold text-[#1a1a18] text-lg mb-3">1. Responsable du traitement</h2>
             <p>
               Le responsable du traitement des données personnelles est SASU Pauco (en cours de création),
-              représentée par Paul Monfort, dont le siège social est situé à Saint-Malo, Bretagne, France.
+              représentée par Paul Monfort, dont le siège social est situé à Saint-Cast-le-Guildo, Bretagne, France.
             </p>
             <p className="mt-2">
               Contact : <a href="mailto:paul@paucoandco.com" className="text-[#2D6A4A] hover:underline">paul@paucoandco.com</a>
