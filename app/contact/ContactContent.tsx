@@ -121,6 +121,30 @@ export default function ContactContent() {
 
             {/* Right side */}
             <div className="space-y-8">
+              <ScrollReveal delay={0.05}>
+                <div className="bg-[#1c3829] rounded-xl p-7 text-center">
+                  <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold tracking-[0.14em] uppercase text-[#6DBF85] bg-[#6DBF85]/10 border border-[#6DBF85]/20 px-3 py-1.5 rounded-full mb-4">
+                    <span className="w-[5px] h-[5px] rounded-full bg-[#6DBF85] animate-blink" />
+                    Accès immédiat
+                  </div>
+                  <h3 className="font-serif text-2xl font-semibold text-white mb-2">Prêt à démarrer ?</h3>
+                  <p className="text-sm text-white/50 mb-6">
+                    Accès immédiat après paiement. Onboarding inclus.
+                  </p>
+                  <a
+                    href="https://buy.stripe.com/6oU9AScz10en8LS25s2Ji02"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-[#2D6A4A] text-white font-semibold py-4 rounded-lg hover:bg-[#3a7d58] hover:-translate-y-0.5 transition-all duration-200 no-underline"
+                  >
+                    Devenir Fondateur — 99€/mois à vie &rarr;
+                  </a>
+                  <p className="text-[11px] text-white/30 mt-3">
+                    Sans engagement · Prix garanti à vie · 50 places max
+                  </p>
+                </div>
+              </ScrollReveal>
+
               <ScrollReveal delay={0.1}>
                 <div className="bg-white border border-[#E4DDD3] rounded-xl p-7">
                   <h3 className="font-semibold text-lg mb-4">Réserver un appel</h3>
