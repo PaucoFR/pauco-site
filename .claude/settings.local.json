@@ -10,7 +10,10 @@
       "WebFetch(domain:paucoandco.com)",
       "Bash(magick --version 2>/dev/null; ffmpeg -version 2>/dev/null | head -1)",
       "Bash(python3 -c \"from PIL import Image; print\\('OK'\\)\" 2>/dev/null || python -c \"from PIL import Image; print\\('OK'\\)\" 2>/dev/null)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(find /c/Users/funla/Desktop/pauco-site -type f \\\\\\(-name *.py -o -name *.json -o -name .env* -o -name requirements.txt -o -name *.sh -o -name *.md \\\\\\))",
+      "Bash(git config:*)",
+      "Bash(du -sh * .*)"
     ]
   }
 }
