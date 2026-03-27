@@ -155,7 +155,36 @@ export default function CGU() {
 
           {/* Article 7 */}
           <div>
-            <h2 className="font-semibold text-[#1a1a18] text-lg mb-3">7. Propriété intellectuelle</h2>
+            <h2 className="font-semibold text-[#1a1a18] text-lg mb-3">7. Engagement de disponibilité (SLA)</h2>
+            <p>
+              Pauco s&apos;engage à maintenir une disponibilité mensuelle du service de{" "}
+              <strong className="text-[#1a1a18]">99 %</strong>, soit moins de 7 heures d&apos;indisponibilité
+              par mois calendaire.
+            </p>
+            <p className="mt-3 font-semibold text-[#1a1a18]">Exclusions du calcul de disponibilité :</p>
+            <ul className="list-disc pl-5 space-y-2 mt-3">
+              <li>Les <strong className="text-[#1a1a18]">maintenances planifiées</strong>, annoncées au moins 24 heures à l&apos;avance par email au Client.</li>
+              <li>Les incidents liés aux <strong className="text-[#1a1a18]">sous-traitants techniques</strong> (Railway, Airtable, Stripe) sur lesquels Pauco n&apos;a pas de contrôle direct.</li>
+              <li>Les cas de <strong className="text-[#1a1a18]">force majeure</strong> tels que définis par l&apos;article 1218 du Code civil.</li>
+            </ul>
+            <div className="mt-4 p-4 bg-[#f8f6f3] rounded-lg border border-[#E4DDD3]">
+              <p className="text-sm">
+                <strong className="text-[#1a1a18]">Compensation :</strong> en cas de dépassement du seuil d&apos;indisponibilité,
+                le Client peut demander un crédit d&apos;un jour d&apos;abonnement par heure d&apos;indisponibilité
+                supplémentaire, sur simple demande à{" "}
+                <a href="mailto:paul@paucoandco.com" className="text-[#2D6A4A] hover:underline">paul@paucoandco.com</a>.
+                Ce crédit constitue l&apos;unique recours du Client au titre du présent SLA.
+              </p>
+            </div>
+            <p className="mt-3">
+              Suivi de la disponibilité :{" "}
+              <a href="https://status.paucoandco.com" className="text-[#2D6A4A] hover:underline">status.paucoandco.com</a>
+            </p>
+          </div>
+
+          {/* Article 8 */}
+          <div>
+            <h2 className="font-semibold text-[#1a1a18] text-lg mb-3">8. Propriété intellectuelle</h2>
             <p>
               Le logiciel Pauco, son design, ses algorithmes, son code source et l&apos;ensemble de ses composants
               sont la <strong className="text-[#1a1a18]">propriété exclusive de Paul Monfort</strong>.
@@ -171,9 +200,9 @@ export default function CGU() {
             </p>
           </div>
 
-          {/* Article 8 */}
+          {/* Article 9 */}
           <div>
-            <h2 className="font-semibold text-[#1a1a18] text-lg mb-3">8. Prix et paiement</h2>
+            <h2 className="font-semibold text-[#1a1a18] text-lg mb-3">9. Prix et paiement</h2>
             <ul className="list-disc pl-5 space-y-2">
               <li>L&apos;abonnement à Pauco est facturé <strong className="text-[#1a1a18]">mensuellement</strong> via la plateforme de paiement sécurisée <strong className="text-[#1a1a18]">Stripe</strong>.</li>
               <li><strong className="text-[#1a1a18]">Offre Client Fondateur :</strong> 99 €/mois HT, tarif garanti à vie, réservé aux 50 premiers clients.</li>
@@ -185,21 +214,21 @@ export default function CGU() {
             </ul>
           </div>
 
-          {/* Article 9 */}
+          {/* Article 10 */}
           <div>
-            <h2 className="font-semibold text-[#1a1a18] text-lg mb-3">9. Résiliation</h2>
+            <h2 className="font-semibold text-[#1a1a18] text-lg mb-3">10. Résiliation</h2>
             <ul className="list-disc pl-5 space-y-2">
               <li>Le Client peut résilier son abonnement <strong className="text-[#1a1a18]">à tout moment, sans frais</strong>, par simple email à{" "}
                 <a href="mailto:paul@paucoandco.com" className="text-[#2D6A4A] hover:underline">paul@paucoandco.com</a>.
               </li>
               <li>L&apos;accès au service est maintenu jusqu&apos;à la <strong className="text-[#1a1a18]">fin de la période mensuelle en cours</strong>.</li>
-              <li>Un export des données est disponible pendant <strong className="text-[#1a1a18]">30 jours</strong> après la date effective de résiliation. Passé ce délai, les données seront supprimées conformément à l&apos;article 4.</li>
+              <li>Un export des données est disponible pendant <strong className="text-[#1a1a18]">30 jours</strong> après la date effective de résiliation. Passé ce délai, les données seront supprimées conformément à l&apos;article 4 des présentes CGU.</li>
             </ul>
           </div>
 
-          {/* Article 10 */}
+          {/* Article 11 */}
           <div>
-            <h2 className="font-semibold text-[#1a1a18] text-lg mb-3">10. Modification des CGU</h2>
+            <h2 className="font-semibold text-[#1a1a18] text-lg mb-3">11. Modification des CGU</h2>
             <p>
               Pauco se réserve le droit de modifier les présentes CGU à tout moment. Le Client sera informé de
               toute modification substantielle par email au moins <strong className="text-[#1a1a18]">30 jours</strong> avant
@@ -208,13 +237,13 @@ export default function CGU() {
             <p className="mt-3">
               La poursuite de l&apos;utilisation du service après l&apos;entrée en vigueur des modifications vaut
               acceptation des nouvelles CGU. En cas de désaccord, le Client pourra résilier son abonnement
-              conformément à l&apos;article 9.
+              conformément à l&apos;article 10.
             </p>
           </div>
 
-          {/* Article 11 */}
+          {/* Article 12 */}
           <div>
-            <h2 className="font-semibold text-[#1a1a18] text-lg mb-3">11. Droit applicable et juridiction</h2>
+            <h2 className="font-semibold text-[#1a1a18] text-lg mb-3">12. Droit applicable et juridiction</h2>
             <p>
               Les présentes CGU sont régies par le <strong className="text-[#1a1a18]">droit français</strong>.
             </p>
