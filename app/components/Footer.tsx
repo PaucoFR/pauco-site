@@ -57,6 +57,7 @@ export default function Footer() {
             <Link href="/mentions-legales" className="text-xs text-white/20 hover:text-white/40 transition-colors no-underline">Mentions légales</Link>
             <Link href="/politique-de-confidentialite" className="text-xs text-white/20 hover:text-white/40 transition-colors no-underline">Confidentialité</Link>
             <Link href="/cgv" className="text-xs text-white/20 hover:text-white/40 transition-colors no-underline">CGV</Link>
+            <Link href="/cgu" className="text-xs text-white/20 hover:text-white/40 transition-colors no-underline">CGU</Link>
           </div>
         </div>
       </div>
