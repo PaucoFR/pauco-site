@@ -70,7 +70,7 @@ const features = [
       </svg>
     ),
     title: "Fiches cocktails & coûts bar",
-    desc: "Calcul en cl, pertes (casse, évaporation, dégustation, déco), sans alcool. Coût réel du bar.",
+    desc: "Calcul en cl, pertes casse, évaporation, dégustation, déco, sans alcool. Coût réel du bar.",
   },
   {
     icon: (
@@ -82,7 +82,7 @@ const features = [
       </svg>
     ),
     title: "Gestion des effectifs",
-    desc: "Congés 2,5j/mois, postes, 3 pôles. Analyse fournisseurs et 23 ressources métier.",
+    desc: "Congés 2,5j/mois, postes, 3 pôles.",
   },
 ];
 
