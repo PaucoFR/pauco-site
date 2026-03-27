@@ -26,14 +26,14 @@ const phases = [
     ],
   },
   {
-    date: "Printemps 2026",
-    badge: "Phase 2",
-    title: "Rapport WhatsApp quotidien + Alertes ratios",
-    desc: "Rapport quotidien automatique sur WhatsApp chaque matin (CA, couverts, météo). Alertes ratios en temps réel. Rapport hebdomadaire et mensuel.",
+    date: "Disponible maintenant",
+    badge: "Disponible",
+    title: "Rapport matinal & Tableau de bord avancé",
+    desc: "Rapport quotidien automatique sur WhatsApp chaque matin. Alertes ratios en temps réel. Rapport hebdomadaire et mensuel.",
     priceFondateur: "99€/mois",
     priceStandard: "149€/mois",
     priceNote: "nouveaux clients",
-    active: false,
+    active: true,
     modules: [
       "Rapport matinal WhatsApp automatique",
       "Résumé CA, couverts, météo du jour",
@@ -45,38 +45,56 @@ const phases = [
   },
   {
     date: "Fin 2026",
-    badge: "Phase 3",
-    title: "Mercuriale + Inventaire + Bons de commande",
-    desc: "Mercuriale fournisseurs, inventaire automatisé, bons de commande, suivi des prix.",
+    badge: "Bientôt",
+    title: "Planning avancé & Gestion RH",
+    desc: "Gestion contrats, fiches de paie simplifiées, offres d'emploi, onboarding employés.",
     priceFondateur: "99€/mois",
     priceStandard: "199€/mois",
     priceNote: "nouveaux clients",
     active: false,
     modules: [
-      "Mercuriale fournisseurs centralisée",
-      "Inventaire automatisé",
-      "Bons de commande en un clic",
-      "Suivi des prix fournisseurs",
-      "Alertes variation de prix",
-      "Historique des commandes",
+      "Gestion des contrats de travail",
+      "Fiches de paie simplifiées",
+      "Publication d'offres d'emploi",
+      "Onboarding nouveaux employés",
+      "Suivi des documents RH",
+      "Alertes échéances contrats",
     ],
   },
   {
-    date: "2027",
-    badge: "Phase 4",
-    title: "Prévisions IA météo + Intégrations caisses",
-    desc: "Chaque matin : prévision de couverts du lendemain selon météo, événements locaux et historique. Intégration caisses Lightspeed, Zelty, L'Addition.",
+    date: "Début 2027",
+    badge: "Planifié",
+    title: "Comptabilité & Scan de factures IA",
+    desc: "Photographiez vos factures, elles rentrent automatiquement dans Pauco et chez votre comptable.",
     priceFondateur: "99€/mois",
-    priceStandard: "199€/mois",
+    priceStandard: "249€/mois",
     priceNote: "nouveaux clients",
     active: false,
     modules: [
-      "Prévision de couverts par IA",
-      "Données météo et événements locaux",
-      "Analyse de l'historique de fréquentation",
+      "Scan de factures par photo",
+      "Reconnaissance automatique IA",
+      "Export comptable automatique",
+      "Classement par catégorie",
+      "Suivi des paiements fournisseurs",
+      "Rapprochement bancaire simplifié",
+    ],
+  },
+  {
+    date: "Mai 2027",
+    badge: "Planifié",
+    title: "Intégrations caisses & Prévisions IA",
+    desc: "Connexion Lightspeed, Zelty, L'Addition. CA automatique, zéro saisie. Prévisions couverts par IA selon météo et historique.",
+    priceFondateur: "99€/mois",
+    priceStandard: "299€/mois",
+    priceNote: "nouveaux clients",
+    active: false,
+    modules: [
       "Intégration Lightspeed",
       "Intégration Zelty",
       "Intégration L'Addition",
+      "CA automatique sans saisie",
+      "Prévisions couverts par IA",
+      "Données météo et historique",
     ],
   },
 ];
@@ -113,7 +131,7 @@ export default function RoadmapContent() {
                   <p className="text-sm text-[#2D6A4A]/80 leading-relaxed">
                     En tant que fondateur, vous bénéficiez de chaque nouveau module sans augmentation.
                     Votre prix de 99€/mois est contractuellement garanti à vie, même quand le logiciel
-                    passera à 199€/mois pour les nouveaux clients.
+                    passera à 299€/mois pour les nouveaux clients.
                   </p>
                 </div>
               </div>
