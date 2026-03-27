@@ -4,9 +4,10 @@ import ScrollReveal from "../components/ScrollReveal";
 import Tag from "../components/Tag";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Blog gestion restaurant — Conseils pour restaurateurs",
   description:
-    "Conseils pour restaurateurs : coût matière, avis Google, planning équipe, seuil de rentabilité. Par Paul, fondateur de Pauco.",
+    "Guides pratiques pour restaurateurs indépendants : réduire son coût matière, gérer ses avis Google, optimiser son planning équipe, calculer son seuil de rentabilité.",
+  alternates: { canonical: "https://paucoandco.com/blog" },
 };
 
 const articles = [

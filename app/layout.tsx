@@ -2,33 +2,69 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import SchemaOrg from "./components/SchemaOrg";
 
 export const metadata: Metadata = {
   title: {
-    default: "Pauco — Le logiciel tout-en-un des restaurateurs",
-    template: "%s | Pauco",
+    default:
+      "Pauco — Logiciel de gestion restaurant tout-en-un pour restaurateurs indépendants",
+    template: "%s | Pauco — Logiciel gestion restaurant",
   },
   description:
-    "E-réputation automatique, gestion CA et dépenses, fiches techniques, coût matière, planning équipe. 99€/mois à vie pour les 50 premiers restaurateurs fondateurs.",
+    "Logiciel de gestion restaurant tout-en-un : réponse automatique aux avis Google, gestion CA et dépenses, fiches techniques, coût matière, planning équipe. 99€/mois à vie pour les 50 premiers restaurateurs fondateurs.",
+  keywords: [
+    "logiciel gestion restaurant",
+    "logiciel restaurateur indépendant",
+    "réponse avis google restaurant automatique",
+    "gestion restaurant tout en un",
+    "logiciel restauration",
+    "gestion avis restaurant",
+    "coût matière restaurant",
+    "planning restaurant",
+    "fiches techniques restaurant",
+    "logiciel restaurant pas cher",
+  ],
   metadataBase: new URL("https://paucoandco.com"),
+  alternates: {
+    canonical: "https://paucoandco.com",
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
     url: "https://paucoandco.com",
     siteName: "Pauco",
-    title: "Pauco — Le logiciel tout-en-un des restaurateurs",
+    title:
+      "Pauco — Logiciel de gestion restaurant tout-en-un | 99€/mois à vie",
     description:
-      "Réponses automatiques à tous vos avis, rapport hebdomadaire, dashboard. 99€/mois à vie — prix fondateur garanti.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+      "Réponse automatique aux avis Google, gestion CA, fiches techniques, coût matière, planning équipe. Le logiciel tout-en-un des restaurateurs indépendants — 99€/mois à vie.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Pauco — Logiciel de gestion restaurant tout-en-un",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pauco — Le logiciel tout-en-un des restaurateurs",
+    title:
+      "Pauco — Logiciel de gestion restaurant tout-en-un | 99€/mois à vie",
     description:
-      "Réponses automatiques à tous vos avis. 99€/mois à vie — prix fondateur garanti.",
-    images: ["/og-image.jpg"],
+      "Réponse automatique aux avis Google, gestion CA, coût matière, planning. Le logiciel tout-en-un des restaurateurs indépendants.",
+    images: ["/og-image.png"],
   },
-  robots: "index, follow",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -56,6 +92,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
+        <SchemaOrg />
         <Navbar />
         <main>{children}</main>
         <Footer />

@@ -5,9 +5,10 @@ import Tag from "../../components/Tag";
 import CTASection from "../../components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Gérer les avis Google de son restaurant : le guide complet",
+  title: "Réponse avis Google restaurant automatique : le guide complet",
   description:
-    "93% des consommateurs lisent les avis en ligne. Apprenez à gérer vos avis Google, TripAdvisor et Booking pour attirer plus de clients.",
+    "93% des consommateurs lisent les avis en ligne avant de choisir un restaurant. Découvrez comment automatiser les réponses aux avis Google, TripAdvisor et Booking pour attirer plus de clients.",
+  alternates: { canonical: "https://paucoandco.com/blog/gerer-avis-google-restaurant" },
 };
 
 export default function ArticleAvisGoogle() {

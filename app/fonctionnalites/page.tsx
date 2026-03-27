@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import FonctionnalitesContent from "./FonctionnalitesContent";
 
 export const metadata: Metadata = {
-  title: "Fonctionnalités",
+  title: "Fonctionnalités du logiciel de gestion restaurant Pauco",
   description:
-    "E-réputation automatique, gestion CA/dépenses, planning, fiches techniques, coût matière, coûts bar. Tout ce dont un restaurateur a besoin.",
+    "Découvrez les 6 modules Pauco : réponse automatique aux avis Google, gestion CA et dépenses, planning équipe, fiches techniques, coût matière, coûts bar. Le logiciel de gestion restaurant tout-en-un.",
+  alternates: { canonical: "https://paucoandco.com/fonctionnalites" },
 };
 
 export default function FonctionnalitesPage() {
