@@ -401,7 +401,7 @@ export default function Home() {
               </p>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#E4DDD3] border border-[#E4DDD3] rounded-xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 pb-10">
             {[
               {
                 num: "1",
@@ -421,7 +421,10 @@ export default function Home() {
               },
             ].map((step, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
-                <div className="bg-white p-9 md:p-10">
+                <div className={`bg-white border border-[#E4DDD3] p-9 md:p-10 h-full ${
+                  i === 0 ? "rounded-t-xl md:rounded-l-xl md:rounded-tr-none" :
+                  i === 2 ? "rounded-b-xl md:rounded-r-xl md:rounded-bl-none" : ""
+                } ${i > 0 ? "-mt-px md:mt-0 md:-ml-px" : ""}`}>
                   <div
                     className={`w-11 h-11 rounded-full flex items-center justify-center mb-6 ${
                       step.green ? "bg-[#2D6A4A]" : "bg-[#1c3829]"
