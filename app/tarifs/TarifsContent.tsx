@@ -8,10 +8,10 @@ import CTASection from "../components/CTASection";
 
 const comparatif = [
   { feature: "E-réputation (avis Google)", pauco: true, lightspeed: false, zelty: false, addition: false },
-  { feature: "Fiches techniques & food cost", pauco: true, lightspeed: false, zelty: false, addition: false },
+  { feature: "Fiches techniques & coût matière", pauco: true, lightspeed: false, zelty: false, addition: false },
   { feature: "Gestion CA + dépenses + ratios", pauco: true, lightspeed: false, zelty: false, addition: false },
   { feature: "Planning équipe", pauco: true, lightspeed: true, zelty: false, addition: false },
-  { feature: "Costs bar & cocktails", pauco: true, lightspeed: false, zelty: false, addition: false },
+  { feature: "Coûts bar & cocktails", pauco: true, lightspeed: false, zelty: false, addition: false },
   { feature: "Rapport WhatsApp", pauco: true, lightspeed: false, zelty: false, addition: false },
   { feature: "Prévisions IA météo", pauco: true, lightspeed: false, zelty: false, addition: false },
   { feature: "Intégration caisses", pauco: true, lightspeed: true, zelty: true, addition: true },

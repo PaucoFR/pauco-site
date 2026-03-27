@@ -38,11 +38,11 @@ const modules: any[] = [
     title: "Gestion CA, dépenses & ratios",
     subtitle: "Pilotez votre restaurant avec des chiffres, pas au feeling.",
     description:
-      "Saisissez votre CA quotidien et vos dépenses en 4 catégories : Achats & matières, Personnel, Charges opérationnelles, Charges fixes. Pauco calcule automatiquement votre food cost, vos ratios et votre seuil de rentabilité avec la date prévisionnelle d'atteinte.",
+      "Saisissez votre CA quotidien et vos dépenses en 4 catégories : Achats & matières, Personnel, Charges opérationnelles, Charges fixes. Pauco calcule automatiquement votre coût matière, vos ratios et votre seuil de rentabilité avec la date prévisionnelle d'atteinte.",
     features: [
       "Saisie du CA quotidien en 10 secondes",
       "4 catégories de dépenses prédéfinies",
-      "Food cost % calculé automatiquement",
+      "Coût matière % calculé automatiquement",
       "Seuil de rentabilité avec date d'atteinte",
       "Graphiques d'évolution jour/semaine/mois",
       "Export CSV et Excel",
@@ -61,14 +61,14 @@ const modules: any[] = [
   {
     id: "planning",
     tag: "Module 3",
-    title: "Planning drag & drop",
+    title: "Planning",
     subtitle: "Finies les heures perdues à faire le planning sur Excel.",
     description:
-      "Un planning visuel avec 3 pôles (Salle, Bar, Cuisine), des shifts personnalisés avec couleurs, un compteur d'heures automatique, la gestion des congés (2,5j/mois), et l'export PDF en un clic pour votre équipe.",
+      "Un planning visuel avec 3 pôles (Salle, Bar, Cuisine), des créneaux personnalisés avec couleurs, un compteur d'heures automatique, la gestion des congés (2,5j/mois), et l'export PDF en un clic pour votre équipe.",
     features: [
       "3 pôles : Salle, Bar, Cuisine",
-      "Drag & drop intuitif",
-      "Shifts personnalisés avec couleurs",
+      "Glisser-déposer intuitif",
+      "Créneaux personnalisés avec couleurs",
       "Compteur d'heures automatique",
       "Gestion des congés (2,5j/mois)",
       "Export PDF pour l'équipe",
@@ -91,9 +91,9 @@ const modules: any[] = [
     title: "Fiches techniques recettes",
     subtitle: "Connaissez le coût réel de chaque plat à la carte.",
     description:
-      "Créez vos fiches techniques avec coefficients, ratios, marges, les 14 allergènes réglementaires, portions et temps de préparation. Pauco calcule automatiquement le food cost par plat pour que vous sachiez exactement ce que chaque plat vous rapporte.",
+      "Créez vos fiches techniques avec coefficients, ratios, marges, les 14 allergènes réglementaires, portions et temps de préparation. Pauco calcule automatiquement le coût matière par plat pour que vous sachiez exactement ce que chaque plat vous rapporte.",
     features: [
-      "Calcul automatique du food cost par plat",
+      "Calcul automatique du coût matière par plat",
       "Coefficients et ratios de marge",
       "14 allergènes réglementaires",
       "Portions et temps de préparation",
@@ -114,7 +114,7 @@ const modules: any[] = [
   {
     id: "costs-bar",
     tag: "Module 5",
-    title: "Fiches cocktails & Costs Bar",
+    title: "Fiches cocktails & coûts bar",
     subtitle: "Calculez le coût réel de votre bar — pertes incluses.",
     description:
       "Créez vos fiches cocktails avec calcul en cl. Intégrez toutes les pertes : casse, évaporation, dégustation, décoration. Gérez les recettes sans alcool. Le coût réel de votre bar avec toutes les pertes est calculé automatiquement.",
@@ -123,7 +123,7 @@ const modules: any[] = [
       "Pertes intégrées (casse, évaporation, dégustation, déco)",
       "Recettes avec et sans alcool",
       "Coût réel par cocktail",
-      "Food cost bar global",
+      "Coût matière bar global",
       "Comparaison coût/prix de vente",
     ],
     mockup: {
@@ -285,7 +285,7 @@ export default function FonctionnalitesContent() {
                           <div className="grid grid-cols-2 gap-px bg-white/[0.06]">
                             {[
                               { label: "CA Semaine", value: mod.mockup.data.ca, trend: mod.mockup.data.trend },
-                              { label: "Food Cost", value: mod.mockup.data.foodCost, trend: "" },
+                              { label: "Coût matière", value: mod.mockup.data.foodCost, trend: "" },
                             ].map((m, mi) => (
                               <div key={mi} className="bg-[#1C2230] p-4">
                                 <div className="text-[10px] font-medium tracking-wider uppercase text-white/28 mb-1.5">{m.label}</div>
@@ -317,7 +317,7 @@ export default function FonctionnalitesContent() {
                           <div className="text-base font-semibold text-white">{mod.mockup.data.plat}</div>
                           <div className="grid grid-cols-3 gap-2">
                             {[
-                              { l: "Food Cost", v: mod.mockup.data.foodCost },
+                              { l: "Coût mat.", v: mod.mockup.data.foodCost },
                               { l: "Prix vente", v: mod.mockup.data.prixVente },
                               { l: "Marge", v: mod.mockup.data.marge },
                             ].map((m, mi) => (

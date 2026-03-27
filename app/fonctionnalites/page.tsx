@@ -4,7 +4,7 @@ import FonctionnalitesContent from "./FonctionnalitesContent";
 export const metadata: Metadata = {
   title: "Fonctionnalités",
   description:
-    "E-réputation automatique, gestion CA/dépenses, planning drag & drop, fiches techniques, food cost, costs bar. Tout ce dont un restaurateur a besoin.",
+    "E-réputation automatique, gestion CA/dépenses, planning, fiches techniques, coût matière, coûts bar. Tout ce dont un restaurateur a besoin.",
 };
 
 export default function FonctionnalitesPage() {

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | Pauco",
   },
   description:
-    "E-réputation automatique, gestion CA et dépenses, fiches techniques, food cost, planning équipe. 99€/mois à vie pour les 50 premiers restaurateurs fondateurs.",
+    "E-réputation automatique, gestion CA et dépenses, fiches techniques, coût matière, planning équipe. 99€/mois à vie pour les 50 premiers restaurateurs fondateurs.",
   metadataBase: new URL("https://paucoandco.com"),
   openGraph: {
     type: "website",

@@ -71,7 +71,7 @@ export default function ArticleSeuilRentabilite() {
                 Les charges variables évoluent avec votre CA :
               </p>
               <ul className="list-disc pl-6 space-y-2 text-[15px] text-[#6A6059] mb-4">
-                <li>Achats de matières premières (food cost)</li>
+                <li>Achats de matières premières (coût matière)</li>
                 <li>Heures supplémentaires et extras</li>
                 <li>Consommables (serviettes, produits d&apos;entretien)</li>
                 <li>Commissions plateformes de livraison</li>
@@ -88,7 +88,7 @@ export default function ArticleSeuilRentabilite() {
                   <span className="font-semibold text-[#1a1a18]">45 000€</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-[#6A6059]">Charges variables (food cost 30% + extras)</span>
+                  <span className="text-[#6A6059]">Charges variables (coût matière 30% + extras)</span>
                   <span className="font-semibold text-[#1a1a18]">15 750€</span>
                 </div>
                 <div className="border-t border-[#E4DDD3] pt-3">
@@ -110,7 +110,7 @@ export default function ArticleSeuilRentabilite() {
               <h2 className="font-serif text-2xl font-semibold mt-10 mb-4">Comment réduire votre seuil de rentabilité</h2>
               <p className="text-[15px] text-[#6A6059] leading-relaxed mb-4">
                 Deux leviers : réduire vos charges fixes (renégocier le bail, optimiser
-                les contrats) ou augmenter votre taux de marge (réduire le food cost,
+                les contrats) ou augmenter votre taux de marge (réduire le coût matière,
                 ajuster les prix de vente). L&apos;idéal : agir sur les deux en même temps.
               </p>
 

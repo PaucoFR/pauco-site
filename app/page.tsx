@@ -33,7 +33,7 @@ const features = [
       </svg>
     ),
     title: "Gestion CA, dépenses & ratios",
-    desc: "Saisie du CA quotidien, dépenses en 4 catégories, food cost %, seuil de rentabilité. Export CSV/Excel.",
+    desc: "Saisie du CA quotidien, dépenses en 4 catégories, coût matière %, seuil de rentabilité. Export CSV/Excel.",
   },
   {
     icon: (
@@ -44,8 +44,8 @@ const features = [
         <line x1="3" y1="10" x2="21" y2="10" />
       </svg>
     ),
-    title: "Planning drag & drop",
-    desc: "3 pôles Salle/Bar/Cuisine, shifts personnalisés avec couleurs, compteur heures, gestion des congés, export PDF.",
+    title: "Planning",
+    desc: "3 pôles Salle/Bar/Cuisine, créneaux personnalisés avec couleurs, compteur heures, gestion des congés, export PDF.",
   },
   {
     icon: (
@@ -57,7 +57,7 @@ const features = [
       </svg>
     ),
     title: "Fiches techniques recettes",
-    desc: "Coefficients, ratios, marges, 14 allergènes, portions, temps de préparation. Food cost par plat automatisé.",
+    desc: "Coefficients, ratios, marges, 14 allergènes, portions, temps de préparation. Coût matière par plat automatisé.",
   },
   {
     icon: (
@@ -69,7 +69,7 @@ const features = [
         <line x1="14" y1="1" x2="14" y2="4" />
       </svg>
     ),
-    title: "Fiches cocktails & Costs Bar",
+    title: "Fiches cocktails & coûts bar",
     desc: "Calcul en cl, pertes (casse, évaporation, dégustation, déco), sans alcool. Coût réel du bar.",
   },
   {
@@ -166,7 +166,7 @@ export default function Home() {
                 </h1>
                 <p className="text-[17px] text-[#6A6059] leading-relaxed mb-8 max-w-[420px]">
                   E-réputation automatique, gestion CA et dépenses, fiches
-                  techniques, food cost, planning équipe et costs bar. Le premier
+                  techniques, coût matière, planning équipe et coûts bar. Le premier
                   logiciel tout-en-un des restaurateurs — 99€/mois à vie.
                 </p>
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-10">
@@ -405,19 +405,19 @@ export default function Home() {
             {[
               {
                 num: "1",
-                title: "Vous nous donnez accès à votre fiche Google",
-                desc: "On vous guide en 5 minutes. Vous partagez l'accès gestionnaire à votre fiche Google Business — rien à installer, aucun mot de passe à donner.",
+                title: "Vous créez votre espace en 5 minutes",
+                desc: "Nom du restaurant, équipe, CA objectif. On configure tout avec vous en un appel de 15 minutes.",
               },
               {
                 num: "2",
-                title: "On paramètre votre ton et vos réponses types",
-                desc: "Un échange de 15 minutes pour qu'on comprenne votre établissement — ambiance, type de cuisine, ce que vous voulez mettre en avant.",
+                title: "On paramètre votre tableau de bord",
+                desc: "Fiches techniques, planning, dépenses, coût matière. Opérationnel en 24h, rien à installer de votre côté.",
                 green: true,
               },
               {
                 num: "3",
-                title: "Pauco pilote votre restaurant",
-                desc: "Chaque avis reçoit une réponse personnalisée. Vos marges et food cost sont calculés automatiquement. Votre planning est à jour.",
+                title: "Pauco pilote, vous gérez",
+                desc: "Rapport chaque matin sur votre téléphone, réponses aux avis automatiques, coût matière en temps réel. Vous gardez un œil sur tout sans y passer de temps.",
               },
             ].map((step, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>

@@ -86,7 +86,7 @@ export default function ArticlePlanning() {
 
               <div className="bg-[#D6F0DF] border border-[#6DBF85]/30 rounded-xl p-6 my-10">
                 <p className="text-sm text-[#2D6A4A] leading-relaxed">
-                  <strong>Le planning Pauco</strong> : drag & drop, 3 pôles (Salle/Bar/Cuisine),
+                  <strong>Le planning Pauco</strong> : glisser-déposer, 3 pôles (Salle/Bar/Cuisine),
                   compteur d&apos;heures automatique, gestion des congés, export PDF. Tout est inclus
                   dans l&apos;abonnement fondateur à 99€/mois.
                 </p>

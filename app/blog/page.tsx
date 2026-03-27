@@ -6,15 +6,15 @@ import Tag from "../components/Tag";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Conseils pour restaurateurs : food cost, avis Google, planning équipe, seuil de rentabilité. Par Paul, fondateur de Pauco.",
+    "Conseils pour restaurateurs : coût matière, avis Google, planning équipe, seuil de rentabilité. Par Paul, fondateur de Pauco.",
 };
 
 const articles = [
   {
     slug: "reduire-food-cost",
-    title: "Comment réduire son food cost en restauration",
+    title: "Comment réduire son coût matière en restauration",
     excerpt:
-      "Le food cost est l'un des indicateurs les plus importants en restauration. Découvrez les méthodes concrètes pour le réduire sans sacrifier la qualité de vos plats.",
+      "Le coût matière est l'un des indicateurs les plus importants en restauration. Découvrez les méthodes concrètes pour le réduire sans sacrifier la qualité de vos plats.",
     readTime: "8 min",
     category: "Gestion",
   },

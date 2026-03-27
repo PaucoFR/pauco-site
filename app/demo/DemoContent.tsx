@@ -12,22 +12,22 @@ const demoModules = [
     icon: "💬",
   },
   {
-    title: "Dashboard CA",
-    desc: "Explorez le tableau de bord avec les données de CA, dépenses, food cost et seuil de rentabilité.",
+    title: "Tableau de bord CA",
+    desc: "Explorez le tableau de bord avec les données de CA, dépenses, coût matière et seuil de rentabilité.",
     icon: "📊",
   },
   {
     title: "Planning",
-    desc: "Testez le planning drag & drop avec les 3 pôles, les shifts personnalisés et le compteur d'heures.",
+    desc: "Testez le planning avec les 3 pôles, les créneaux personnalisés et le compteur d'heures.",
     icon: "📅",
   },
   {
     title: "Fiches techniques",
-    desc: "Créez une fiche technique avec calcul automatique du food cost, des allergènes et des marges.",
+    desc: "Créez une fiche technique avec calcul automatique du coût matière, des allergènes et des marges.",
     icon: "📋",
   },
   {
-    title: "Costs Bar",
+    title: "Coûts bar",
     desc: "Composez un cocktail et voyez le coût réel calculé avec toutes les pertes intégrées.",
     icon: "🍸",
   },
@@ -93,7 +93,7 @@ export default function DemoContent() {
                       <div className="text-[11px] text-[#4ade80] mt-0.5">+18% vs sem. dern.</div>
                     </div>
                     <div className="bg-white/[0.04] rounded-lg p-4">
-                      <div className="text-[10px] text-white/30 uppercase tracking-wider mb-1">Food Cost</div>
+                      <div className="text-[10px] text-white/30 uppercase tracking-wider mb-1">Coût matière</div>
                       <div className="text-xl font-bold text-white">27,4%</div>
                       <div className="text-[11px] text-[#4ade80] mt-0.5">Objectif : 30%</div>
                     </div>

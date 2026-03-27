@@ -17,7 +17,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-white/30 leading-relaxed">
-              Le logiciel tout-en-un des restaurateurs. E-réputation, gestion, planning, food cost.
+              Le logiciel tout-en-un des restaurateurs. E-réputation, gestion, planning, coût matière.
             </p>
           </div>
           <div>
