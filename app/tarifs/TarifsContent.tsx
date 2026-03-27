@@ -21,7 +21,7 @@ const comparatif = [
 const faqs = [
   {
     q: "Le prix de 99€ est vraiment garanti à vie ?",
-    a: "Oui, c'est un engagement contractuel. Tant que vous restez abonné, votre prix ne changera jamais — même quand le logiciel passera à 299€ pour les nouveaux clients.",
+    a: "Oui, c'est un engagement contractuel. Tant que vous restez abonné, votre prix ne changera jamais — même quand le logiciel passera à 199€ pour les nouveaux clients.",
   },
   {
     q: "Y a-t-il des frais cachés ?",
@@ -123,7 +123,7 @@ export default function TarifsContent() {
                   Standard (futur)
                 </div>
                 <div className="flex items-baseline gap-1 mb-1">
-                  <span className="font-serif text-5xl font-semibold text-[#A09488]">299€</span>
+                  <span className="font-serif text-5xl font-semibold text-[#A09488]">199€</span>
                   <span className="text-[#A09488]">/mois</span>
                 </div>
                 <p className="text-sm text-[#A09488] mb-6">

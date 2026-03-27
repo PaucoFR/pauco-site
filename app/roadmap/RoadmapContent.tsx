@@ -67,7 +67,7 @@ const phases = [
     title: "Prévisions IA météo + Intégrations caisses",
     desc: "Chaque matin : prévision de couverts du lendemain selon météo, événements locaux et historique. Intégration caisses Lightspeed, Zelty, L'Addition.",
     priceFondateur: "99€/mois",
-    priceStandard: "299€/mois",
+    priceStandard: "199€/mois",
     priceNote: "nouveaux clients",
     active: false,
     modules: [
@@ -113,7 +113,7 @@ export default function RoadmapContent() {
                   <p className="text-sm text-[#2D6A4A]/80 leading-relaxed">
                     En tant que fondateur, vous bénéficiez de chaque nouveau module sans augmentation.
                     Votre prix de 99€/mois est contractuellement garanti à vie, même quand le logiciel
-                    passera à 299€/mois pour les nouveaux clients.
+                    passera à 199€/mois pour les nouveaux clients.
                   </p>
                 </div>
               </div>
