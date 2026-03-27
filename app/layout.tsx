@@ -85,11 +85,8 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
           rel="stylesheet"
         />
-        <link
-          rel="icon"
-          type="image/svg+xml"
-          href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='56' height='56' rx='14' fill='%232D6A4A'/%3E%3Cpath d='M16 10H31C37.6274 10 43 15.3726 43 22C43 28.6274 37.6274 34 31 34H22V46H16V10Z' fill='white'/%3E%3Ccircle cx='31' cy='22' r='7' fill='%232D6A4A'/%3E%3C/svg%3E"
-        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
       </head>
       <body className="font-sans antialiased">
         <SchemaOrg />
