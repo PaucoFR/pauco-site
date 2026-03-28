@@ -355,7 +355,7 @@ export default function FonctionnalitesContent() {
                             </div>
                             <div className="bg-white/[0.04] rounded-lg p-3">
                               <div className="text-[10px] text-white/30 uppercase tracking-wider mb-1">En congé</div>
-                              <div className="text-lg font-bold text-[#F59E0B]">{mod.mockup.data.conges}</div>
+                              <div className="text-lg font-bold text-white">{mod.mockup.data.conges}</div>
                             </div>
                           </div>
                           <div className="space-y-1.5">

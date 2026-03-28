@@ -78,7 +78,7 @@ const features = [
       </svg>
     ),
     title: "Gestion des effectifs",
-    desc: "Congés 2,5j/mois, postes, 3 pôles.",
+    desc: "Gestion des congés (2,5j/mois), postes par pôle Salle/Bar/Cuisine, analyse fournisseurs et 23 ressources métier.",
   },
 ];
 
