@@ -1,14 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import ScrollReveal from "./components/ScrollReveal";
 import Tag from "./components/Tag";
 import CTASection from "./components/CTASection";
-
-const FOUNDERS = 12;
-const TOTAL = 50;
 
 const villes = [
   "Nice", "Bordeaux", "Biarritz", "Bayonne", "Vannes", "Brest", "Quimper",
@@ -87,33 +83,6 @@ const features = [
 ];
 
 export default function Home() {
-  const [count, setCount] = useState(0);
-  const counterRef = useRef<HTMLDivElement>(null);
-  const counted = useRef(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !counted.current) {
-          counted.current = true;
-          const dur = 1800;
-          const t0 = performance.now();
-          const step = (now: number) => {
-            const p = Math.min((now - t0) / dur, 1);
-            const e = 1 - Math.pow(1 - p, 3);
-            const v = Math.round(e * FOUNDERS);
-            setCount(v);
-            if (p < 1) requestAnimationFrame(step);
-          };
-          requestAnimationFrame(step);
-        }
-      },
-      { threshold: 0.3 }
-    );
-    if (counterRef.current) observer.observe(counterRef.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <>
       {/* Ticker */}
@@ -352,55 +321,6 @@ export default function Home() {
               </ScrollReveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Founder counter — above CTA */}
-      <section className="pb-0">
-        <div className="max-w-[560px] mx-auto px-6 md:px-12">
-          <ScrollReveal>
-            <div
-              ref={counterRef}
-              className="bg-white border border-[#E4DDD3] rounded-xl p-7"
-            >
-              <div className="flex items-center gap-2 mb-4">
-                <span className="w-[7px] h-[7px] rounded-full bg-[#6DBF85] animate-blink" />
-                <span className="text-[11px] font-semibold tracking-[0.13em] uppercase text-[#2D6A4A]">
-                  Places fondateur en cours
-                </span>
-              </div>
-              <div className="flex justify-between items-end mb-3.5">
-                <div>
-                  <div className="font-serif text-[54px] font-semibold leading-none text-[#1a1a18]">
-                    {count}
-                    <span className="text-[26px] text-[#A09488]">/50</span>
-                  </div>
-                  <div className="text-xs text-[#6A6059] mt-1">
-                    restaurants fondateurs
-                  </div>
-                </div>
-                <div className="text-right">
-                  <div className="font-serif text-4xl font-semibold text-[#2D6A4A] leading-none">
-                    {TOTAL - count}
-                  </div>
-                  <div className="text-xs text-[#6A6059] mt-0.5">
-                    places restantes
-                  </div>
-                </div>
-              </div>
-              <div className="h-1 bg-[#E4DDD3] rounded-full overflow-hidden mb-3">
-                <div
-                  className="h-full bg-gradient-to-r from-[#2D6A4A] to-[#6DBF85] rounded-full transition-all duration-[1800ms]"
-                  style={{ width: `${(count / TOTAL) * 100}%` }}
-                />
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-xs text-[#A09488]">
-                  Prix garanti à vie · ferme à 50
-                </span>
-              </div>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 

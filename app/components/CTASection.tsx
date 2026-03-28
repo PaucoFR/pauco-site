@@ -22,10 +22,13 @@ export default function CTASection() {
           >
             Devenir client fondateur &rarr;
           </Link>
-          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-7 mt-7 items-center">
+          <p className="text-sm text-white/40 mt-5 flex items-center justify-center gap-2">
+            <span className="w-[6px] h-[6px] rounded-full bg-[#4ade80] animate-pulse" />
+            38 places restantes sur 50 · Prix garanti à vie
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-7 mt-5 items-center">
             {[
               "99€/mois · jamais augmenté",
-              "Logiciel complet d'ici fin 2027",
               "Sans engagement",
             ].map((text) => (
               <span
