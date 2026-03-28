@@ -86,21 +86,6 @@ const features = [
   },
 ];
 
-const testimonials = [
-  {
-    text: "Pauco gère mes réponses aux avis automatiquement depuis 3 semaines. Ma note Google est passée de 4,2 à 4,6. Je n'ai plus rien à faire.",
-    name: "Thomas R.",
-    role: "Directeur de restaurant",
-    initials: "TR",
-  },
-  {
-    text: "Le planning et les fiches techniques m'ont fait gagner 2h par jour. Je vois mes marges en temps réel, mes coûts bar sont enfin sous contrôle.",
-    name: "Sophie M.",
-    role: "Gérante de restaurant",
-    initials: "SM",
-  },
-];
-
 export default function Home() {
   const [count, setCount] = useState(0);
   const counterRef = useRef<HTMLDivElement>(null);
@@ -147,174 +132,97 @@ export default function Home() {
       </div>
 
       {/* Hero */}
-      <section className="py-16 md:py-20">
-        <div className="max-w-[1120px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              >
-                <div className="mb-6">
-                  <Tag>Prix fondateur · 99€/mois à vie</Tag>
-                </div>
-                <h1 className="font-serif text-[clamp(40px,5vw,62px)] font-semibold leading-[1.07] tracking-tight mb-5">
-                  Le logiciel que vos
-                  <br />
-                  <em className="italic text-[#2D6A4A]">concurrents n&apos;ont pas.</em>
-                </h1>
-                <p className="text-[17px] text-[#6A6059] leading-relaxed mb-8 max-w-[420px]">
-                  E-réputation automatique, gestion CA et dépenses, fiches
-                  techniques, coût matière, planning équipe et coûts bar. Le premier
-                  logiciel tout-en-un des restaurateurs — 99€/mois à vie.
-                </p>
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-10">
-                  <Link
-                    href="/contact"
-                    className="bg-[#2D6A4A] text-white text-base font-semibold px-7 py-4 rounded-lg hover:bg-[#3a7d58] hover:-translate-y-0.5 transition-all duration-200 no-underline text-center"
-                  >
-                    Bloquer ma place fondateur
-                  </Link>
-                  <Link
-                    href="/fonctionnalites"
-                    className="border-[1.5px] border-[#E4DDD3] text-[#6A6059] text-base font-medium px-5 py-3.5 rounded-lg hover:border-[#1a1a18] hover:text-[#1a1a18] transition-all duration-200 no-underline text-center"
-                  >
-                    Voir les fonctionnalités
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Founder box */}
-              <div
-                ref={counterRef}
-                className="bg-white border border-[#E4DDD3] rounded-xl p-7"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="w-[7px] h-[7px] rounded-full bg-[#6DBF85] animate-blink" />
-                  <span className="text-[11px] font-semibold tracking-[0.13em] uppercase text-[#2D6A4A]">
-                    Places fondateur en cours
-                  </span>
-                </div>
-                <div className="flex justify-between items-end mb-3.5">
-                  <div>
-                    <div className="font-serif text-[54px] font-semibold leading-none text-[#1a1a18]">
-                      {count}
-                      <span className="text-[26px] text-[#A09488]">/50</span>
-                    </div>
-                    <div className="text-xs text-[#6A6059] mt-1">
-                      restaurants fondateurs
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className="font-serif text-4xl font-semibold text-[#2D6A4A] leading-none">
-                      {TOTAL - count}
-                    </div>
-                    <div className="text-xs text-[#6A6059] mt-0.5">
-                      places restantes
-                    </div>
-                  </div>
-                </div>
-                <div className="h-1 bg-[#E4DDD3] rounded-full overflow-hidden mb-3">
-                  <div
-                    className="h-full bg-gradient-to-r from-[#2D6A4A] to-[#6DBF85] rounded-full transition-all duration-[1800ms]"
-                    style={{ width: `${(count / TOTAL) * 100}%` }}
-                  />
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-xs text-[#A09488]">
-                    Prix garanti à vie · ferme à 50
-                  </span>
-                </div>
-              </div>
+      <section className="py-20 md:py-28">
+        <div className="max-w-[720px] mx-auto px-6 md:px-12 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <div className="mb-6">
+              <Tag>Prix fondateur · 99€/mois à vie</Tag>
             </div>
-
-            {/* Right stats */}
-            <div className="flex flex-col gap-3">
-              <div className="grid grid-cols-2 gap-3">
-                <ScrollReveal>
-                  <div className="bg-white border border-[#E4DDD3] rounded-xl p-5">
-                    <div className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#A09488] mb-2">
-                      Tout inclus dès maintenant
-                    </div>
-                    <div className="font-serif text-3xl font-semibold leading-none text-[#1a1a18]">
-                      6 modules
-                    </div>
-                    <div className="text-xs text-[#2D6A4A] mt-1 font-medium">
-                      dans un seul abonnement
-                    </div>
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal delay={0.1}>
-                  <div className="bg-[#1c3829] border border-[#1c3829] rounded-xl p-5">
-                    <div className="text-[11px] font-medium tracking-[0.1em] uppercase text-white/35 mb-2">
-                      À vie garanti fondateurs
-                    </div>
-                    <div className="font-serif text-3xl font-semibold leading-none text-white">
-                      99€
-                    </div>
-                    <div className="text-xs text-[#6DBF85] mt-1 font-medium">
-                      prix contractuel
-                    </div>
-                    <div className="h-[3px] bg-white/10 rounded-full overflow-hidden mt-2.5">
-                      <div className="h-full bg-[#6DBF85] rounded-full" style={{ width: "94%" }} />
-                    </div>
-                  </div>
-                </ScrollReveal>
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <ScrollReveal delay={0.15}>
-                  <div className="bg-white border border-[#E4DDD3] rounded-xl p-5">
-                    <div className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#A09488] mb-2">
-                      Places fondateurs max
-                    </div>
-                    <div className="font-serif text-3xl font-semibold leading-none text-[#1a1a18]">50</div>
-                    <div className="text-xs text-[#2D6A4A] mt-1 font-medium">puis le prix augmente</div>
-                  </div>
-                </ScrollReveal>
-                <ScrollReveal delay={0.2}>
-                  <div className="bg-white border border-[#E4DDD3] rounded-xl p-5">
-                    <div className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#A09488] mb-2">
-                      Opérationnel en
-                    </div>
-                    <div className="font-serif text-3xl font-semibold leading-none text-[#1a1a18]">24h</div>
-                    <div className="text-xs text-[#2D6A4A] mt-1 font-medium">rien à installer</div>
-                  </div>
-                </ScrollReveal>
-              </div>
-
-              {/* Testimonials */}
-              {testimonials.map((t, i) => (
-                <ScrollReveal key={i} delay={0.25 + i * 0.1}>
-                  <div className="bg-white border border-[#E4DDD3] rounded-xl p-5">
-                    <div className="text-[#F59E0B] text-sm tracking-widest mb-2.5">
-                      ★★★★★
-                    </div>
-                    <p className="text-[13px] leading-relaxed text-[#1a1a18] italic mb-3.5">
-                      &ldquo;{t.text}&rdquo;
-                    </p>
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-9 h-9 rounded-full bg-[#D6F0DF] flex items-center justify-center text-[10px] font-bold text-[#2D6A4A] shrink-0">
-                        {t.initials}
-                      </div>
-                      <div>
-                        <div className="font-semibold text-xs">{t.name}</div>
-                        <div className="text-[11px] text-[#6A6059]">{t.role}</div>
-                      </div>
-                      <span className="ml-auto bg-[#D6F0DF] text-[#2D6A4A] text-[9px] font-bold tracking-[0.08em] px-2 py-0.5 rounded shrink-0 hidden sm:inline">
-                        CLIENT FONDATEUR
-                      </span>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              ))}
+            <h1 className="font-serif text-[clamp(40px,5vw,62px)] font-semibold leading-[1.07] tracking-tight mb-5">
+              Le logiciel que vos
+              <br />
+              <em className="italic text-[#2D6A4A]">concurrents n&apos;ont pas.</em>
+            </h1>
+            <p className="text-[17px] text-[#6A6059] leading-relaxed mb-8 max-w-[520px] mx-auto">
+              E-réputation automatique, gestion CA et dépenses, fiches
+              techniques, coût matière, planning équipe et coûts bar. Le premier
+              logiciel tout-en-un des restaurateurs — 99€/mois à vie.
+            </p>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 mb-8">
+              <Link
+                href="/contact"
+                className="bg-[#2D6A4A] text-white text-base font-semibold px-7 py-4 rounded-lg hover:bg-[#3a7d58] hover:-translate-y-0.5 transition-all duration-200 no-underline text-center"
+              >
+                Bloquer ma place fondateur
+              </Link>
+              <Link
+                href="/fonctionnalites"
+                className="border-[1.5px] border-[#E4DDD3] text-[#6A6059] text-base font-medium px-5 py-3.5 rounded-lg hover:border-[#1a1a18] hover:text-[#1a1a18] transition-all duration-200 no-underline text-center"
+              >
+                Voir les fonctionnalités
+              </Link>
             </div>
-          </div>
+            <p className="text-sm text-[#A09488]">
+              Déjà utilisé par des restaurateurs en France — 99€/mois, sans engagement.
+            </p>
+          </motion.div>
         </div>
       </section>
 
+      {/* Key numbers */}
+      <div className="bg-white border-t border-b border-[#E4DDD3] py-14">
+        <div className="max-w-[1120px] mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <ScrollReveal>
+              <div className="bg-white border border-[#E4DDD3] rounded-xl p-5 text-center">
+                <div className="font-serif text-3xl font-semibold leading-none text-[#1a1a18]">
+                  6 modules
+                </div>
+                <div className="text-xs text-[#2D6A4A] mt-1.5 font-medium">
+                  tout inclus dès maintenant
+                </div>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.1}>
+              <div className="bg-[#1c3829] border border-[#1c3829] rounded-xl p-5 text-center">
+                <div className="font-serif text-3xl font-semibold leading-none text-white">
+                  99€
+                </div>
+                <div className="text-xs text-[#6DBF85] mt-1.5 font-medium">
+                  prix garanti à vie
+                </div>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.15}>
+              <div className="bg-white border border-[#E4DDD3] rounded-xl p-5 text-center">
+                <div className="font-serif text-3xl font-semibold leading-none text-[#1a1a18]">
+                  50 places
+                </div>
+                <div className="text-xs text-[#2D6A4A] mt-1.5 font-medium">
+                  puis le prix augmente
+                </div>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
+              <div className="bg-white border border-[#E4DDD3] rounded-xl p-5 text-center">
+                <div className="font-serif text-3xl font-semibold leading-none text-[#1a1a18]">
+                  24h
+                </div>
+                <div className="text-xs text-[#2D6A4A] mt-1.5 font-medium">
+                  pour être opérationnel
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </div>
+
       {/* Proof strip */}
-      <div className="bg-white border-t border-b border-[#E4DDD3] py-12">
+      <div className="py-12">
         <div className="max-w-[1120px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-5">
             {[
@@ -444,6 +352,55 @@ export default function Home() {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Founder counter — above CTA */}
+      <section className="pb-0">
+        <div className="max-w-[560px] mx-auto px-6 md:px-12">
+          <ScrollReveal>
+            <div
+              ref={counterRef}
+              className="bg-white border border-[#E4DDD3] rounded-xl p-7"
+            >
+              <div className="flex items-center gap-2 mb-4">
+                <span className="w-[7px] h-[7px] rounded-full bg-[#6DBF85] animate-blink" />
+                <span className="text-[11px] font-semibold tracking-[0.13em] uppercase text-[#2D6A4A]">
+                  Places fondateur en cours
+                </span>
+              </div>
+              <div className="flex justify-between items-end mb-3.5">
+                <div>
+                  <div className="font-serif text-[54px] font-semibold leading-none text-[#1a1a18]">
+                    {count}
+                    <span className="text-[26px] text-[#A09488]">/50</span>
+                  </div>
+                  <div className="text-xs text-[#6A6059] mt-1">
+                    restaurants fondateurs
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="font-serif text-4xl font-semibold text-[#2D6A4A] leading-none">
+                    {TOTAL - count}
+                  </div>
+                  <div className="text-xs text-[#6A6059] mt-0.5">
+                    places restantes
+                  </div>
+                </div>
+              </div>
+              <div className="h-1 bg-[#E4DDD3] rounded-full overflow-hidden mb-3">
+                <div
+                  className="h-full bg-gradient-to-r from-[#2D6A4A] to-[#6DBF85] rounded-full transition-all duration-[1800ms]"
+                  style={{ width: `${(count / TOTAL) * 100}%` }}
+                />
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-[#A09488]">
+                  Prix garanti à vie · ferme à 50
+                </span>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
