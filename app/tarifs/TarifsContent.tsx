@@ -71,9 +71,9 @@ export default function TarifsContent() {
       <section className="pb-20">
         <div className="max-w-[900px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <ScrollReveal>
-              <div className="bg-white border-2 border-[#2D6A4A] rounded-2xl p-8 relative">
-                <div className="absolute -top-3 left-8">
+            <ScrollReveal className="overflow-visible pt-3">
+              <div className="bg-white border-2 border-[#2D6A4A] rounded-xl p-7 relative overflow-visible">
+                <div className="absolute -top-3 left-8 z-10">
                   <span className="bg-[#2D6A4A] text-white text-[11px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full">
                     Recommandé
                   </span>
@@ -118,7 +118,7 @@ export default function TarifsContent() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.15}>
-              <div className="bg-white border border-[#E4DDD3] rounded-2xl p-8">
+              <div className="bg-white border border-[#E4DDD3] rounded-xl p-7">
                 <div className="text-xs font-semibold tracking-[0.1em] uppercase text-[#A09488] mb-4">
                   Standard (futur)
                 </div>

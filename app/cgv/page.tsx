@@ -102,7 +102,7 @@ export default function CGV() {
             </p>
             <p className="mt-2">
               Pour résilier, le client peut contacter le service client par email à{" "}
-              <a href="mailto:paul@paucoandco.com" className="text-[#2D6A4A] hover:underline">paul@paucoandco.com</a>{" "}
+              <a href="mailto:contact@paucoandco.com" className="text-[#2D6A4A] hover:underline">contact@paucoandco.com</a>{" "}
               ou par téléphone au{" "}
               <a href="tel:+33783470657" className="text-[#2D6A4A] hover:underline">+33 7 83 47 06 57</a>.
             </p>

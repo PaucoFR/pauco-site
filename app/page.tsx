@@ -188,7 +188,7 @@ export default function Home() {
               {/* Founder box */}
               <div
                 ref={counterRef}
-                className="bg-white border-[1.5px] border-[#E4DDD3] rounded-xl p-6"
+                className="bg-white border border-[#E4DDD3] rounded-xl p-7"
               >
                 <div className="flex items-center gap-2 mb-4">
                   <span className="w-[7px] h-[7px] rounded-full bg-[#6DBF85] animate-blink" />
@@ -233,7 +233,7 @@ export default function Home() {
             <div className="flex flex-col gap-3">
               <div className="grid grid-cols-2 gap-3">
                 <ScrollReveal>
-                  <div className="bg-white border border-[#E4DDD3] rounded-[10px] p-5">
+                  <div className="bg-white border border-[#E4DDD3] rounded-xl p-5">
                     <div className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#A09488] mb-2">
                       Tout inclus dès maintenant
                     </div>
@@ -246,7 +246,7 @@ export default function Home() {
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={0.1}>
-                  <div className="bg-[#1c3829] border border-[#1c3829] rounded-[10px] p-5">
+                  <div className="bg-[#1c3829] border border-[#1c3829] rounded-xl p-5">
                     <div className="text-[11px] font-medium tracking-[0.1em] uppercase text-white/35 mb-2">
                       À vie garanti fondateurs
                     </div>
@@ -264,7 +264,7 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <ScrollReveal delay={0.15}>
-                  <div className="bg-white border border-[#E4DDD3] rounded-[10px] p-5">
+                  <div className="bg-white border border-[#E4DDD3] rounded-xl p-5">
                     <div className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#A09488] mb-2">
                       Places fondateurs max
                     </div>
@@ -273,7 +273,7 @@ export default function Home() {
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={0.2}>
-                  <div className="bg-white border border-[#E4DDD3] rounded-[10px] p-5">
+                  <div className="bg-white border border-[#E4DDD3] rounded-xl p-5">
                     <div className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#A09488] mb-2">
                       Opérationnel en
                     </div>
@@ -286,7 +286,7 @@ export default function Home() {
               {/* Testimonials */}
               {testimonials.map((t, i) => (
                 <ScrollReveal key={i} delay={0.25 + i * 0.1}>
-                  <div className="bg-white border border-[#E4DDD3] rounded-[10px] p-5">
+                  <div className="bg-white border border-[#E4DDD3] rounded-xl p-5">
                     <div className="text-[#F59E0B] text-sm tracking-widest mb-2.5">
                       ★★★★★
                     </div>
@@ -358,7 +358,7 @@ export default function Home() {
               <ScrollReveal key={i} delay={i * 0.08}>
                 <div className="bg-white p-6 sm:p-9 relative overflow-hidden group hover:bg-[#FAFDF8] transition-colors duration-200">
                   <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#2D6A4A] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300" />
-                  <div className="w-10 h-10 rounded-[10px] bg-[#D6F0DF] flex items-center justify-center mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#D6F0DF] flex items-center justify-center mb-4">
                     {f.icon}
                   </div>
                   <h3 className="text-[17px] font-semibold mb-2">{f.title}</h3>

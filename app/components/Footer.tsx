@@ -46,7 +46,7 @@ export default function Footer() {
               Contact
             </h4>
             <div className="flex flex-col gap-2.5">
-              <a href="mailto:paul@paucoandco.com" className="text-sm text-white/30 hover:text-white/60 transition-colors no-underline">paul@paucoandco.com</a>
+              <a href="mailto:contact@paucoandco.com" className="text-sm text-white/30 hover:text-white/60 transition-colors no-underline">contact@paucoandco.com</a>
               <a href="tel:+33783470657" className="text-sm text-white/30 hover:text-white/60 transition-colors no-underline">+33 7 83 47 06 57</a>
             </div>
           </div>

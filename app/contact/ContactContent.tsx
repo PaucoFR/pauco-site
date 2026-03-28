@@ -35,7 +35,7 @@ export default function ContactContent() {
       setStatus("sent");
       setForm({ nom: "", restaurant: "", email: "", telephone: "", message: "" });
     } catch {
-      window.location.href = `mailto:paul@paucoandco.com?subject=${encodeURIComponent("Contact — " + form.nom)}&body=${encodeURIComponent(`Nom : ${form.nom}\nRestaurant : ${form.restaurant}\nEmail : ${form.email}\nTél : ${form.telephone}\n\n${form.message}`)}`;
+      window.location.href = `mailto:contact@paucoandco.com?subject=${encodeURIComponent("Contact — " + form.nom)}&body=${encodeURIComponent(`Nom : ${form.nom}\nRestaurant : ${form.restaurant}\nEmail : ${form.email}\nTél : ${form.telephone}\n\n${form.message}`)}`;
       setStatus("sent");
     }
   };
@@ -182,7 +182,7 @@ export default function ContactContent() {
                       </div>
                     </a>
                     <a
-                      href="mailto:paul@paucoandco.com"
+                      href="mailto:contact@paucoandco.com"
                       className="flex items-center gap-3 text-[#1a1a18] hover:text-[#2D6A4A] transition-colors no-underline group"
                     >
                       <div className="w-10 h-10 rounded-lg bg-[#D6F0DF] flex items-center justify-center group-hover:bg-[#2D6A4A] transition-colors">
@@ -191,7 +191,7 @@ export default function ContactContent() {
                         </svg>
                       </div>
                       <div>
-                        <div className="font-semibold text-sm">paul@paucoandco.com</div>
+                        <div className="font-semibold text-sm">contact@paucoandco.com</div>
                         <div className="text-xs text-[#6A6059]">Réponse sous 24h</div>
                       </div>
                     </a>

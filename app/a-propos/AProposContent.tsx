@@ -83,10 +83,10 @@ export default function AProposContent() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="mailto:paul@paucoandco.com"
+                  href="mailto:contact@paucoandco.com"
                   className="text-sm text-[#6A6059] hover:text-[#2D6A4A] transition-colors no-underline"
                 >
-                  paul@paucoandco.com
+                  contact@paucoandco.com
                 </a>
                 <a
                   href="tel:+33783470657"
@@ -144,7 +144,7 @@ export default function AProposContent() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {valeurs.map((v, i) => (
               <ScrollReveal key={i} delay={i * 0.08}>
-                <div className="bg-[#fafaf8] border border-[#E4DDD3] rounded-xl p-7">
+                <div className="bg-white border border-[#E4DDD3] rounded-xl p-7">
                   <h3 className="text-lg font-semibold mb-2">{v.title}</h3>
                   <p className="text-sm text-[#6A6059] leading-relaxed">{v.desc}</p>
                 </div>

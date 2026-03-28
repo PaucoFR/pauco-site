@@ -44,7 +44,7 @@ export default function CGU() {
               <li>Le service est réservé aux <strong className="text-[#1a1a18]">professionnels de la restauration</strong> agissant dans le cadre de leur activité.</li>
               <li>L&apos;utilisateur est seul responsable de la confidentialité de ses identifiants de connexion et de toute activité réalisée depuis son compte.</li>
               <li>En cas de suspicion d&apos;utilisation non autorisée, le Client s&apos;engage à en informer immédiatement Pauco à l&apos;adresse{" "}
-                <a href="mailto:paul@paucoandco.com" className="text-[#2D6A4A] hover:underline">paul@paucoandco.com</a>.
+                <a href="mailto:contact@paucoandco.com" className="text-[#2D6A4A] hover:underline">contact@paucoandco.com</a>.
               </li>
             </ul>
           </div>
@@ -137,7 +137,7 @@ export default function CGU() {
                 <strong className="text-[#1a1a18]">Droits RGPD :</strong> conformément au RGPD, vous disposez d&apos;un droit
                 d&apos;accès, de rectification, de suppression, de portabilité et de limitation du traitement de vos données.
                 Pour exercer ces droits, contactez-nous à{" "}
-                <a href="mailto:paul@paucoandco.com" className="text-[#2D6A4A] hover:underline">paul@paucoandco.com</a>.
+                <a href="mailto:contact@paucoandco.com" className="text-[#2D6A4A] hover:underline">contact@paucoandco.com</a>.
               </p>
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function CGU() {
                 <strong className="text-[#1a1a18]">Compensation :</strong> en cas de dépassement du seuil d&apos;indisponibilité,
                 le Client peut demander un crédit d&apos;un jour d&apos;abonnement par heure d&apos;indisponibilité
                 supplémentaire, sur simple demande à{" "}
-                <a href="mailto:paul@paucoandco.com" className="text-[#2D6A4A] hover:underline">paul@paucoandco.com</a>.
+                <a href="mailto:contact@paucoandco.com" className="text-[#2D6A4A] hover:underline">contact@paucoandco.com</a>.
                 Ce crédit constitue l&apos;unique recours du Client au titre du présent SLA.
               </p>
             </div>
@@ -219,7 +219,7 @@ export default function CGU() {
             <h2 className="font-semibold text-[#1a1a18] text-lg mb-3">10. Résiliation</h2>
             <ul className="list-disc pl-5 space-y-2">
               <li>Le Client peut résilier son abonnement <strong className="text-[#1a1a18]">à tout moment, sans frais</strong>, par simple email à{" "}
-                <a href="mailto:paul@paucoandco.com" className="text-[#2D6A4A] hover:underline">paul@paucoandco.com</a>.
+                <a href="mailto:contact@paucoandco.com" className="text-[#2D6A4A] hover:underline">contact@paucoandco.com</a>.
               </li>
               <li>L&apos;accès au service est maintenu jusqu&apos;à la <strong className="text-[#1a1a18]">fin de la période mensuelle en cours</strong>.</li>
               <li>Un export des données est disponible pendant <strong className="text-[#1a1a18]">30 jours</strong> après la date effective de résiliation. Passé ce délai, les données seront supprimées conformément à l&apos;article 4 des présentes CGU.</li>
