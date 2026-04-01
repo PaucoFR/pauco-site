@@ -23,7 +23,7 @@ export default function CGV() {
             </p>
             <p className="mt-2">
               Le service est édité par SASU Pauco (en cours de création), représentée par Paul Monfort,
-              dont le siège social est situé à Saint-Cast-le-Guildo, Bretagne, France.
+              dont le siège social est situé au 447 impasse de la Ville Revault, 35800 Saint-Lunaire, France.
             </p>
           </div>
 
@@ -150,7 +150,7 @@ export default function CGV() {
             <p className="mt-2">
               En cas de litige, les parties s&apos;engagent à rechercher une solution amiable avant toute action
               judiciaire. À défaut d&apos;accord amiable dans un délai de 30 jours, le litige sera porté devant
-              le <strong className="text-[#1a1a18]">tribunal compétent de Saint-Cast-le-Guildo</strong>.
+              le <strong className="text-[#1a1a18]">tribunal compétent de Saint-Malo</strong>.
             </p>
           </div>
 

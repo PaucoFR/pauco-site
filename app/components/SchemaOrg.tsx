@@ -40,7 +40,9 @@ export default function SchemaOrg() {
       },
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Saint-Cast-le-Guildo",
+        streetAddress: "447 impasse de la Ville Revault",
+        postalCode: "35800",
+        addressLocality: "Saint-Lunaire",
         addressRegion: "Bretagne",
         addressCountry: "FR",
       },
@@ -71,7 +73,9 @@ export default function SchemaOrg() {
     },
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Saint-Cast-le-Guildo",
+      streetAddress: "447 impasse de la Ville Revault",
+      postalCode: "35800",
+      addressLocality: "Saint-Lunaire",
       addressRegion: "Bretagne",
       addressCountry: "FR",
     },

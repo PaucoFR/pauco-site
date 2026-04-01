@@ -22,7 +22,7 @@ export default function MentionsLegales() {
             <ul className="list-none space-y-1.5 mt-3">
               <li><strong className="text-[#1a1a18]">Raison sociale :</strong> SASU Pauco (en cours de création)</li>
               <li><strong className="text-[#1a1a18]">Représentant légal :</strong> Paul Monfort</li>
-              <li><strong className="text-[#1a1a18]">Siège social :</strong> Saint-Cast-le-Guildo, Bretagne, France</li>
+              <li><strong className="text-[#1a1a18]">Siège social :</strong> 447 impasse de la Ville Revault, 35800 Saint-Lunaire, France</li>
               <li><strong className="text-[#1a1a18]">Email :</strong> <a href="mailto:contact@paucoandco.com" className="text-[#2D6A4A] hover:underline">contact@paucoandco.com</a></li>
               <li><strong className="text-[#1a1a18]">Téléphone :</strong> <a href="tel:+33783470657" className="text-[#2D6A4A] hover:underline">+33 7 83 47 06 57</a></li>
             </ul>

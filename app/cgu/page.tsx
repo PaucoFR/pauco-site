@@ -25,7 +25,7 @@ export default function CGU() {
             </p>
             <p className="mt-3">
               Pauco est édité par <strong className="text-[#1a1a18]">Paul Monfort</strong>, SASU en cours de création,
-              dont le siège social est situé à Saint-Cast-le-Guildo, Bretagne, France.
+              dont le siège social est situé au 447 impasse de la Ville Revault, 35800 Saint-Lunaire, France.
             </p>
             <p className="mt-3">
               Toute utilisation de la plateforme implique l&apos;acceptation sans réserve des présentes CGU par
