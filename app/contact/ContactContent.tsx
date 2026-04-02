@@ -157,7 +157,7 @@ export default function ContactContent() {
                     width="100%"
                     height="400"
                     frameBorder="0"
-                    className="rounded-lg"
+                    className="rounded-lg max-h-[50vh] sm:max-h-none"
                     title="Calendly"
                   />
                 </div>

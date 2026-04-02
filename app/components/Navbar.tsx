@@ -19,6 +19,11 @@ export default function Navbar() {
     setMenuOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
   const links = [
     { href: "/fonctionnalites", label: "Fonctionnalités" },
     { href: "/roadmap", label: "Roadmap" },
