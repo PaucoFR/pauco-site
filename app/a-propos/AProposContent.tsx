@@ -83,10 +83,10 @@ export default function AProposContent() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="mailto:contact@paucoandco.com"
+                  href="mailto:paul@paucoandco.com"
                   className="text-sm text-[#6A6059] hover:text-[#2D6A4A] transition-colors no-underline"
                 >
-                  contact@paucoandco.com
+                  paul@paucoandco.com
                 </a>
                 <a
                   href="tel:+33783470657"

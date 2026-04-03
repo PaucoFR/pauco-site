@@ -21,7 +21,7 @@ export default function PolitiqueConfidentialite() {
               représentée par Paul Monfort, dont le siège social est situé au 447 impasse de la Ville Revault, 35800 Saint-Lunaire, France.
             </p>
             <p className="mt-2">
-              Contact : <a href="mailto:contact@paucoandco.com" className="text-[#2D6A4A] hover:underline">contact@paucoandco.com</a>
+              Contact : <a href="mailto:paul@paucoandco.com" className="text-[#2D6A4A] hover:underline">paul@paucoandco.com</a>
             </p>
           </div>
 
@@ -78,7 +78,7 @@ export default function PolitiqueConfidentialite() {
             </ul>
             <p className="mt-3">
               Pour exercer ces droits, contactez-nous à :{" "}
-              <a href="mailto:contact@paucoandco.com" className="text-[#2D6A4A] hover:underline">contact@paucoandco.com</a>
+              <a href="mailto:paul@paucoandco.com" className="text-[#2D6A4A] hover:underline">paul@paucoandco.com</a>
             </p>
             <p className="mt-2">
               Vous pouvez également introduire une réclamation auprès de la CNIL (Commission Nationale de

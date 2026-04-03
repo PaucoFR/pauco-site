@@ -34,7 +34,7 @@ export default function SchemaOrg() {
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "+33783470657",
-        email: "contact@paucoandco.com",
+        email: "paul@paucoandco.com",
         contactType: "customer service",
         availableLanguage: "French",
       },
@@ -82,7 +82,7 @@ export default function SchemaOrg() {
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+33783470657",
-      email: "contact@paucoandco.com",
+      email: "paul@paucoandco.com",
       contactType: "customer service",
       availableLanguage: "French",
     },
