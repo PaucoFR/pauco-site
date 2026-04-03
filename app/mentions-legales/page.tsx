@@ -20,10 +20,13 @@ export default function MentionsLegales() {
               Le site <strong className="text-[#1a1a18]">paucoandco.com</strong> est édité par :
             </p>
             <ul className="list-none space-y-1.5 mt-3">
-              <li><strong className="text-[#1a1a18]">Raison sociale :</strong> SASU Pauco (en cours de création)</li>
-              <li><strong className="text-[#1a1a18]">Représentant légal :</strong> Paul Monfort</li>
-              <li><strong className="text-[#1a1a18]">Siège social :</strong> 447 impasse de la Ville Revault, 35800 Saint-Lunaire, France</li>
-              <li><strong className="text-[#1a1a18]">Email :</strong> <a href="mailto:contact@paucoandco.com" className="text-[#2D6A4A] hover:underline">contact@paucoandco.com</a></li>
+              <li><strong className="text-[#1a1a18]">Raison sociale :</strong> Pauco — Société par actions simplifiée à associé unique (SASU)</li>
+              <li><strong className="text-[#1a1a18]">Capital social :</strong> 1 000 €</li>
+              <li><strong className="text-[#1a1a18]">RCS :</strong> Saint-Malo — SIREN 103 317 335</li>
+              <li><strong className="text-[#1a1a18]">N° TVA intracommunautaire :</strong> FR 27 103 317 335</li>
+              <li><strong className="text-[#1a1a18]">Siège social :</strong> 447 Impasse de la Ville Revault, 35800 Saint-Lunaire, France</li>
+              <li><strong className="text-[#1a1a18]">Directeur de la publication :</strong> Paul Monfort</li>
+              <li><strong className="text-[#1a1a18]">Email :</strong> <a href="mailto:paul@paucoandco.com" className="text-[#2D6A4A] hover:underline">paul@paucoandco.com</a></li>
               <li><strong className="text-[#1a1a18]">Téléphone :</strong> <a href="tel:+33783470657" className="text-[#2D6A4A] hover:underline">+33 7 83 47 06 57</a></li>
             </ul>
           </div>
@@ -36,8 +39,8 @@ export default function MentionsLegales() {
           <div>
             <h2 className="font-semibold text-[#1a1a18] text-lg mb-3">3. Hébergeur</h2>
             <ul className="list-none space-y-1.5">
-              <li><strong className="text-[#1a1a18]">Nom :</strong> Railway Corporation</li>
-              <li><strong className="text-[#1a1a18]">Adresse :</strong> San Francisco, CA, États-Unis</li>
+              <li><strong className="text-[#1a1a18]">Nom :</strong> Railway (Railway Corp.)</li>
+              <li><strong className="text-[#1a1a18]">Adresse :</strong> 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis</li>
               <li><strong className="text-[#1a1a18]">Site :</strong> railway.app</li>
             </ul>
           </div>
@@ -76,7 +79,7 @@ export default function MentionsLegales() {
           </div>
 
           <p className="text-sm text-[#A09488] pt-6 border-t border-[#E4DDD3]">
-            Dernière mise à jour : mars 2026
+            Dernière mise à jour : avril 2026
           </p>
         </div>
       </div>
