@@ -80,6 +80,25 @@ const features = [
     title: "Gestion des effectifs",
     desc: "Gestion des congés (2,5j/mois), postes par pôle Salle/Bar/Cuisine, analyse fournisseurs et 23 ressources métier.",
   },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" className="w-5 h-5 stroke-[#2D6A4A] fill-none stroke-2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+    ),
+    title: "Hygiène HACCP",
+    desc: "Relevés températures, réception marchandises, traçabilité, étiquetage DLC/DDM, checklists hygiène quotidiennes.",
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" className="w-5 h-5 stroke-[#2D6A4A] fill-none stroke-2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+        <line x1="4" y1="22" x2="4" y2="15" />
+      </svg>
+    ),
+    title: "Légal",
+    desc: "Allergènes réglementaires, DUER, horaires d\u2019affichage, mentions obligatoires. Conformité assurée.",
+  },
 ];
 
 export default function Home() {
@@ -118,8 +137,9 @@ export default function Home() {
             </h1>
             <p className="text-[17px] text-[#6A6059] leading-relaxed mb-8 max-w-[520px] mx-auto">
               E-réputation automatique, gestion CA et dépenses, fiches
-              techniques, coût matière, planning équipe et coûts bar. Le premier
-              logiciel tout-en-un des restaurateurs — 99€/mois à vie.
+              techniques, coût matière, planning équipe, coûts bar, HACCP et
+              conformité légale. Le premier logiciel tout-en-un des
+              restaurateurs — 99€/mois à vie.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 mb-8">
               <Link
@@ -149,7 +169,7 @@ export default function Home() {
             <ScrollReveal>
               <div className="bg-white border border-[#E4DDD3] rounded-xl p-5 text-center">
                 <div className="font-serif text-3xl font-semibold leading-none text-[#1a1a18]">
-                  6 modules
+                  8 modules
                 </div>
                 <div className="text-xs text-[#2D6A4A] mt-1.5 font-medium">
                   tout inclus dès maintenant

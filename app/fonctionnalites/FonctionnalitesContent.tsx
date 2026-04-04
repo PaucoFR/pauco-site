@@ -162,6 +162,60 @@ const modules: any[] = [
     },
     color: "from-[#14B8A6] to-[#5EEAD4]",
   },
+  {
+    id: "haccp",
+    tag: "Module 7",
+    title: "Hygiène HACCP",
+    subtitle: "Conformité HACCP sans paperasse.",
+    description:
+      "Relevés de températures, fiches de réception marchandises, traçabilité complète, étiquetage DLC/DDM et checklists hygiène quotidiennes. Tout est archivé et prêt pour un contrôle sanitaire.",
+    features: [
+      "Relevés de températures (frigos, chambres froides)",
+      "Fiches de réception marchandises",
+      "Traçabilité complète des produits",
+      "Étiquetage DLC/DDM automatisé",
+      "Checklists hygiène quotidiennes",
+      "Archivage pour contrôle sanitaire",
+    ],
+    mockup: {
+      type: "haccp",
+      data: {
+        checks: [
+          { label: "Frigo 1", value: "3,2°C", ok: true },
+          { label: "Frigo 2", value: "4,1°C", ok: true },
+          { label: "Chambre froide", value: "-18,5°C", ok: true },
+        ],
+      },
+    },
+    color: "from-[#EF4444] to-[#F87171]",
+  },
+  {
+    id: "legal",
+    tag: "Module 8",
+    title: "Légal",
+    subtitle: "Toutes vos obligations légales au même endroit.",
+    description:
+      "Gestion des allergènes réglementaires, Document Unique d\u2019Évaluation des Risques (DUER), horaires d\u2019affichage obligatoires et mentions légales. Conformité assurée en permanence.",
+    features: [
+      "Gestion des 14 allergènes réglementaires",
+      "DUER (Document Unique d\u2019Évaluation des Risques)",
+      "Horaires d\u2019affichage obligatoires",
+      "Mentions obligatoires (licences, origine viandes)",
+      "Modèles conformes prêts à l\u2019emploi",
+      "Alertes mises à jour réglementaires",
+    ],
+    mockup: {
+      type: "legal",
+      data: {
+        items: [
+          { label: "Allergènes", status: "Conforme" },
+          { label: "DUER", status: "Conforme" },
+          { label: "Affichage horaires", status: "Conforme" },
+        ],
+      },
+    },
+    color: "from-[#6366F1] to-[#818CF8]",
+  },
 ];
 
 export default function FonctionnalitesContent() {
@@ -171,7 +225,7 @@ export default function FonctionnalitesContent() {
       <section className="pt-28 pb-16 md:pt-36 md:pb-20">
         <div className="max-w-[1120px] mx-auto px-6 md:px-12">
           <ScrollReveal>
-            <Tag>6 modules actifs</Tag>
+            <Tag>8 modules actifs</Tag>
             <h1 className="font-serif text-[clamp(36px,5vw,56px)] font-semibold leading-tight tracking-tight mt-5 mb-4">
               Tout ce dont un restaurateur a besoin.
               <br />
@@ -365,6 +419,31 @@ export default function FonctionnalitesContent() {
                               </div>
                             ))}
                           </div>
+                        </div>
+                      )}
+                      {mod.mockup.type === "haccp" && (
+                        <div className="space-y-2">
+                          {mod.mockup.data.checks.map((c: any, ci: number) => (
+                            <div key={ci} className="flex justify-between items-center p-3 bg-white/[0.04] rounded-lg">
+                              <div className="text-sm text-white font-medium">{c.label}</div>
+                              <div className="flex items-center gap-2">
+                                <span className="text-sm text-white/50">{c.value}</span>
+                                <span className="w-2 h-2 rounded-full bg-[#4ade80]" />
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {mod.mockup.type === "legal" && (
+                        <div className="space-y-2">
+                          {mod.mockup.data.items.map((item: any, ii: number) => (
+                            <div key={ii} className="flex justify-between items-center p-3 bg-white/[0.04] rounded-lg">
+                              <div className="text-sm text-white font-medium">{item.label}</div>
+                              <span className="text-[11px] font-semibold bg-[#4ade80]/15 text-[#4ade80] px-2.5 py-1 rounded-full">
+                                {item.status}
+                              </span>
+                            </div>
+                          ))}
                         </div>
                       )}
                     </div>
