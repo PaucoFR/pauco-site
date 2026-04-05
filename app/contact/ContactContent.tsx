@@ -33,6 +33,12 @@ export default function ContactContent() {
       });
       if (!res.ok) throw new Error();
       setStatus("sent");
+      // Google Ads conversion tracking
+      if (typeof window !== "undefined" && typeof window.gtag === "function") {
+        window.gtag("event", "conversion", {
+          send_to: "AW-18006689412/BR9XCNWZvZUcEISNoYpD",
+        });
+      }
       setForm({ nom: "", restaurant: "", email: "", telephone: "", message: "" });
     } catch {
       window.location.href = `mailto:paul@paucoandco.com?subject=${encodeURIComponent("Contact — " + form.nom)}&body=${encodeURIComponent(`Nom : ${form.nom}\nRestaurant : ${form.restaurant}\nEmail : ${form.email}\nTél : ${form.telephone}\n\n${form.message}`)}`;
