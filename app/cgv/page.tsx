@@ -22,8 +22,8 @@ export default function CGV() {
               (Software as a Service) destiné aux professionnels de la restauration.
             </p>
             <p className="mt-2">
-              Le service est édité par SASU Pauco (en cours de création), représentée par Paul Monfort,
-              dont le siège social est situé au 447 impasse de la Ville Revault, 35800 Saint-Lunaire, France.
+              Le service est édité par Pauco SASU, représentée par Paul Monfort, SIREN 103 317 335, RCS Saint-Malo,
+              dont le siège social est situé au 447 Impasse de la Ville Revault, 35800 Saint-Lunaire, France.
             </p>
           </div>
 

@@ -24,8 +24,8 @@ export default function CGU() {
               <a href="https://app.paucoandco.com" className="text-[#2D6A4A] hover:underline">app.paucoandco.com</a>.
             </p>
             <p className="mt-3">
-              Pauco est édité par <strong className="text-[#1a1a18]">Paul Monfort</strong>, SASU en cours de création,
-              dont le siège social est situé au 447 impasse de la Ville Revault, 35800 Saint-Lunaire, France.
+              Pauco est édité par <strong className="text-[#1a1a18]">Pauco SASU</strong>, représentée par Paul Monfort,
+              SIREN 103 317 335, RCS Saint-Malo, dont le siège social est situé au 447 Impasse de la Ville Revault, 35800 Saint-Lunaire, France.
             </p>
             <p className="mt-3">
               Toute utilisation de la plateforme implique l&apos;acceptation sans réserve des présentes CGU par
