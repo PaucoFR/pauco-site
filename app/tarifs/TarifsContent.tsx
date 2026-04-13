@@ -107,6 +107,7 @@ export default function TarifsContent() {
                 </ul>
                 <Link
                   href="/contact"
+                  onClick={() => { if (typeof window !== "undefined" && typeof window.gtag === "function") window.gtag("event", "conversion", { send_to: "AW-18006689412/BR9XCNWZvZUcEISNoYpD" }); }}
                   className="block w-full bg-[#2D6A4A] text-white text-center font-semibold py-3.5 rounded-lg hover:bg-[#3a7d58] transition-colors no-underline"
                 >
                   Devenir fondateur

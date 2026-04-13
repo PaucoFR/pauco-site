@@ -59,6 +59,7 @@ export default function DemoContent() {
                   href="https://demo.paucoandco.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => { if (typeof window !== "undefined" && typeof window.gtag === "function") window.gtag("event", "conversion", { send_to: "AW-18006689412/BR9XCNWZvZUcEISNoYpD" }); }}
                   className="bg-[#2D6A4A] text-white text-base font-semibold px-8 py-4 rounded-lg hover:bg-[#3a7d58] hover:-translate-y-0.5 transition-all duration-200 no-underline text-center"
                 >
                   Lancer la démo &rarr;
@@ -152,6 +153,7 @@ export default function DemoContent() {
               href="https://demo.paucoandco.com"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => { if (typeof window !== "undefined" && typeof window.gtag === "function") window.gtag("event", "conversion", { send_to: "AW-18006689412/BR9XCNWZvZUcEISNoYpD" }); }}
               className="inline-block bg-[#2D6A4A] text-white text-base font-semibold px-8 py-4 rounded-lg hover:bg-[#3a7d58] hover:-translate-y-0.5 transition-all duration-200 no-underline"
             >
               Accéder à la démo &rarr;

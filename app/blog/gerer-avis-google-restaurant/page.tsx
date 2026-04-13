@@ -3,6 +3,7 @@ import Link from "next/link";
 import ScrollReveal from "../../components/ScrollReveal";
 import Tag from "../../components/Tag";
 import CTASection from "../../components/CTASection";
+import ConversionLink from "../../components/ConversionLink";
 
 export const metadata: Metadata = {
   title: "Réponse avis Google restaurant automatique : le guide complet",
@@ -97,12 +98,12 @@ export default function ArticleAvisGoogle() {
                   et Booking. Chaque réponse est unique et personnalisée à votre ton. 100% de taux
                   de réponse, 0 minute de votre temps.
                 </p>
-                <Link
+                <ConversionLink
                   href="/contact"
                   className="inline-block mt-4 bg-[#2D6A4A] text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-[#3a7d58] transition-colors no-underline"
                 >
                   Devenir fondateur &rarr;
-                </Link>
+                </ConversionLink>
               </div>
             </div>
           </ScrollReveal>

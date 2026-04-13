@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 export default function Footer() {
@@ -47,7 +49,7 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col gap-2.5">
               <a href="mailto:paul@paucoandco.com" className="text-sm text-white/30 hover:text-white/60 transition-colors no-underline">paul@paucoandco.com</a>
-              <a href="tel:+33783470657" className="text-sm text-white/30 hover:text-white/60 transition-colors no-underline">+33 7 83 47 06 57</a>
+              <a href="tel:+33783470657" onClick={() => { if (typeof window !== "undefined" && typeof window.gtag === "function") window.gtag("event", "conversion", { send_to: "AW-18006689412/BR9XCNWZvZUcEISNoYpD" }); }} className="text-sm text-white/30 hover:text-white/60 transition-colors no-underline">+33 7 83 47 06 57</a>
             </div>
           </div>
         </div>

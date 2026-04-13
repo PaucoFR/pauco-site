@@ -89,6 +89,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/contact"
+            onClick={() => { if (typeof window !== "undefined" && typeof window.gtag === "function") window.gtag("event", "conversion", { send_to: "AW-18006689412/BR9XCNWZvZUcEISNoYpD" }); }}
             className="bg-[#6DBF85] text-[#1c3829] text-[13px] font-semibold px-5 py-2.5 rounded-lg hover:bg-[#7fcf97] hover:-translate-y-0.5 transition-all duration-200 no-underline whitespace-nowrap"
           >
             Devenir fondateur
@@ -149,6 +150,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/contact"
+            onClick={() => { if (typeof window !== "undefined" && typeof window.gtag === "function") window.gtag("event", "conversion", { send_to: "AW-18006689412/BR9XCNWZvZUcEISNoYpD" }); }}
             className="bg-[#6DBF85] text-[#1c3829] text-sm font-semibold px-5 py-3.5 rounded-lg text-center no-underline mt-2 min-h-[44px]"
           >
             Devenir fondateur

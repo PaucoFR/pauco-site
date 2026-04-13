@@ -141,6 +141,7 @@ export default function ContactContent() {
                     href="https://buy.stripe.com/6oU9AScz10en8LS25s2Ji02"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => { if (typeof window !== "undefined" && typeof window.gtag === "function") window.gtag("event", "conversion", { send_to: "AW-18006689412/BR9XCNWZvZUcEISNoYpD" }); }}
                     className="block w-full bg-[#2D6A4A] text-white font-semibold py-4 rounded-lg hover:bg-[#3a7d58] hover:-translate-y-0.5 transition-all duration-200 no-underline"
                   >
                     Devenir Fondateur — 99€/mois à vie &rarr;
@@ -175,6 +176,7 @@ export default function ContactContent() {
                   <div className="space-y-4">
                     <a
                       href="tel:+33783470657"
+                      onClick={() => { if (typeof window !== "undefined" && typeof window.gtag === "function") window.gtag("event", "conversion", { send_to: "AW-18006689412/BR9XCNWZvZUcEISNoYpD" }); }}
                       className="flex items-center gap-3 text-[#1a1a18] hover:text-[#2D6A4A] transition-colors no-underline group"
                     >
                       <div className="w-10 h-10 rounded-lg bg-[#D6F0DF] flex items-center justify-center group-hover:bg-[#2D6A4A] transition-colors">

@@ -90,6 +90,7 @@ export default function AProposContent() {
                 </a>
                 <a
                   href="tel:+33783470657"
+                  onClick={() => { if (typeof window !== "undefined" && typeof window.gtag === "function") window.gtag("event", "conversion", { send_to: "AW-18006689412/BR9XCNWZvZUcEISNoYpD" }); }}
                   className="text-sm text-[#6A6059] hover:text-[#2D6A4A] transition-colors no-underline"
                 >
                   +33 7 83 47 06 57

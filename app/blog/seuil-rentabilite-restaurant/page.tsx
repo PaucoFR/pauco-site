@@ -3,6 +3,7 @@ import Link from "next/link";
 import ScrollReveal from "../../components/ScrollReveal";
 import Tag from "../../components/Tag";
 import CTASection from "../../components/CTASection";
+import ConversionLink from "../../components/ConversionLink";
 
 export const metadata: Metadata = {
   title: "Seuil de rentabilité restaurant : comment le calculer",
@@ -127,12 +128,12 @@ export default function ArticleSeuilRentabilite() {
                   la date prévisionnelle d&apos;atteinte, mise à jour en temps réel à chaque saisie
                   de CA et de dépenses. Tout est inclus dans l&apos;abonnement fondateur à 99€/mois.
                 </p>
-                <Link
+                <ConversionLink
                   href="/contact"
                   className="inline-block mt-4 bg-[#2D6A4A] text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-[#3a7d58] transition-colors no-underline"
                 >
                   Devenir fondateur &rarr;
-                </Link>
+                </ConversionLink>
               </div>
             </div>
           </ScrollReveal>

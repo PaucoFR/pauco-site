@@ -1,5 +1,5 @@
-import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
+import ConversionLink from "./ConversionLink";
 
 export default function CTASection() {
   return (
@@ -16,12 +16,12 @@ export default function CTASection() {
             Le prix augmente à chaque nouveau module. Les fondateurs gardent
             99€ à vie.
           </p>
-          <Link
+          <ConversionLink
             href="/contact"
             className="block sm:inline-block w-full sm:w-auto bg-[#2D6A4A] text-white text-base font-semibold px-8 py-4 rounded-lg hover:bg-[#3a7d58] hover:-translate-y-0.5 transition-all duration-200 no-underline text-center"
           >
             Devenir client fondateur &rarr;
-          </Link>
+          </ConversionLink>
           <p className="text-sm text-white/40 mt-5 flex items-center justify-center gap-2">
             <span className="w-[6px] h-[6px] rounded-full bg-[#4ade80] animate-pulse" />
             38 places restantes sur 50 · Prix garanti à vie

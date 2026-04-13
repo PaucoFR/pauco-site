@@ -3,6 +3,7 @@ import Link from "next/link";
 import ScrollReveal from "../../components/ScrollReveal";
 import Tag from "../../components/Tag";
 import CTASection from "../../components/CTASection";
+import ConversionLink from "../../components/ConversionLink";
 
 export const metadata: Metadata = {
   title: "Planning équipe restaurant : les 7 erreurs à éviter",
@@ -90,12 +91,12 @@ export default function ArticlePlanning() {
                   compteur d&apos;heures automatique, gestion des congés, export PDF. Tout est inclus
                   dans l&apos;abonnement fondateur à 99€/mois.
                 </p>
-                <Link
+                <ConversionLink
                   href="/contact"
                   className="inline-block mt-4 bg-[#2D6A4A] text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-[#3a7d58] transition-colors no-underline"
                 >
                   Devenir fondateur &rarr;
-                </Link>
+                </ConversionLink>
               </div>
             </div>
           </ScrollReveal>
