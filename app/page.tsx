@@ -269,7 +269,7 @@ export default function Home() {
       {/* Key numbers */}
       <div className="bg-white border-t border-b border-[#E4DDD3] py-14">
         <div className="max-w-[1120px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <ScrollReveal>
               <div className="bg-white border border-[#E4DDD3] rounded-xl p-5 text-center">
                 <div className="font-serif text-3xl font-semibold leading-none text-[#1a1a18]">
@@ -300,39 +300,6 @@ export default function Home() {
                 </div>
               </div>
             </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <div className="bg-white border border-[#E4DDD3] rounded-xl p-5 text-center">
-                <div className="font-serif text-3xl font-semibold leading-none text-[#1a1a18]">
-                  24h
-                </div>
-                <div className="text-xs text-[#2D6A4A] mt-1.5 font-medium">
-                  pour être opérationnel
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </div>
-
-      {/* Proof strip */}
-      <div className="py-12">
-        <div className="max-w-[1120px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-5">
-            {[
-              { n: "12", l: "restaurants en France" },
-              { n: "4,7★", l: "note moyenne clients" },
-              { n: "100%", l: "taux de réponse" },
-              { n: "24h", l: "pour être opérationnel" },
-            ].map((s, i) => (
-              <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="text-center">
-                  <div className="font-serif text-3xl sm:text-4xl font-semibold leading-none">
-                    {s.n}
-                  </div>
-                  <div className="text-sm text-[#6A6059] mt-1">{s.l}</div>
-                </div>
-              </ScrollReveal>
-            ))}
           </div>
         </div>
       </div>
