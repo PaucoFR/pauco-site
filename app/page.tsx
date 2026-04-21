@@ -239,6 +239,9 @@ export default function Home() {
                   Une erreur est survenue. Appelez directement au +33 7 83 47 06 57.
                 </p>
               )}
+              <p className="italic text-[14px] text-[#6A6059] text-center mt-4 leading-relaxed max-w-[560px] mx-auto">
+                Nos clients récupèrent en moyenne 8 heures par semaine. Pour seulement 99€ et sans engagement, sans même utiliser toutes les fonctionnalités.
+              </p>
             </div>
 
             <p className="text-sm text-[#A09488]">
