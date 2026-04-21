@@ -185,12 +185,14 @@ export default function Home() {
               >
                 Bloquer ma place fondateur
               </ConversionLink>
-              <Link
-                href="/fonctionnalites"
+              <a
+                href="https://demo.paucoandco.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border-[1.5px] border-[#E4DDD3] text-[#6A6059] text-base font-medium px-5 py-3.5 rounded-lg hover:border-[#1a1a18] hover:text-[#1a1a18] transition-all duration-200 no-underline text-center"
               >
-                Voir les fonctionnalités
-              </Link>
+                Voir la démo
+              </a>
             </div>
 
             {/* Callback form */}
@@ -228,7 +230,7 @@ export default function Home() {
                     disabled={callbackStatus === "sending"}
                     className="shrink-0 bg-[#2D6A4A] text-white text-sm font-semibold px-4 py-3 rounded-lg hover:bg-[#3a7d58] transition-colors disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap"
                   >
-                    {callbackStatus === "sending" ? "Envoi..." : "Je veux être rappelé"}
+                    {callbackStatus === "sending" ? "Envoi..." : "En savoir plus"}
                   </button>
                 </form>
               )}
