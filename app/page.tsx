@@ -194,7 +194,7 @@ export default function Home() {
             </div>
 
             {/* Callback form */}
-            <div className="max-w-[540px] mx-auto mb-6">
+            <div className="w-full max-w-[620px] mx-auto mb-6">
               {callbackStatus === "sent" ? (
                 <div className="bg-[#D6F0DF] border border-[#6DBF85]/30 rounded-xl px-5 py-4 text-center">
                   <div className="font-semibold text-[#2D6A4A] text-[15px]">
@@ -204,7 +204,7 @@ export default function Home() {
               ) : (
                 <form
                   onSubmit={handleCallbackSubmit}
-                  className="bg-white border border-[#E4DDD3] rounded-xl p-3 flex flex-col sm:flex-row gap-2 shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
+                  className="w-full bg-white border border-[#E4DDD3] rounded-xl p-2 flex flex-col sm:flex-row sm:items-stretch gap-2 shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
                 >
                   <input
                     type="text"
@@ -212,7 +212,7 @@ export default function Home() {
                     required
                     value={callback.prenom}
                     onChange={(e) => setCallback({ ...callback, prenom: e.target.value })}
-                    className="flex-1 bg-[#fafaf8] border-[1.5px] border-[#E4DDD3] rounded-lg px-4 py-3 text-sm text-[#1a1a18] outline-none focus:border-[#2D6A4A] transition-colors placeholder:text-[#A09488]"
+                    className="flex-1 min-w-0 w-full bg-[#fafaf8] border-[1.5px] border-[#E4DDD3] rounded-lg px-3 py-3 text-sm text-[#1a1a18] outline-none focus:border-[#2D6A4A] transition-colors placeholder:text-[#A09488]"
                   />
                   <input
                     type="tel"
@@ -221,12 +221,12 @@ export default function Home() {
                     pattern="[0-9\s+\-().]{8,}"
                     value={callback.telephone}
                     onChange={(e) => setCallback({ ...callback, telephone: e.target.value })}
-                    className="flex-1 bg-[#fafaf8] border-[1.5px] border-[#E4DDD3] rounded-lg px-4 py-3 text-sm text-[#1a1a18] outline-none focus:border-[#2D6A4A] transition-colors placeholder:text-[#A09488]"
+                    className="flex-1 min-w-0 w-full bg-[#fafaf8] border-[1.5px] border-[#E4DDD3] rounded-lg px-3 py-3 text-sm text-[#1a1a18] outline-none focus:border-[#2D6A4A] transition-colors placeholder:text-[#A09488]"
                   />
                   <button
                     type="submit"
                     disabled={callbackStatus === "sending"}
-                    className="bg-[#2D6A4A] text-white text-sm font-semibold px-5 py-3 rounded-lg hover:bg-[#3a7d58] transition-colors disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap"
+                    className="shrink-0 bg-[#2D6A4A] text-white text-sm font-semibold px-4 py-3 rounded-lg hover:bg-[#3a7d58] transition-colors disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap"
                   >
                     {callbackStatus === "sending" ? "Envoi..." : "Je veux être rappelé"}
                   </button>
