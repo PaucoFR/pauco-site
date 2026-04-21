@@ -165,7 +165,7 @@ export default function Home() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="mb-6">
-              <Tag>Prix fondateur · 99€/mois à vie</Tag>
+              <Tag>Prix fondateur · 99€/mois sans engagement</Tag>
             </div>
             <h1 className="font-serif text-[clamp(40px,5vw,62px)] font-semibold leading-[1.07] tracking-tight mb-5">
               Le logiciel que vos
@@ -176,7 +176,7 @@ export default function Home() {
               E-réputation automatique, gestion CA et dépenses, fiches
               techniques, coût matière, planning équipe, coûts bar, HACCP et
               conformité légale. Le premier logiciel tout-en-un des
-              restaurateurs — 99€/mois à vie.
+              restaurateurs — 99€/mois sans engagement.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 mb-6">
               <ConversionLink
@@ -244,9 +244,6 @@ export default function Home() {
               </p>
             </div>
 
-            <p className="text-sm text-[#A09488]">
-              Déjà utilisé par des restaurateurs en France — 99€/mois, sans engagement.
-            </p>
           </motion.div>
         </div>
       </section>
