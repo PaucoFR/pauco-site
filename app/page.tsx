@@ -246,40 +246,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video presentation (placeholder — remplacer par un embed YouTube quand la vidéo sera prête) */}
+      {/* Video presentation */}
       <section className="pb-16 md:pb-20">
         <div className="max-w-[960px] mx-auto px-6 md:px-12">
           <ScrollReveal>
-            {/*
-              TODO : remplacer ce bloc par un embed YouTube, par exemple :
+            <div className="relative aspect-video w-full rounded-2xl bg-[#F0EEE8] border border-[#E4DDD3] overflow-hidden shadow-[0_4px_24px_rgba(28,56,41,0.08)]">
               <iframe
-                src="https://www.youtube.com/embed/VIDEO_ID"
-                title="Présentation Pauco"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                src="https://www.youtube.com/embed/EPU3s5AAhto?rel=0"
+                title="Présentation Pauco — 2 minutes"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
-                className="absolute inset-0 w-full h-full rounded-2xl"
+                loading="lazy"
+                className="absolute inset-0 w-full h-full"
               />
-            */}
-            <div className="relative aspect-video w-full rounded-2xl bg-[#F0EEE8] border border-[#E4DDD3] overflow-hidden group cursor-pointer">
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-                <div className="w-20 h-20 rounded-full bg-white shadow-[0_4px_20px_rgba(45,106,74,0.18)] flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="w-8 h-8 fill-[#2D6A4A] ml-1"
-                    aria-hidden="true"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <div className="text-center">
-                  <div className="font-serif text-xl md:text-2xl font-semibold text-[#1a1a18]">
-                    Présentation Pauco — 2 minutes
-                  </div>
-                  <div className="text-xs text-[#A09488] mt-1 tracking-[0.12em] uppercase">
-                    Vidéo à venir
-                  </div>
-                </div>
-              </div>
             </div>
           </ScrollReveal>
         </div>
