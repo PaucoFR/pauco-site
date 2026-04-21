@@ -269,7 +269,7 @@ export default function Home() {
       {/* Key numbers */}
       <div className="bg-white border-t border-b border-[#E4DDD3] py-14">
         <div className="max-w-[1120px] mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <ScrollReveal>
               <div className="bg-white border border-[#E4DDD3] rounded-xl p-5 text-center">
                 <div className="font-serif text-3xl font-semibold leading-none text-[#1a1a18]">
@@ -297,6 +297,16 @@ export default function Home() {
                 </div>
                 <div className="text-xs text-[#2D6A4A] mt-1.5 font-medium">
                   puis le prix augmente
+                </div>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
+              <div className="bg-white border border-[#E4DDD3] rounded-xl p-5 text-center">
+                <div className="font-serif text-3xl font-semibold leading-none text-[#1a1a18]">
+                  24h
+                </div>
+                <div className="text-xs text-[#2D6A4A] mt-1.5 font-medium">
+                  pour être opérationnel
                 </div>
               </div>
             </ScrollReveal>
