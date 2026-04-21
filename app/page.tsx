@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import ScrollReveal from "./components/ScrollReveal";
 import Tag from "./components/Tag";
 import CTASection from "./components/CTASection";
+import ConversionLink from "./components/ConversionLink";
 
 const villes = [
   "Nice", "Bordeaux", "Biarritz", "Bayonne", "Vannes", "Brest", "Quimper",
@@ -102,6 +104,41 @@ const features = [
 ];
 
 export default function Home() {
+  const [callback, setCallback] = useState({ prenom: "", telephone: "" });
+  const [callbackStatus, setCallbackStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  const handleCallbackSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (callbackStatus === "sending") return;
+    setCallbackStatus("sending");
+    try {
+      const res = await fetch("https://hook.eu1.make.com/t9my6wvka33iwdjpp1kzjmu9kbi96koa", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          prenom: callback.prenom,
+          telephone: callback.telephone,
+          email: "",
+          restaurant: "",
+          message: "Demande de rappel — formulaire homepage",
+          source: "paucoandco.com/homepage-rappel",
+          type: "rappel",
+          date: new Date().toISOString(),
+        }),
+      });
+      if (!res.ok) throw new Error();
+      if (typeof window !== "undefined" && typeof window.gtag === "function") {
+        window.gtag("event", "conversion", {
+          send_to: "AW-18006689412/BR9XCNWZvZUcEISNoYpD",
+        });
+      }
+      setCallbackStatus("sent");
+      setCallback({ prenom: "", telephone: "" });
+    } catch {
+      setCallbackStatus("error");
+    }
+  };
+
   return (
     <>
       {/* Ticker */}
@@ -141,13 +178,13 @@ export default function Home() {
               conformité légale. Le premier logiciel tout-en-un des
               restaurateurs — 99€/mois à vie.
             </p>
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 mb-8">
-              <Link
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 mb-6">
+              <ConversionLink
                 href="/contact"
                 className="bg-[#2D6A4A] text-white text-base font-semibold px-7 py-4 rounded-lg hover:bg-[#3a7d58] hover:-translate-y-0.5 transition-all duration-200 no-underline text-center"
               >
                 Bloquer ma place fondateur
-              </Link>
+              </ConversionLink>
               <Link
                 href="/fonctionnalites"
                 className="border-[1.5px] border-[#E4DDD3] text-[#6A6059] text-base font-medium px-5 py-3.5 rounded-lg hover:border-[#1a1a18] hover:text-[#1a1a18] transition-all duration-200 no-underline text-center"
@@ -155,10 +192,96 @@ export default function Home() {
                 Voir les fonctionnalités
               </Link>
             </div>
+
+            {/* Callback form */}
+            <div className="max-w-[540px] mx-auto mb-6">
+              {callbackStatus === "sent" ? (
+                <div className="bg-[#D6F0DF] border border-[#6DBF85]/30 rounded-xl px-5 py-4 text-center">
+                  <div className="font-semibold text-[#2D6A4A] text-[15px]">
+                    Parfait ! Paul vous rappelle dans l&apos;heure.
+                  </div>
+                </div>
+              ) : (
+                <form
+                  onSubmit={handleCallbackSubmit}
+                  className="bg-white border border-[#E4DDD3] rounded-xl p-3 flex flex-col sm:flex-row gap-2 shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
+                >
+                  <input
+                    type="text"
+                    placeholder="Prénom"
+                    required
+                    value={callback.prenom}
+                    onChange={(e) => setCallback({ ...callback, prenom: e.target.value })}
+                    className="flex-1 bg-[#fafaf8] border-[1.5px] border-[#E4DDD3] rounded-lg px-4 py-3 text-sm text-[#1a1a18] outline-none focus:border-[#2D6A4A] transition-colors placeholder:text-[#A09488]"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Téléphone"
+                    required
+                    pattern="[0-9\s+\-().]{8,}"
+                    value={callback.telephone}
+                    onChange={(e) => setCallback({ ...callback, telephone: e.target.value })}
+                    className="flex-1 bg-[#fafaf8] border-[1.5px] border-[#E4DDD3] rounded-lg px-4 py-3 text-sm text-[#1a1a18] outline-none focus:border-[#2D6A4A] transition-colors placeholder:text-[#A09488]"
+                  />
+                  <button
+                    type="submit"
+                    disabled={callbackStatus === "sending"}
+                    className="bg-[#2D6A4A] text-white text-sm font-semibold px-5 py-3 rounded-lg hover:bg-[#3a7d58] transition-colors disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap"
+                  >
+                    {callbackStatus === "sending" ? "Envoi..." : "Je veux être rappelé"}
+                  </button>
+                </form>
+              )}
+              {callbackStatus === "error" && (
+                <p className="text-xs text-red-600 mt-2 text-center">
+                  Une erreur est survenue. Appelez directement au +33 7 83 47 06 57.
+                </p>
+              )}
+            </div>
+
             <p className="text-sm text-[#A09488]">
               Déjà utilisé par des restaurateurs en France — 99€/mois, sans engagement.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Video presentation (placeholder — remplacer par un embed YouTube quand la vidéo sera prête) */}
+      <section className="pb-16 md:pb-20">
+        <div className="max-w-[960px] mx-auto px-6 md:px-12">
+          <ScrollReveal>
+            {/*
+              TODO : remplacer ce bloc par un embed YouTube, par exemple :
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="Présentation Pauco"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full rounded-2xl"
+              />
+            */}
+            <div className="relative aspect-video w-full rounded-2xl bg-[#F0EEE8] border border-[#E4DDD3] overflow-hidden group cursor-pointer">
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+                <div className="w-20 h-20 rounded-full bg-white shadow-[0_4px_20px_rgba(45,106,74,0.18)] flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-8 h-8 fill-[#2D6A4A] ml-1"
+                    aria-hidden="true"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div className="text-center">
+                  <div className="font-serif text-xl md:text-2xl font-semibold text-[#1a1a18]">
+                    Présentation Pauco — 2 minutes
+                  </div>
+                  <div className="text-xs text-[#A09488] mt-1 tracking-[0.12em] uppercase">
+                    Vidéo à venir
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
