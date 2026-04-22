@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
-const GA4_ID = "G-WGL6SJCKFF";
+const GA4_ID = "G-BMZH34QV07";
 
 export default function GtagPageview() {
   const pathname = usePathname();

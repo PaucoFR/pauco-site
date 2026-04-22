@@ -93,7 +93,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         {/* Google tag (gtag.js) — Google Ads + GA4 */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-WGL6SJCKFF"
+          src="https://www.googletagmanager.com/gtag/js?id=G-BMZH34QV07"
           strategy="afterInteractive"
         />
         <Script id="google-gtag-init" strategy="afterInteractive">
@@ -101,7 +101,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-WGL6SJCKFF', { send_page_view: false });
+            gtag('config', 'G-BMZH34QV07', { send_page_view: false });
             gtag('config', 'AW-18006689412');
           `}
         </Script>
