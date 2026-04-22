@@ -90,16 +90,17 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon.png" />
       </head>
       <body className="font-sans antialiased">
-        {/* Google tag (gtag.js) — Google Ads */}
+        {/* Google tag (gtag.js) — Google Ads + GA4 */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18006689412"
+          src="https://www.googletagmanager.com/gtag/js?id=G-WGL6SJCKFF"
           strategy="afterInteractive"
         />
-        <Script id="google-ads-gtag" strategy="afterInteractive">
+        <Script id="google-gtag-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+            gtag('config', 'G-WGL6SJCKFF');
             gtag('config', 'AW-18006689412');
           `}
         </Script>
