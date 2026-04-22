@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SchemaOrg from "./components/SchemaOrg";
+import GtagPageview from "./components/GtagPageview";
 
 export const metadata: Metadata = {
   title: {
@@ -100,10 +101,11 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-WGL6SJCKFF');
+            gtag('config', 'G-WGL6SJCKFF', { send_page_view: false });
             gtag('config', 'AW-18006689412');
           `}
         </Script>
+        <GtagPageview />
         <SchemaOrg />
         <Navbar />
         <main>{children}</main>
