@@ -112,15 +112,21 @@ export default function Home() {
     if (callbackStatus === "sending") return;
     setCallbackStatus("sending");
     try {
+      const prenom = callback.prenom.trim();
+      const telephone = callback.telephone.trim();
       const res = await fetch("https://hook.eu1.make.com/t9my6wvka33iwdjpp1kzjmu9kbi96koa", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          prenom: callback.prenom,
-          telephone: callback.telephone,
+          prenom,
+          nom: prenom,
+          telephone,
+          phone: telephone,
+          tel: telephone,
+          numero: telephone,
           email: "",
           restaurant: "",
-          message: "Demande de rappel — formulaire homepage",
+          message: `Demande de rappel — formulaire homepage\nPrénom : ${prenom}\nTéléphone : ${telephone}`,
           source: "paucoandco.com/homepage-rappel",
           type: "rappel",
           date: new Date().toISOString(),
